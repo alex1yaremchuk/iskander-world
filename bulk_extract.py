@@ -56,7 +56,8 @@ def export(db):
         meta = json.loads(row['metadata_json'])
         works.append(dict(id=row['id'], title=row['canonical_title'], kind=row['kind'],
                           parent_id=row['parent_id'], volume=meta.get('volume'),
-                          pilot=row['id'] in {x['work_id'] for x in appearances if not x['id'].startswith('bulk_')},
+                          pilot=row['id'] in {x['work_id'] for x in appearances
+                                             if not x['id'].startswith(('bulk_', 'deep_'))},
                           automatic=row['id'] in scanned_work_ids,
                           automatic_candidates=row['id'] in auto_work_ids))
     data = dict(
@@ -149,18 +150,10 @@ def main():
                             'Автоматический кандидат появления по повторяемому имени.'))
                 work_people[wid].add(pid)
 
-        # Co-occurrence only for small, recurring candidate sets in one work.
-        for wid, people in work_people.items():
-            people = sorted(people)
-            if len(people) > 40:
-                continue
-            for index, a in enumerate(people):
-                for b in people[index + 1:]:
-                    rid = 'bulk_rel_' + digest(a + b + wid)[:24]
-                    db.execute('INSERT INTO Relation VALUES (?,?,?,?,?,?,?,?,?)',
-                               (rid, a, b, 'co_occurs', 'Совместное появление (автоматически)', 'uncertain',
-                                'automatic', 'reported', 'Не утверждение о личной связи: оба имени повторяются в одном произведении.'))
-                    db.execute('INSERT INTO RelationEvidence VALUES (?,?)', (rid, evidence_for[a]))
+        # Deliberately do not create all person pairs inside a work.  That old
+        # shortcut was quadratic and, more importantly, did not express an
+        # actual relationship.  Explicit relationship contexts are collected
+        # by deep_read.py and resolved separately.
         export(db)
         assert not db.execute('PRAGMA foreign_key_check').fetchall()
     print('bulk candidates:', len(selected), 'works:', len(work_people))
