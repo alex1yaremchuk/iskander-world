@@ -8,6 +8,7 @@ STEPS = [
     'build_pilot.py',
     'bulk_extract.py',
     'deep_read.py',
+    'apply_context_reading.py',
     'prepare_review_queue.py',
     'verify.py',
     'verify_pilot.py',

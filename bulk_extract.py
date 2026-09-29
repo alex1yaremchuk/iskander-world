@@ -59,7 +59,7 @@ def export(db):
         works.append(dict(id=row['id'], title=row['canonical_title'], kind=row['kind'],
                           parent_id=row['parent_id'], volume=meta.get('volume'),
                           pilot=row['id'] in {x['work_id'] for x in appearances
-                                             if not x['id'].startswith(('bulk_', 'deep_'))},
+                                             if not x['id'].startswith(('bulk_', 'deep_', 'context_'))},
                           automatic=row['id'] in scanned_work_ids,
                           automatic_candidates=row['id'] in auto_work_ids))
     data = dict(
