@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мир Искандера — литературный атлас</title>
+  <meta name="description" content="Персонажи Фазиля Искандера, их родство, истории и места. Личный литературный атлас с цитатами из книг.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23133932'/%3E%3Cpath d='M12 14h10v23H12zm14 0h10v23H26z' fill='%23e8cb82'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<aside class="rail">
+  <a href="#graph" class="brand" aria-label="Мир Искандера, главная"><span class="brand-mark">ФИ</span><span>Мир<br>Искандера</span></a>
+  <p class="rail-caption">ЛИТЕРАТУРНЫЙ АТЛАС</p>
+  <nav aria-label="Режимы атласа" id="navigation">
+    <button data-view="graph" class="nav-item active"><span aria-hidden="true">⌘</span>Карта связей</button>
+    <button data-view="people" class="nav-item"><span aria-hidden="true">◎</span>Персонажи</button>
+    <button data-view="works" class="nav-item"><span aria-hidden="true">▤</span>Произведения</button>
+    <button data-view="family" class="nav-item"><span aria-hidden="true">⑂</span>Семьи</button>
+    <button data-view="places" class="nav-item"><span aria-hidden="true">◇</span>Места</button>
+  </nav>
+  <div class="rail-bottom"><span class="edition-mark">ЛИЧНОЕ СОБРАНИЕ</span><p>Десять томов.<br>Один мир историй.</p><button class="rail-info" id="about">О наполнении атласа ↗</button></div>
+</aside>
+<div class="page">
+  <header class="topbar"><div class="breadcrumb">Фазиль Искандер <span>/</span> <span id="current-view">Карта связей</span></div><div class="search-wrap"><label class="sr-only" for="search">Найти персонажа</label><input id="search" type="search" placeholder="Найти персонажа или прозвище…" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div></header>
+  <main id="main" tabindex="-1"><div id="content"></div></main>
+  <footer><span>Пилот · 3 текста разобраны</span><span>Каждая связь ведёт к книге</span></footer>
+</div>
+<dialog id="evidence-dialog" aria-labelledby="evidence-title"><header><div><span class="eyebrow">ИЗ ТЕКСТА</span><h2 id="evidence-title">Основание связи</h2></div><button class="icon-button" data-close aria-label="Закрыть цитаты">×</button></header><div id="evidence-content"></div></dialog>
+<noscript>Для просмотра связей нужен JavaScript. Реестр также доступен в папке data проекта.</noscript>
+</body></html>

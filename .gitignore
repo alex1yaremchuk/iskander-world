@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+# Source books are local inputs and are not published.
+corpus/
+
+# Reproducible working data; the browser projection stays in site/dist/data.js.
+data/
+
+# Local OS/editor files.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
