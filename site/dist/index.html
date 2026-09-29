@@ -5,7 +5,7 @@
   <title>Мир Искандера — литературный атлас</title>
   <meta name="description" content="Персонажи Фазиля Искандера, их родство, истории и места. Личный литературный атлас с цитатами из книг.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23133932'/%3E%3Cpath d='M12 14h10v23H12zm14 0h10v23H26z' fill='%23e8cb82'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="app.js"></script>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="search.css"><script defer src="data.js"></script><script defer src="app.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">К содержимому</a>
@@ -22,9 +22,9 @@
   <div class="rail-bottom"><span class="edition-mark">ЛИЧНОЕ СОБРАНИЕ</span><p>Десять томов.<br>Один мир историй.</p><button class="rail-info" id="about">О наполнении атласа ↗</button></div>
 </aside>
 <div class="page">
-  <header class="topbar"><div class="topbar-start"><div class="history-controls" aria-label="История навигации"><button data-history-back aria-label="Назад" title="Назад">←</button><button data-history-forward aria-label="Вперёд" title="Вперёд">→</button></div><div class="breadcrumb">Фазиль Искандер <span>/</span> <span id="current-view">Карта связей</span></div></div><div class="search-wrap"><label class="sr-only" for="search">Найти персонажа</label><input id="search" type="search" placeholder="Найти персонажа или прозвище…" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div></header>
+  <header class="topbar"><div class="topbar-start"><div class="history-controls" aria-label="История навигации"><button data-history-back aria-label="Назад" title="Назад">←</button><button data-history-forward aria-label="Вперёд" title="Вперёд">→</button></div><div class="breadcrumb">Фазиль Искандер <span>/</span> <span id="current-view">Карта связей</span></div></div><div class="search-wrap"><label class="sr-only" for="search">Поиск по атласу</label><input id="search" type="search" placeholder="Персонаж или произведение…" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div></header>
   <main id="main" tabindex="-1"><div id="content"></div></main>
-  <footer><span>Пилот · 3 текста разобраны</span><span>Каждая связь ведёт к книге</span></footer>
+  <footer><span>Проверенный слой · 26 текстов</span><span>Каждая связь ведёт к книге</span></footer>
 </div>
 <dialog id="evidence-dialog" aria-labelledby="evidence-title"><header><div><span class="eyebrow">ИЗ ТЕКСТА</span><h2 id="evidence-title">Основание связи</h2></div><button class="icon-button" data-close aria-label="Закрыть цитаты">×</button></header><div id="evidence-content"></div></dialog>
 <noscript>Для просмотра связей нужен JavaScript. Реестр также доступен в папке data проекта.</noscript>

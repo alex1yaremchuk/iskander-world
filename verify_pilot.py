@@ -19,7 +19,7 @@ assert not db.execute('SELECT id FROM Relation WHERE from_person="stepan" AND to
 data=json.loads((ROOT/'data/pilot_export.json').read_text(encoding='utf-8'))
 pilot_ids={w['id'] for w in data['works'] if w['pilot']}
 automatic_ids={w['id'] for w in data['works'] if w.get('automatic')}
-assert len(pilot_ids)==data['meta']['pilot_count']==25
+assert len(pilot_ids)==data['meta']['pilot_count']==26
 assert len(automatic_ids)==data['meta']['automatic_work_count']>=100
 assert any(w['title']=='Дядя Сандро и его любимец' and w['pilot'] for w in data['works'])
 assert any(w['title']=='Чегемские сплетни' and w['pilot'] for w in data['works'])

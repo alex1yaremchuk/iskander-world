@@ -1,0 +1,24 @@
+.search-results > a {
+  display: block;
+  width: 100%;
+  padding: 13px 15px;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.search-results > a:hover {
+  background: var(--paper);
+}
+
+.search-heading {
+  margin: 0 !important;
+  padding: 10px 15px !important;
+  border-top: 1px solid var(--line);
+  background: #f4f7f5;
+  color: var(--muted);
+  font-size: .68rem !important;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
