@@ -32,11 +32,14 @@ def main():
     report = {
         'metrics': {
             'verified_pilot_works': len(pilot),
+            'context_read_works': db.execute("SELECT COUNT(*) FROM ContextReadingWork WHERE status='read'").fetchone()[0],
             'automatic_works': db.execute("SELECT COUNT(DISTINCT work_id) FROM Appearance WHERE id LIKE 'bulk_%'").fetchone()[0],
             'people': db.execute('SELECT COUNT(*) FROM Person').fetchone()[0],
             'aliases': db.execute('SELECT COUNT(*) FROM Alias').fetchone()[0],
             'verified_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id NOT LIKE 'bulk_%' AND id NOT LIKE 'deep_%' AND id NOT LIKE 'context_%'").fetchone()[0],
-            'context_read_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id LIKE 'context_%'").fetchone()[0],
+            'context_read_appearances': db.execute("""SELECT COUNT(*) FROM Appearance a
+              JOIN ContextReadingWork c ON c.work_id=a.work_id
+              WHERE a.id NOT LIKE 'bulk_%' AND a.id NOT LIKE 'deep_%'""").fetchone()[0],
             'deep_read_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id LIKE 'deep_%'").fetchone()[0],
             'automatic_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id LIKE 'bulk_%'").fetchone()[0],
             'verified_relations': db.execute("SELECT COUNT(*) FROM Relation WHERE id NOT LIKE 'bulk_%'").fetchone()[0],
@@ -76,6 +79,7 @@ def main():
         'Отчёт строится напрямую из SQLite после сборки пилота и очереди проверки.', '',
         '## Сводка', '',
         f"- Проверенный пилот: {m['verified_pilot_works']} из {m['canonical_works']} записей реестра; автоматический слой: {m['automatic_works']} произведений.",
+        f"- Полностью прочитано с поддержанием контекста: {m['context_read_works']} произведений.",
         f"- Персонажей: {m['people']}; проверенных появлений: {m['verified_appearances']}; последовательным контекстным чтением: {m['context_read_appearances']}; найденных словарным проходом: {m['deep_read_appearances']}; широких автоматических кандидатов: {m['automatic_appearances']}.",
         f"- Проверенных связей: {m['verified_relations']}; автоматических совместных появлений: {m['automatic_relations']}; мест: {m['places']}.",
         f"- Mentions в пилоте: {m['pilot_mentions']}; разрешено: {m['resolved_mentions']}; ожидают решения: {m['pilot_mentions']-m['resolved_mentions']}.",

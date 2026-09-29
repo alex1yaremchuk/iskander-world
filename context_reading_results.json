@@ -1,0 +1,211 @@
+{
+  "method": "sequential reading with per-work character state",
+  "works": [
+    {
+      "title": "Начало",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Автобиографический писательский рассказчик: родной город в Абхазии, дедушкино село Чегем, учёба в Москве и Литературном институте. Сведён с общим литературным рассказчиком, но не отождествлён с биографическим автором без оговорки.",
+      "summary": "Авторский рассказчик вспоминает школьный образ лентяя, неожиданную золотую медаль, поступление в Москве, путь к писательству и разговор с читателем на теплоходе.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["Однажды, когда я учился в школе", "я перешел в Литературный институт"]},
+        {"person": "narrator_mother", "role": "episode", "evidence": ["принесли маме прямо на работу"]}
+      ],
+      "people": [
+        {"id": "narrator_daughter", "name": "Дочь рассказчика", "description": "Маленькая дочь писателя-рассказчика; воспринимает телефон как игру и успевает отключать звонки.", "role": "episode", "evidence": ["дочка моя тоже прислушивается к телефону"]},
+        {"id": "begin_medalist", "name": "Одноклассник-медалист", "description": "Сильный ученик и первоначальный кандидат на золотую медаль; из-за неудачных ответов получает серебряную.", "role": "episode", "evidence": ["мальчик этот, готовясь к первому экзамену"]},
+        {"id": "begin_medalist_mother", "name": "Мать одноклассника-медалиста", "description": "Член родительского комитета; после выпускных экзаменов бьёт рассказчика мокрым зонтиком.", "role": "episode", "evidence": ["Я три года проторчала в комитете"]},
+        {"id": "begin_class_teacher", "name": "Классная руководительница", "description": "Объявляет рассказчику, что школа рассчитывает на его серебряную медаль.", "role": "episode", "evidence": ["На серебряную потянешь"]},
+        {"id": "begin_military_teacher", "name": "Школьный военрук", "description": "Замечает, как рассказчик держит носилки; с этого начинается его репутация отъявленного лентяя.", "role": "episode", "evidence": ["Военрук, присматривавший за нами"]},
+        {"id": "begin_school_director", "name": "Директор школы", "description": "Подозревает рассказчика в краже подзорной трубы из географического кабинета.", "role": "episode", "evidence": ["слухи об Отъявленном Лентяе дошли до директора школы"]},
+        {"id": "begin_book_boy", "name": "Мальчик, обменявший книгу", "description": "Даёт будущему писателю «Лекции по эстетике» Гегеля в обмен на «Шерлока Холмса».", "role": "mention", "evidence": ["я обменялся с одним мальчиком книгами"]},
+        {"id": "begin_philosophy_admissions", "name": "Сотрудник приёма философского факультета", "description": "Принимает документы в МГУ, сомневается в русском языке абитуриента и упоминает национальную разнарядку.", "role": "secondary", "evidence": ["За столиком с названием «Философский факультет»"]},
+        {"id": "begin_train_girl", "name": "Попутчица в Москву", "description": "Девушка из вагона, посоветовавшая рассказчику поступать в Библиотечный институт.", "role": "mention", "evidence": ["расхваливала одна девушка из моего вагона"]},
+        {"id": "begin_library_admissions", "name": "Сотрудник приёма Библиотечного института", "description": "С подозрением изучает слишком хороший аттестат рассказчика, но принимает его без экзаменов.", "role": "episode", "evidence": ["человек из приемной комиссии испуганно вертел мой аттестат"]},
+        {"id": "begin_reader", "name": "Читатель с «Адмирала Нахимова»", "description": "Техник мясокомбината, узнающий писателя по кольцу; объясняет ему собственное понимание рассказа «Детский сад».", "role": "secondary", "evidence": ["ко мне подошел мой читатель", "он работает техником на мясокомбинате"]}
+      ],
+      "relations": [
+        {"from": "narrator_mother", "to": "narrator", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["принесли маме прямо на работу"]},
+        {"from": "narrator", "to": "narrator_daughter", "type": "parent", "label": "Отец → дочь", "confidence": "explicit", "evidence": ["дочка моя тоже прислушивается к телефону"]},
+        {"from": "begin_medalist_mother", "to": "begin_medalist", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["у него была слишком настырная мать"]},
+        {"from": "begin_medalist_mother", "to": "narrator", "type": "conflict", "label": "Бьёт мокрым зонтиком", "confidence": "explicit", "evidence": ["несколько раз мазанула мне по шее мокрым зонтиком"]},
+        {"from": "begin_class_teacher", "to": "narrator", "type": "teacher", "label": "Классная руководительница", "confidence": "explicit", "evidence": ["На серебряную потянешь"]},
+        {"from": "begin_military_teacher", "to": "narrator", "type": "teacher", "label": "Школьный военрук", "confidence": "explicit", "evidence": ["Военрук, присматривавший за нами"]},
+        {"from": "begin_school_director", "to": "narrator", "type": "suspects", "label": "Подозревает в краже трубы", "confidence": "explicit", "evidence": ["решил, что это именно я стащил подзорную трубу"]},
+        {"from": "begin_book_boy", "to": "narrator", "type": "classmate", "label": "Обмениваются книгами", "confidence": "explicit", "evidence": ["я обменялся с одним мальчиком книгами"]},
+        {"from": "begin_philosophy_admissions", "to": "narrator", "type": "interviews", "label": "Принимает документы в университет", "confidence": "explicit", "evidence": ["За столиком с названием «Философский факультет»"]},
+        {"from": "begin_train_girl", "to": "narrator", "type": "advises", "label": "Советует Библиотечный институт", "confidence": "explicit", "evidence": ["расхваливала одна девушка из моего вагона"]},
+        {"from": "begin_library_admissions", "to": "narrator", "type": "admits", "label": "Принимает в институт", "confidence": "explicit", "evidence": ["Хорошо, вы приняты"]},
+        {"from": "begin_reader", "to": "narrator", "type": "reader", "label": "Читатель и писатель", "confidence": "explicit", "evidence": ["ко мне подошел мой читатель"]}
+      ]
+    },
+    {
+      "title": "Петух",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Автобиографический рассказчик вспоминает детское лето у родственников в горной деревне Абхазии. Сведён с общим литературным рассказчиком; точная ветвь родства с хозяевами дома в тексте не названа.",
+      "summary": "Мальчик живёт летом у тётки и её взрослых детей, вступает в затяжную войну с боевым петухом и после его гибели испытывает неожиданную печаль.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["В детстве меня не любили петухи"]},
+        {"person": "narrator_mother", "role": "mention", "evidence": ["Ма-ма!"]}
+      ],
+      "people": [
+        {"id": "rooster_aunt", "name": "Тётка рассказчика из горной деревни", "description": "Хозяйка дома, где рассказчик проводит лето; мать двух взрослых дочерей и двух взрослых сыновей. После последней схватки решает зажарить петуха.", "role": "secondary", "evidence": ["когда тетка с сыновьями работала на огороде", "Завтра мы его зажарим"]},
+        {"id": "rooster_cousin", "name": "Двоюродный брат рассказчика из горной деревни", "description": "Один из двух взрослых сыновей тётки: спасает рассказчика от петуха и затем помогает поймать и убить птицу. Текст не позволяет уверенно установить, один ли и тот же брат совершает все названные действия.", "role": "secondary", "evidence": ["если бы подбежавший брат ударом мотыги", "мы с братом стали его ловить"]},
+        {"id": "rooster_other_cousins", "name": "Другие дети тётки рассказчика", "description": "Две взрослые дочери и ещё один взрослый сын тётки; летом живут и работают в горной деревне. Индивидуально не названы.", "kind": "collective", "role": "mention", "evidence": ["две взрослые дочери, два взрослых сына"]}
+      ],
+      "relations": [
+        {"from": "rooster_aunt", "to": "narrator", "type": "aunt", "label": "Тётка → племянник", "confidence": "explicit", "evidence": ["когда тетка с сыновьями работала на огороде"]},
+        {"from": "rooster_aunt", "to": "rooster_cousin", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["когда тетка с сыновьями работала на огороде"]},
+        {"from": "rooster_aunt", "to": "rooster_other_cousins", "type": "parent", "label": "Мать → дети", "confidence": "explicit", "evidence": ["две взрослые дочери, два взрослых сына"]},
+        {"from": "rooster_cousin", "to": "narrator", "type": "cousin", "label": "Двоюродные братья", "confidence": "inferred", "evidence": ["В то лето я жил у своих родственников", "если бы подбежавший брат ударом мотыги"]},
+        {"from": "rooster_cousin", "to": "narrator", "type": "rescues", "label": "Спасает от петуха", "confidence": "explicit", "evidence": ["если бы подбежавший брат ударом мотыги"]},
+        {"from": "rooster_other_cousins", "to": "narrator", "type": "cousin", "label": "Двоюродные родственники", "confidence": "inferred", "evidence": ["В то лето я жил у своих родственников", "две взрослые дочери, два взрослых сына"]}
+      ]
+    },
+    {
+      "title": "Рассказ о море",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Автобиографический рассказчик вспоминает детство у моря в абхазском городе, дом с приезжавшими из гор двоюродными родственниками и случай своего спасения. Сведён с общим литературным рассказчиком.",
+      "summary": "Рассказчик вспоминает море детства: поиски мнимых золотых монет со школьным товарищем, первые заплывы и безымянного молодого человека, который спас его от утопления.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["Я не помню, когда научился ходить", "здесь же я чуть не утонул"]}
+      ],
+      "people": [
+        {"id": "sea_cousins", "name": "Двоюродные братья и сёстры рассказчика", "description": "Родственники из гор и окрестных деревень, которые жили в городском доме семьи рассказчика во время учёбы. Индивидуально не названы.", "kind": "collective", "role": "mention", "evidence": ["Дом наш всегда был полон всякими двоюродными братьями и сестрами"]},
+        {"id": "sea_school_friend", "name": "Школьный товарищ рассказчика", "description": "Вместе с рассказчиком принимает металлические пробки под водой за золотые монеты и ныряет за кладом.", "role": "episode", "evidence": ["один мой школьный товарищ шепнул мне"]},
+        {"id": "sea_rescuer", "name": "Юноша, спасший рассказчика", "description": "Безымянный молодой человек на берегу замечает тонущего мальчика, вытаскивает его из воды и своим спокойствием побуждает снова поплыть.", "role": "secondary", "evidence": ["парень меня все-таки спас", "Парень стоял на берегу и улыбался мне"]},
+        {"id": "sea_rescuer_girlfriend", "name": "Девушка спасителя", "description": "Девушка в синем купальнике; предлагает сделать мальчику искусственное дыхание, заботливо осматривает его и гордится своим спутником.", "role": "secondary", "evidence": ["Надо сделать искусственное дыхание", "девушка держала в руках свою ненужную"]},
+        {"id": "sergo_ordzhonikidze", "name": "Серго Орджоникидзе", "description": "Историческое лицо, которое, по местному преданию, сидело в сохранившейся камере приморской крепости, тогда ещё будучи фельдшером Гудаутского уезда.", "kind": "historical", "role": "mention", "evidence": ["где, говорят, сидел Серго Орджоникидзе"]}
+      ],
+      "relations": [
+        {"from": "sea_cousins", "to": "narrator", "type": "cousin", "label": "Двоюродные братья и сёстры", "confidence": "explicit", "evidence": ["Дом наш всегда был полон всякими двоюродными братьями и сестрами"]},
+        {"from": "sea_school_friend", "to": "narrator", "type": "schoolmate", "label": "Школьные товарищи", "confidence": "explicit", "evidence": ["один мой школьный товарищ шепнул мне"]},
+        {"from": "sea_rescuer", "to": "narrator", "type": "rescues", "label": "Спасает от утопления", "confidence": "explicit", "evidence": ["парень меня все-таки спас"]},
+        {"from": "sea_rescuer_girlfriend", "to": "sea_rescuer", "type": "romantic", "label": "Влюблённая пара", "confidence": "inferred", "evidence": ["видно было, что она гордится им"]},
+        {"from": "sea_rescuer_girlfriend", "to": "narrator", "type": "cares_for", "label": "Помогает после спасения", "confidence": "explicit", "evidence": ["положила руку мне на лоб"]}
+      ]
+    },
+    {
+      "title": "Тринадцатый подвиг Геракла",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Автобиографический школьный рассказчик: ученик пятого «Б» в военное время, страдающий хронической малярией. Сведён с общим литературным рассказчиком; это не означает автоматического тождества с Чиком.",
+      "summary": "Пятиклассник, не решивший задачу, приводит на урок врача с медсестрой, чтобы отложить опрос, но учитель математики Харлампий Диогенович разоблачает его «тринадцатый подвиг» и смехом учит не бояться выглядеть смешным.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["В тот день я не решил задачу", "У меня была хроническая малярия"]}
+      ],
+      "people": [
+        {"id": "kharlampy_diogenovich", "name": "Харлампий Диогенович", "description": "Грек по происхождению, учитель математики в пятом «Б». Поддерживает дисциплину спокойной иронией и закаляет учеников, выставляя проступки смешными.", "role": "main", "evidence": ["Звали его Харлампий Диогенович", "Главное оружие Харлампия Диогеновича"], "merge_ids": ["bulk_243e5a5715203e672b344671", "bulk_07b8d3a54fc063d089927d7c"]},
+        {"id": "thirteenth_school_director", "name": "Директор школы рассказчика в пятом классе", "description": "Тревожный директор в неизменной зелёной шляпе; пытается бороться с соседним стадионом и особенно боится завуча.", "role": "episode", "evidence": ["директор испуганно распахивал дверь", "больше всего боялся нашего завуча"]},
+        {"id": "stadium_uncle_vasya", "name": "Дядя Вася, комендант стадиона", "description": "Комендант соседнего со школой стадиона, который узнаёт школьников и прогоняет их.", "role": "mention", "evidence": ["комендант стадиона дядя Вася"]},
+        {"id": "thirteenth_head_teacher", "name": "Завуч школы рассказчика", "description": "Властная женщина, которой, по словам рассказчика, особенно боится директор школы.", "role": "mention", "evidence": ["Это была демоническая женщина"]},
+        {"id": "saharov_classmate", "name": "Сахаров", "description": "Отличник из класса рассказчика; самостоятельно решает трудную задачу и на контрольных служит учителю образцом для Авдеенко.", "role": "secondary", "evidence": ["Сахаров, пересядьте, пожалуйста", "у отличника Сахарова"]},
+        {"id": "shurik_avdeenko", "name": "Александр (Шурик) Авдеенко", "description": "Высокий, загорелый и угрюмый одноклассник, который плохо учится; учитель иронически называет его чёрным лебедем.", "role": "secondary", "evidence": ["Александр Авдеенко найдет в себе силы", "Шурик Авдеенко сидит"], "merge_ids": ["bulk_fd68bef11674337f478ae251"]},
+        {"id": "alik_komarov", "name": "Адольф (Алик) Комаров", "description": "Тихий сосед рассказчика по парте, способный троечник. После начала войны предпочитает имя Алик; очень боится укола.", "role": "secondary", "evidence": ["Звали его Адольф Комаров", "он себя называл Аликом"]},
+        {"id": "thirteenth_doctor", "name": "Школьная докторша", "description": "Врач, пришедшая делать пятиклассникам прививки против тифа; помогает потерявшему сознание Алику.", "role": "secondary", "evidence": ["в дверях появились доктор с медсестрой", "докторша его удержала"]},
+        {"id": "nurse_galochka", "name": "Галочка", "description": "Молодая помощница школьного врача; неохотно обрабатывает место укола рассказчика.", "role": "secondary", "evidence": ["А что, Галочка, пойдем", "Помощница ее быстро и небрежно"]},
+        {"id": "thirteenth_class_monitor", "name": "Староста пятого «Б»", "description": "Безымянный староста класса, которого учитель заставляет стереть доску в отсутствие дежурного.", "role": "episode", "evidence": ["заставил самого старосту стирать с доски"]},
+        {"id": "thirteenth_history_teacher", "name": "Учительница истории пятого «Б»", "description": "Откладывает организованный поход класса в краеведческий музей.", "role": "mention", "evidence": ["учительница истории все время откладывала"]},
+        {"id": "museum_dagger_boy", "name": "Школьник, укравший кинжал из музея", "description": "Ученик той же школы, который заранее спланировал кражу кинжала абхазского феодала, чтобы убежать с ним на фронт.", "role": "mention", "evidence": ["один мальчик из нашей школы стащил"]},
+        {"id": "thirteenth_footballer", "name": "Одноклассник-футболист рассказчика", "description": "Один из заядлых школьных футболистов; тоже не решает домашнюю задачу и тем успокаивает рассказчика.", "role": "episode", "evidence": ["Я спросил у одного из них насчет задачи"]},
+        {"id": "thirteenth_military_teacher", "name": "Военрук школы рассказчика в пятом классе", "description": "Школьный военный руководитель, к которому Харлампий Диогенович шутливо отправляет рассказчика «разминироваться».", "role": "mention", "evidence": ["попросите военрука, чтобы он вас разминировал"]}
+      ],
+      "relations": [
+        {"from": "kharlampy_diogenovich", "to": "narrator", "type": "teacher", "label": "Учитель математики → ученик", "confidence": "explicit", "evidence": ["Звали его Харлампий Диогенович", "Расскажите, как вы решили задачу"]},
+        {"from": "kharlampy_diogenovich", "to": "saharov_classmate", "type": "teacher", "label": "Учитель → ученик", "confidence": "explicit", "evidence": ["Сахаров, пересядьте, пожалуйста"]},
+        {"from": "kharlampy_diogenovich", "to": "shurik_avdeenko", "type": "teacher", "label": "Учитель → ученик", "confidence": "explicit", "evidence": ["Авдеенко думает, что он лебедь"]},
+        {"from": "kharlampy_diogenovich", "to": "alik_komarov", "type": "teacher", "label": "Учитель → ученик", "confidence": "explicit", "evidence": ["Алик Комаров все больше и больше бледнел"]},
+        {"from": "saharov_classmate", "to": "narrator", "type": "classmate", "label": "Одноклассники", "confidence": "explicit", "evidence": ["у отличника Сахарова"]},
+        {"from": "shurik_avdeenko", "to": "narrator", "type": "classmate", "label": "Одноклассники", "confidence": "explicit", "evidence": ["Шурик Авдеенко сидит"]},
+        {"from": "alik_komarov", "to": "narrator", "type": "desk_mate", "label": "Соседи по парте", "confidence": "explicit", "evidence": ["Нас посадили вместе"]},
+        {"from": "thirteenth_footballer", "to": "narrator", "type": "classmate", "label": "Одноклассники и партнёры по футболу", "confidence": "explicit", "evidence": ["Мы разделились на две команды"]},
+        {"from": "thirteenth_school_director", "to": "thirteenth_head_teacher", "type": "colleague", "label": "Директор боится завуча", "confidence": "explicit", "evidence": ["больше всего боялся нашего завуча"]},
+        {"from": "stadium_uncle_vasya", "to": "narrator", "type": "conflict", "label": "Прогоняет школьников со стадиона", "confidence": "explicit", "evidence": ["гнал нас оттуда со злостью"]},
+        {"from": "thirteenth_doctor", "to": "alik_komarov", "type": "cares_for", "label": "Делает прививку и приводит в чувство", "confidence": "explicit", "evidence": ["докторша его удержала"]},
+        {"from": "thirteenth_doctor", "to": "narrator", "type": "cares_for", "label": "Делает прививку", "confidence": "explicit", "evidence": ["когда мне сделали укол"]},
+        {"from": "nurse_galochka", "to": "thirteenth_doctor", "type": "assistant", "label": "Помощница врача", "confidence": "explicit", "evidence": ["Помощница ее быстро и небрежно"]},
+        {"from": "nurse_galochka", "to": "narrator", "type": "cares_for", "label": "Обрабатывает место укола", "confidence": "explicit", "evidence": ["с ненавистью дотерла мне спину"]},
+        {"from": "thirteenth_history_teacher", "to": "narrator", "type": "teacher", "label": "Учительница истории → ученик", "confidence": "explicit", "evidence": ["учительница истории все время откладывала"]},
+        {"from": "museum_dagger_boy", "to": "narrator", "type": "schoolmate", "label": "Ученики одной школы", "confidence": "explicit", "evidence": ["один мальчик из нашей школы стащил"]},
+        {"from": "thirteenth_military_teacher", "to": "narrator", "type": "teacher", "label": "Школьный военрук → ученик", "confidence": "inferred", "evidence": ["попросите военрука, чтобы он вас разминировал"]}
+      ]
+    },
+    {
+      "title": "Мой дядя самых честных правил…",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Рассказчик прямо не назван, но семейный состав — дядя Коля, его мать-бабушка, тётушка и соседка тётя Фаина — совпадает с миром Чика. Рабочая идентификация: Чик; одновременно это автобиографическая маска, а не независимое доказательство тождества с биографическим автором.",
+      "summary": "Чик вспоминает психически больного дядю Колю: домашнюю жизнь, собственные жестокие детские розыгрыши, выдуманное разоблачение «шпиона», безответную любовь дяди к портнихе Фаине и его смерть вскоре после матери.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["А у меня дядя сумасшедший", "Сейчас я жалею"]},
+        {"person": "chik_uncle_kolya", "role": "main", "evidence": ["Из какого-то такта дядя Коля", "Умер дядя вскоре после бабушки"]},
+        {"person": "chik_grandmother", "role": "secondary", "evidence": ["Он бабушку называл бабушкой, хотя она ему была мамой", "Я, бабушка и он"]},
+        {"person": "chik_aunt", "role": "secondary", "evidence": ["Тетя извлекала из зингеровской машинки", "Тетя потом говорила"]},
+        {"person": "poor_seamstress", "role": "secondary", "evidence": ["Он был влюблен в тетю Фаину", "Тетя Фаина была портнихой"]},
+        {"person": "chik_mother", "role": "mention", "evidence": ["то есть мои родители"]},
+        {"person": "chik_father", "role": "mention", "evidence": ["то есть мои родители"]}
+      ],
+      "people": [
+        {"id": "faina_husband_shoemaker", "name": "Муж тёти Фаины", "description": "Косоглазый сапожник, мирный и добрый человек. Защищает жену без ссоры и чинит отверстия, которые дядя Коля проделывает в стене их кухоньки.", "role": "secondary", "evidence": ["Муж ее был косоглазый сапожник"]},
+        {"id": "aunt_tamara_neighbor", "name": "Тётя Тамара", "description": "Рыжая молодая соседка неопределённых занятий, к которой вечерами приходят матросы; постоянно ссорится с тётей Фаиной.", "role": "secondary", "evidence": ["Звали ее тетя Тамара", "Тетя Фаина и тетя Тамара всегда ругались"]},
+        {"id": "doctor_zhdanov", "name": "Доктор Жданов", "description": "Врач, на мнение которого ссылается тётушка, объясняя комиссии, что физический труд полезен дяде Коле.", "role": "mention", "evidence": ["сам доктор Жданов говорил"], "merge_ids": ["bulk_1a4fef3f76cb89ce278db7f8"]},
+        {"id": "uncle_kolya_commission", "name": "Комиссия по делу дяди Коли", "description": "Безымянные проверяющие, ежегодно приходящие после соседских доносов выяснять условия жизни и труда дяди Коли.", "kind": "collective", "role": "episode", "evidence": ["Примерно раз в год являлась комиссия"]},
+        {"id": "chik_street_boys", "name": "Ребята с улицы Чика", "description": "Дворовые товарищи, перед которыми Чик в детстве хвастается своим необычным дядей.", "kind": "collective", "role": "episode", "evidence": ["Когда ребята с нашей улицы начинали хвастаться"]},
+        {"id": "fran_gut", "name": "Фран-Гут", "description": "Знаменитый темнокожий борец из приезжего цирка-шапито, за которого болеют мальчики; лично в событиях рассказа не участвует.", "kind": "historical", "role": "mention", "evidence": ["Фран-Гут был знаменитым борцом"]}
+      ],
+      "relations": [
+        {"from": "chik_uncle_kolya", "to": "chik", "type": "avuncular", "label": "Дядя → племянник", "confidence": "explicit", "evidence": ["А у меня дядя сумасшедший"]},
+        {"from": "chik_grandmother", "to": "chik_uncle_kolya", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["хотя она ему была мамой"]},
+        {"from": "chik_grandmother", "to": "chik", "type": "grandparent", "label": "Бабушка → внук", "confidence": "explicit", "evidence": ["Я, бабушка и он"]},
+        {"from": "chik_aunt", "to": "chik", "type": "avuncular", "label": "Тётя → племянник", "confidence": "explicit", "evidence": ["тетка просила меня подержать ему ухо"]},
+        {"from": "chik_aunt", "to": "chik_uncle_kolya", "type": "sibling", "label": "Сестра и брат", "confidence": "strongly_implied", "evidence": ["Дядя жил на втором этаже нашего дома вместе с тетей, бабушкой"]},
+        {"from": "chik_aunt", "to": "chik_uncle_kolya", "type": "cares_for", "label": "Опекает и защищает", "confidence": "explicit", "evidence": ["Он у меня живет как граф"]},
+        {"from": "chik", "to": "chik_uncle_kolya", "type": "conflict", "label": "Дразнит и раскаивается", "confidence": "explicit", "evidence": ["Любимым занятием моим было дразнить его"]},
+        {"from": "chik_uncle_kolya", "to": "poor_seamstress", "type": "in_love", "label": "Безответно влюблён", "confidence": "explicit", "evidence": ["Он был влюблен в тетю Фаину"]},
+        {"from": "poor_seamstress", "to": "faina_husband_shoemaker", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["У меня муж есть", "Муж ее был косоглазый сапожник"]},
+        {"from": "faina_husband_shoemaker", "to": "poor_seamstress", "type": "protects", "label": "Спокойно защищает жену", "confidence": "explicit", "evidence": ["но было видно, что он защищает свою жену"]},
+        {"from": "poor_seamstress", "to": "aunt_tamara_neighbor", "type": "conflict", "label": "Постоянно ссорятся", "confidence": "explicit", "evidence": ["Тетя Фаина и тетя Тамара всегда ругались"]},
+        {"from": "doctor_zhdanov", "to": "chik_uncle_kolya", "type": "doctor", "label": "Врачебное мнение о труде", "confidence": "strongly_implied", "evidence": ["сам доктор Жданов говорил"]},
+        {"from": "uncle_kolya_commission", "to": "chik_uncle_kolya", "type": "investigates", "label": "Проверяет условия жизни", "confidence": "explicit", "evidence": ["Примерно раз в год являлась комиссия"]},
+        {"from": "chik_street_boys", "to": "chik", "type": "friend", "label": "Дворовые товарищи", "confidence": "explicit", "evidence": ["ребята с нашей улицы"]},
+        {"from": "chik_mother", "to": "chik", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["то есть мои родители"]},
+        {"from": "chik_father", "to": "chik", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["то есть мои родители"]}
+      ]
+    },
+    {
+      "title": "Запретный плод",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Семейный состав и детская перспектива совпадают с циклом Чика: мать, отец до высылки, старшие брат и сестра. Рабочая идентификация рассказчика — Чик.",
+      "summary": "Чик завидует сестре, нарушившей семейный запрет на свинину, шантажирует её и выдаёт отцу. Отец впервые наказывает мальчика, и тот понимает, что принцип не оправдывает предательства, выросшего из зависти.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Я мечтал попробовать свинину", "Я очень любил отца"]},
+        {"person": "chik_mother", "role": "secondary", "evidence": ["Мама говорила, что тетя Соня спасла меня", "Мама пыталась меня поднять"]},
+        {"person": "chik_father", "role": "secondary", "evidence": ["ждали отца к обеду", "он впервые меня наказал"]},
+        {"person": "chik_older_brother", "role": "secondary", "evidence": ["В школе он считался одним из самых буйных лоботрясов", "восторженно орал"]},
+        {"person": "chik_sister", "role": "secondary", "evidence": ["моя мама и старшая сестра", "Она вчера ела сало…"]}
+      ],
+      "people": [
+        {"id": "aunt_sonya_nurse", "name": "Тётя Соня", "description": "Пожилая медсестра из двора Чика. Вместе с матерью месяц дежурила у тяжело больного мальчика; тихо рассказывает о первом муже, погибшем в Гражданскую войну.", "role": "secondary", "evidence": ["Звали ее тетя Соня", "спасла меня от смерти"], "merge_ids": ["bulk_76587e2f332d28044337c3ef"]},
+        {"id": "uncle_shura", "name": "Дядя Шура", "description": "Нынешний муж тёти Сони, умелый и доброжелательный мастер, бесплатно чинящий соседям бытовые вещи. Дружески относится к Чику.", "role": "secondary", "evidence": ["Звали его дядя Шура", "он подмигивал мне"]},
+        {"id": "sonya_first_husband", "name": "Первый муж тёти Сони", "description": "Любимый первый муж тёти Сони, убитый во время Гражданской войны; она нашла его тело среди погибших.", "role": "mention", "evidence": ["о первом своем муже, убитом в гражданскую войну"]},
+        {"id": "older_brother_teacher", "name": "Учитель старшего брата Чика", "description": "Безымянный учитель, сформулировавший, что способность брата оценивать поступки отстаёт от темперамента.", "role": "mention", "evidence": ["как сказал его учитель"]}
+      ],
+      "relations": [
+        {"from": "chik_mother", "to": "chik", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["Мама говорила, что тетя Соня спасла меня"]},
+        {"from": "chik_father", "to": "chik", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Я очень любил отца"]},
+        {"from": "chik_older_brother", "to": "chik", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["славы брата"]},
+        {"from": "chik_sister", "to": "chik", "type": "sibling", "label": "Брат и сестра", "confidence": "explicit", "evidence": ["моя мама и старшая сестра"]},
+        {"from": "aunt_sonya_nurse", "to": "uncle_shura", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["должен был вернуться с работы муж", "Звали его дядя Шура"]},
+        {"from": "aunt_sonya_nurse", "to": "sonya_first_husband", "type": "spouse", "label": "Первый брак; муж погиб", "confidence": "explicit", "evidence": ["о первом своем муже, убитом в гражданскую войну"]},
+        {"from": "aunt_sonya_nurse", "to": "chik", "type": "rescues", "label": "Выходила во время тяжёлой болезни", "confidence": "explicit", "evidence": ["тетя Соня спасла меня от смерти"]},
+        {"from": "chik_mother", "to": "aunt_sonya_nurse", "type": "friend", "label": "Близкие соседки; вместе ухаживают за Чиком", "confidence": "explicit", "evidence": ["она с мамой дежурила возле меня"]},
+        {"from": "uncle_shura", "to": "chik", "type": "friend", "label": "Доброжелательный взрослый сосед", "confidence": "explicit", "evidence": ["Мне очень нравился дядя Шура", "он подмигивал мне"]},
+        {"from": "older_brother_teacher", "to": "chik_older_brother", "type": "teacher", "label": "Учитель → ученик", "confidence": "explicit", "evidence": ["как сказал его учитель"]},
+        {"from": "chik_father", "to": "chik", "type": "punishes", "label": "Наказывает за предательство сестры", "confidence": "explicit", "evidence": ["отец схватил меня за уши"]}
+      ]
+    }
+  ]
+}
