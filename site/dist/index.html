@@ -13,16 +13,16 @@
   <a href="#graph" class="brand" aria-label="Мир Искандера, главная"><span class="brand-mark">ФИ</span><span>Мир<br>Искандера</span></a>
   <p class="rail-caption">ЛИТЕРАТУРНЫЙ АТЛАС</p>
   <nav aria-label="Режимы атласа" id="navigation">
-    <button data-view="graph" class="nav-item active"><span aria-hidden="true">⌘</span>Карта связей</button>
-    <button data-view="people" class="nav-item"><span aria-hidden="true">◎</span>Персонажи</button>
-    <button data-view="works" class="nav-item"><span aria-hidden="true">▤</span>Произведения</button>
-    <button data-view="family" class="nav-item"><span aria-hidden="true">⑂</span>Семьи</button>
-    <button data-view="places" class="nav-item"><span aria-hidden="true">◇</span>Места</button>
+    <a href="?view=graph" data-view="graph" class="nav-item active"><span aria-hidden="true">⌘</span>Карта связей</a>
+    <a href="?view=people" data-view="people" class="nav-item"><span aria-hidden="true">◎</span>Персонажи</a>
+    <a href="?view=works" data-view="works" class="nav-item"><span aria-hidden="true">▤</span>Произведения</a>
+    <a href="?view=family" data-view="family" class="nav-item"><span aria-hidden="true">⑂</span>Семьи</a>
+    <a href="?view=places" data-view="places" class="nav-item"><span aria-hidden="true">◇</span>Места</a>
   </nav>
   <div class="rail-bottom"><span class="edition-mark">ЛИЧНОЕ СОБРАНИЕ</span><p>Десять томов.<br>Один мир историй.</p><button class="rail-info" id="about">О наполнении атласа ↗</button></div>
 </aside>
 <div class="page">
-  <header class="topbar"><div class="breadcrumb">Фазиль Искандер <span>/</span> <span id="current-view">Карта связей</span></div><div class="search-wrap"><label class="sr-only" for="search">Найти персонажа</label><input id="search" type="search" placeholder="Найти персонажа или прозвище…" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div></header>
+  <header class="topbar"><div class="topbar-start"><div class="history-controls" aria-label="История навигации"><button data-history-back aria-label="Назад" title="Назад">←</button><button data-history-forward aria-label="Вперёд" title="Вперёд">→</button></div><div class="breadcrumb">Фазиль Искандер <span>/</span> <span id="current-view">Карта связей</span></div></div><div class="search-wrap"><label class="sr-only" for="search">Найти персонажа</label><input id="search" type="search" placeholder="Найти персонажа или прозвище…" autocomplete="off"><div id="search-results" class="search-results" hidden></div></div></header>
   <main id="main" tabindex="-1"><div id="content"></div></main>
   <footer><span>Пилот · 3 текста разобраны</span><span>Каждая связь ведёт к книге</span></footer>
 </div>
