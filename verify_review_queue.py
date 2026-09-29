@@ -23,6 +23,6 @@ assert [x['title'] for x in data['summary']['works']] == [
     'Чик идет на оплакивание', 'Чик и лунатик', 'Чик — играющий судья',
     'Страшная месть Чика', 'Чик чтит обычаи', 'Чик и белая курица',
 ]
-assert data['items'] and {x['status'] for x in data['items']} == {'pending'}
+assert not data['items'] or {x['status'] for x in data['items']} == {'pending'}
 assert not db.execute('PRAGMA foreign_key_check').fetchall()
 print('PASS: review queue spans, pending status, no premature entity resolution or appearances')

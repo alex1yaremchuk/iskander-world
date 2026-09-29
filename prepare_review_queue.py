@@ -127,6 +127,15 @@ def main():
                     if marker in seen:
                         continue
                     seen.add(marker)
+                    # Do not queue a name once the person is already known to
+                    # appear in this work.  The broad automatic layer is
+                    # rebuilt after the verified pilot and may have resolved
+                    # this work/person pair since the queue was first made.
+                    if db.execute(
+                        'SELECT 1 FROM Appearance WHERE work_id=? AND person_id=?',
+                        (work['id'], person_id),
+                    ).fetchone():
+                        continue
                     mid = 'men_' + digest(f'{work["id"]}:{fid}:{start}:{end}')[:24]
                     context_start, context_end = max(0, start-140), min(len(paragraph['text']), end+220)
                     context = paragraph['text'][context_start:context_end]
