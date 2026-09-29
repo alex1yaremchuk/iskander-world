@@ -49,7 +49,8 @@ def export(db):
         JOIN TextFragment t ON t.id=wf.fragment_id JOIN WorkDetail d ON d.work_id=wf.work_id
         JOIN SourceFile sf ON sf.source_id=t.source_id
         WHERE sf.collection='canonical_10vol' AND d.kind NOT IN ('novel','cycle')
-          AND t.id NOT LIKE 'para_%' AND t.id NOT LIKE 'review_para_%' ''')}
+          AND t.id NOT LIKE 'para_%' AND t.id NOT LIKE 'review_para_%'
+          AND t.id NOT LIKE 'deep_para_%' ''')}
     works = []
     for row in db.execute('''SELECT w.id,w.canonical_title,d.kind,d.parent_id,d.metadata_json
                              FROM Work w JOIN WorkDetail d ON d.work_id=w.id'''):
@@ -70,8 +71,8 @@ def export(db):
                   mention_count=db.execute('SELECT COUNT(*) FROM Mention').fetchone()[0],
                   unresolved_count=db.execute('''SELECT COUNT(*) FROM Mention m LEFT JOIN MentionResolution r
                                                   ON r.mention_id=m.id WHERE r.mention_id IS NULL''').fetchone()[0],
-                  coverage='Проверенный пилот + автоматические кандидаты по всему каноническому корпусу.',
-                  extraction='Ручное чтение для пилота; автоматический поиск именных групп для широкого слоя.'))
+                  coverage='Проверенный пилот + линейное подробное чтение прозы + автоматические кандидаты.',
+                  extraction='Ручной пилот; словарный проход известных героев; отдельная очередь отношений.'))
     (ROOT / 'data' / 'pilot_export.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
     (ROOT / 'site' / 'dist' / 'data.js').write_text('window.ISKANDER_DATA=' + json.dumps(data, ensure_ascii=False) + ';\n', encoding='utf-8')
 
