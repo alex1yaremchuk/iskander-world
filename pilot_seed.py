@@ -209,8 +209,11 @@ person('karaman','Караман','Умерший знакомый Хабуга;
        [('p7_0297','Караман')],{'7':'mention'},r'Караман[а-я]*',extra=['p7_0329'])
 person('kyzym','Кязым','Один из сыновей Хабуга, брат матери Чика; его жена Нуца и четверо детей живут в Большом Доме. В рассказе о Хазарате убивает одичавших собак Адамыра.',
        [('p7_0373','Кязыма'),('p9_0188','Кязымом')],{'7':'mention','9':'episode'},r'Кязым[а-я]*',extra=['p7_0381','p7_0441','p9_0189','p9_0196'])
-person('kyzym_wife','Жена Кязыма','Невестка Хабуга, живущая с детьми в Большом Доме и приветствующая вернувшегося Арапку.',
-       [('p7_0381','жена Кязыма')],{'7':'episode'},extra=['p7_0441','p7_0443'])
+person('nutsa','Тётя Нуца','Жена Кязыма, невестка Хабуга и хозяйка Большого Дома; Чик гостит у неё и наблюдает семейные обычаи.',
+       [('p7_0381','жена Кязыма'),('p24_0028','Тетя Нуца')],{'7':'episode','24':'secondary'},
+       r'(?:[Тт][её]т[яюие]\s+)?Нуц[аеиуой]+',
+       notes='Безымянная «жена Кязыма» объединена с Нуцей: в «Дудке старого Хасана» она прямо названа «тетя Нуца, жена дяди Кязыма».',
+       extra=['p7_0441','p7_0443'])
 person('kyzym_son','Сын Кязыма','Безымянный внук Хабуга, который вместе с сестрой утешает мула Арапку.',
        [('p7_0373','мальчик')],{'7':'episode'},extra=['p7_0441','p7_0442'])
 person('kyzym_daughter','Дочь Кязыма','Безымянная внучка Хабуга, которая вместе с братом утешает мула Арапку.',
@@ -367,8 +370,6 @@ person('tsiala','Циала','Девочка, на чьё оплакивание
        [('p20_0014','Циала')],{'20':'secondary'},r'Циал[аеиуой]+')
 person('hector','Гектор','Капитан футбольной команды Третьей Подгорной.',
        [('p22_0003','Гектор')],{'22':'secondary'},r'Гектор[а-я]*')
-person('nutsa','Тётя Нуца','Чегемская хозяйка, у которой Чик гостит и наблюдает семейные обычаи.',
-       [('p24_0028','Тетя Нуца')],{'24':'secondary'},r'(?:[Тт][её]т[яюие]\s+)?Нуц[аеиуой]+')
 person('safar','Сафар','Троюродный брат Чика, встречающий его на Портовой улице.',
        [('p25_0136','Сафар')],{'25':'secondary'},r'Сафар[а-я]*')
 
@@ -510,11 +511,11 @@ relation('father_sandro','kolcheruky','acquaintance','Знакомые и поп
 relation('kolcheruky','stalin','tells_story','Рассказывает фантастическую историю',['p7_0244','p7_0259'],perspective='kolcheruky',status='reported')
 relation('father_sandro','karaman','acquaintance','Приезжает на оплакивание',['p7_0296','p7_0297'])
 relation('father_sandro','kyzym','parent','Отец → сын',['p7_0373','p7_0381','p9_0188'])
-relation('kyzym','kyzym_wife','spouse','Супруги',['p7_0381'],'strongly_implied')
+relation('kyzym','nutsa','spouse','Супруги',['p7_0381'],'strongly_implied',note='Имя жены подтверждено прямой формулировкой в «Дудке старого Хасана».')
 relation('kyzym','kyzym_son','parent','Отец → сын',['p7_0373'])
 relation('kyzym','kyzym_daughter','parent','Отец → дочь',['p7_0373'])
-relation('kyzym_wife','kyzym_son','parent','Мать → сын',['p7_0373','p7_0381'],'strongly_implied')
-relation('kyzym_wife','kyzym_daughter','parent','Мать → дочь',['p7_0373','p7_0381'],'strongly_implied')
+relation('nutsa','kyzym_son','parent','Мать → сын',['p7_0373','p7_0381'],'strongly_implied')
+relation('nutsa','kyzym_daughter','parent','Мать → дочь',['p7_0373','p7_0381'],'strongly_implied')
 relation('father_sandro','kyzym_son','grandparent','Дед → внук',['p7_0373'])
 relation('father_sandro','kyzym_daughter','grandparent','Дед → внучка',['p7_0373'])
 relation('isa','mule_arapka','helps','Помогает вернуть мула домой',['p7_0451','p7_0454','p7_0455'])
@@ -583,12 +584,14 @@ relation('chik_father','chik','parent','Отец → сын',['p15_0254'])
 relation('chik_older_brother','chik','sibling','Братья',['p14_0183','p15_0011'])
 relation('chik_sister','chik','sibling','Брат и сестра',['p25_0132'],'strongly_implied')
 relation('chik_grandmother','chik','grandparent','Бабушка → внук',['p14_0447'])
+relation('chik_grandmother','chik_uncle_kolya','parent','Мать → сын',['p19_0155'])
 relation('chik_uncle_riza','chik','avuncular','Дядя → племянник',['p15_0104','p19_0056'])
 relation('chik_aunt','chik_uncle_riza','sibling','Сестра и брат',['p19_0056'])
 relation('father_sandro','chik_mother','parent','Отец → дочь',['p24_0027','p24_0073'],'strongly_implied',note='Кязым прямо назван братом матери Чика; Кязым — сын Хабуга. Сандро вспоминает мать Чика ребёнком в Большом Доме.')
 relation('wife_habug','chik_mother','parent','Мать → дочь',['p24_0027'],'strongly_implied',note='Материнская линия следует из принадлежности матери Чика к детям Большого Дома; личное имя матери Хабуговых не названо.')
 relation('sandro','chik_mother','sibling','Брат и сестра',['p24_0073'],'strongly_implied')
 relation('kyzym','chik_mother','sibling','Брат и сестра',['p24_0027'])
+relation('kyzym','sandro','sibling','Братья',['p9_0188'],'strongly_implied',note='Оба названы сыновьями Хабуга; «Бригадир Кязым» дополнительно содержит прямую реплику «Мой брат Сандро».')
 relation('brother_sandro','chik_mother','sibling','Брат и сестра',['p24_0027'],'strongly_implied')
 relation('isa','chik_mother','sibling','Брат и сестра',['p24_0027'],'strongly_implied')
 relation('father_sandro','chik','grandparent','Дед → внук',['p24_0027'],'strongly_implied')
@@ -684,7 +687,7 @@ PERSON_PLACES=[
  ('mule_arapka','big_house','Возвращается домой','p7_0440'),
  ('wife_habug','big_house','Хозяйка кухни','p7_0441'),
  ('isa','big_house','Встречает вернувшегося мула','p7_0441'),
- ('kyzym_wife','big_house','Живёт с детьми','p7_0441'),
+ ('nutsa','big_house','Живёт с детьми','p7_0441'),
  ('kyzym_son','big_house','Живёт с семьёй','p7_0441'),
  ('kyzym_daughter','big_house','Живёт с семьёй','p7_0441'),
  ('samuel','mukhus','Приезжает торговать','p7_0085'),

@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 STEPS = [
     'build_pilot.py',
     'bulk_extract.py',
+    'deep_read.py',
     'prepare_review_queue.py',
     'verify.py',
     'verify_pilot.py',

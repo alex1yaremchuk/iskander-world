@@ -50,6 +50,7 @@ def export(db):
         JOIN SourceFile sf ON sf.source_id=t.source_id
         WHERE sf.collection='canonical_10vol' AND d.kind NOT IN ('novel','cycle')
           AND t.id NOT LIKE 'para_%' AND t.id NOT LIKE 'review_para_%'
+          AND t.id NOT LIKE 'deep_para_%'
           AND t.id NOT LIKE 'deep_para_%' ''')}
     works = []
     for row in db.execute('''SELECT w.id,w.canonical_title,d.kind,d.parent_id,d.metadata_json

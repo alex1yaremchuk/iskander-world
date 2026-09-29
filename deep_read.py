@@ -156,6 +156,21 @@ def main():
                 print(f"read {wi}/{len(works)} works")
 
     report = {"run_id": RUN_ID, "works_in_scope": len(works), **totals}
+    decisions_path = ROOT / "deep_review_decisions.json"
+    decisions = json.loads(decisions_path.read_text(encoding="utf-8")) if decisions_path.exists() else {}
+    with db:
+        for item_id, decision in decisions.items():
+            changed = db.execute(
+                "UPDATE DeepReadItem SET status=?,note=? WHERE id=?",
+                (decision["status"], decision.get("note", ""), item_id),
+            ).rowcount
+            if not changed:
+                raise RuntimeError(f"Review decision points to missing item: {item_id}")
+    report["reviewed_decisions"] = len(decisions)
+    # Refresh the browser projection after the new appearances have landed.
+    from bulk_extract import export
+    db.row_factory = sqlite3.Row
+    export(db)
     (ROOT / "DEEP_READ_REPORT.md").write_text(
         "# Линейное подробное чтение корпуса\n\n"
         + "Первый проход завершён по всему прозаическому реестру. Произведение читается один раз; "
@@ -163,6 +178,7 @@ def main():
         + "\n".join(f"- {k}: {v}" for k, v in report.items()) + "\n",
         encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
+    db.close()
 
 
 if __name__ == "__main__":
