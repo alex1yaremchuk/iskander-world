@@ -17,7 +17,7 @@ def main():
     pilot = rows(db, '''SELECT w.id,w.canonical_title title,d.kind,
       COUNT(DISTINCT a.person_id) people
       FROM Work w JOIN WorkDetail d ON d.work_id=w.id
-      JOIN Appearance a ON a.work_id=w.id AND a.id NOT LIKE 'bulk_%'
+      JOIN Appearance a ON a.work_id=w.id AND a.id NOT LIKE 'bulk_%' AND a.id NOT LIKE 'deep_%'
       GROUP BY w.id ORDER BY json_extract(d.metadata_json,'$.volume'),w.canonical_title''')
     unresolved = rows(db, '''SELECT w.canonical_title work,COUNT(*) count
       FROM Mention m LEFT JOIN MentionResolution r ON r.mention_id=m.id
@@ -35,7 +35,8 @@ def main():
             'automatic_works': db.execute("SELECT COUNT(DISTINCT work_id) FROM Appearance WHERE id LIKE 'bulk_%'").fetchone()[0],
             'people': db.execute('SELECT COUNT(*) FROM Person').fetchone()[0],
             'aliases': db.execute('SELECT COUNT(*) FROM Alias').fetchone()[0],
-            'verified_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id NOT LIKE 'bulk_%'").fetchone()[0],
+            'verified_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id NOT LIKE 'bulk_%' AND id NOT LIKE 'deep_%'").fetchone()[0],
+            'deep_read_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id LIKE 'deep_%'").fetchone()[0],
             'automatic_appearances': db.execute("SELECT COUNT(*) FROM Appearance WHERE id LIKE 'bulk_%'").fetchone()[0],
             'verified_relations': db.execute("SELECT COUNT(*) FROM Relation WHERE id NOT LIKE 'bulk_%'").fetchone()[0],
             'automatic_relations': db.execute("SELECT COUNT(*) FROM Relation WHERE id LIKE 'bulk_%'").fetchone()[0],
@@ -44,6 +45,7 @@ def main():
             'pilot_mentions': db.execute("SELECT COUNT(*) FROM Mention WHERE run_id='pilot_v1'").fetchone()[0],
             'resolved_mentions': db.execute("SELECT COUNT(*) FROM MentionResolution r JOIN Mention m ON m.id=r.mention_id WHERE m.run_id='pilot_v1'").fetchone()[0],
             'review_queue': db.execute("SELECT COUNT(*) FROM ReviewItem WHERE batch_id='review_queue_v1'").fetchone()[0],
+            'deep_relation_queue': db.execute("SELECT COUNT(*) FROM DeepReadItem WHERE item_type='relationship_context' AND priority=100").fetchone()[0],
             'canonical_works': db.execute('SELECT COUNT(*) FROM Work').fetchone()[0],
         },
         'pilot_works': pilot,
@@ -73,10 +75,10 @@ def main():
         'Отчёт строится напрямую из SQLite после сборки пилота и очереди проверки.', '',
         '## Сводка', '',
         f"- Проверенный пилот: {m['verified_pilot_works']} из {m['canonical_works']} записей реестра; автоматический слой: {m['automatic_works']} произведений.",
-        f"- Персонажей: {m['people']}; проверенных появлений: {m['verified_appearances']}; автоматических: {m['automatic_appearances']}.",
+        f"- Персонажей: {m['people']}; проверенных появлений: {m['verified_appearances']}; найденных подробным словарным проходом: {m['deep_read_appearances']}; широких автоматических кандидатов: {m['automatic_appearances']}.",
         f"- Проверенных связей: {m['verified_relations']}; автоматических совместных появлений: {m['automatic_relations']}; мест: {m['places']}.",
         f"- Mentions в пилоте: {m['pilot_mentions']}; разрешено: {m['resolved_mentions']}; ожидают решения: {m['pilot_mentions']-m['resolved_mentions']}.",
-        f"- Следующая редакционная очередь: {m['review_queue']} mentions.",
+        f"- Приоритетная очередь контекстов отношений: {m['deep_relation_queue']} абзацев.",
         f"- Evidence-фрагментов: {m['evidence']}.", '',
         '## Покрытие пилота', '',
     ]
