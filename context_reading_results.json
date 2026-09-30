@@ -387,6 +387,40 @@
         {"from": "chik_pe_teacher", "to": "moscow_swimmer", "type": "flirts", "label": "Знакомятся на пляже", "confidence": "explicit", "evidence": ["я вас научу нырять"]},
         {"from": "stela_finder_brother", "to": "stela_beach_boy", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["брат моего товарища"]}
       ]
+    },
+    {
+      "title": "Мой кумир",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Автобиографический школьный рассказчик из приморского абхазского города. Семейных маркеров цикла Чика в тексте нет, поэтому с Чиком автоматически не склеен.",
+      "summary": "Рассказчик вспоминает школьного друга и кумира Юру Ставракиди — сильного, храброго сына маляра. Обожание постепенно разрушается после несправедливой сцены у кинотеатра; много лет спустя друзья переосмысливают природу храбрости.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["В классе он сидел впереди меня", "через много-много лет я его встретил"]}
+      ],
+      "people": [
+        {"id": "yura_stavrakidi", "name": "Юра Ставракиди", "description": "Греческий школьный товарищ и юношеский кумир рассказчика: необычайно сильный, ловкий и храбрый сын маляра. Позднее становится морским офицером и служит на Севере.", "role": "main", "evidence": ["Звали его Юра Ставракиди", "Юра — морской офицер"]},
+        {"id": "yura_painter_father", "name": "Отец Юры Ставракиди", "description": "Молчаливый старый маляр и отец многочисленной семьи; Юра с детства помогает ему работать.", "role": "secondary", "evidence": ["семье маляра", "длинную высохшую фигуру отца Юры"]},
+        {"id": "yura_older_brother", "name": "Старший брат Юры Ставракиди", "description": "Выпускник индустриального техникума, первый интеллигент семьи; помогает отцу красить стены и любит обсуждать международную политику.", "role": "secondary", "evidence": ["Старший сын маляра", "Юрин брат, вместо того"]},
+        {"id": "yura_mother", "name": "Мать Юры Ставракиди", "description": "Гречанка, зовущая старшего сына ужинать и называющая затянувшиеся разговоры «ляй-ляй-конференцией».", "role": "episode", "evidence": ["Юрина мама"]},
+        {"id": "yura_siblings", "name": "Другие братья и сёстры Юры Ставракиди", "description": "Остальные индивидуально не названные дети многочисленной семьи маляра.", "kind": "collective", "role": "mention", "evidence": ["последним сыном в многочисленной семье"]},
+        {"id": "school_mad_photographer", "name": "Школьный фотограф", "description": "Эксцентричный фотограф, снимавший учеников под чёрным балдахином.", "role": "mention", "evidence": ["сумасшедший фотограф, что приходил к нам в школу"]},
+        {"id": "foreign_school_caretaker", "name": "Завхоз-сторож чужой школы", "description": "Бодрый старик, живущий при школе и преследующий ребят за футбол во дворе; его шаги срывают попытку ограбить буфет.", "role": "secondary", "evidence": ["При школе жил завхоз", "бежали от сторожа"]},
+        {"id": "apsny_ticket_boy", "name": "Безбилетный мальчик у кинотеатра «Апсны»", "description": "Худой русскоязычный мальчик из греческого двора, которого Юра несправедливо пытается втянуть в драку.", "role": "secondary", "evidence": ["какой-то мальчик подошел к Юре", "мальчик этот, на вид явно русский"]},
+        {"id": "apsny_greek_boys", "name": "Греческие друзья мальчика у «Апсны»", "description": "Группа греческих мальчиков, останавливающих Юру и стыдящих его за нападение на слабого.", "kind": "collective", "role": "episode", "evidence": ["полдюжины греческих мальчиков окружило нас"]},
+        {"id": "amra_local_friends_yura", "name": "Компания Юры в ресторане «Амра»", "description": "Местные знакомые, с которыми взрослый Юра сидит при встрече с рассказчиком.", "kind": "collective", "role": "mention", "evidence": ["сидел в компании наших местных ребят"]},
+        {"id": "my_idol_waitress", "name": "Официантка ресторана «Амра»", "description": "Приносит компании коньяк и нарезанный арбуз, из-за чего рассказчик откладывает уход.", "role": "episode", "evidence": ["подошла официантка с заказом"]}
+      ],
+      "relations": [
+        {"from": "yura_stavrakidi", "to": "narrator", "type": "friend", "label": "Школьные друзья; позднее расходятся", "confidence": "explicit", "evidence": ["мой давний товарищ Юра Ставракиди", "началом конца нашей дружбы"]},
+        {"from": "yura_painter_father", "to": "yura_stavrakidi", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["последним сыном в многочисленной семье маляра"]},
+        {"from": "yura_mother", "to": "yura_stavrakidi", "type": "parent", "label": "Мать → сын", "confidence": "strongly_implied", "evidence": ["Юрина мама"]},
+        {"from": "yura_older_brother", "to": "yura_stavrakidi", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["Старший сын маляра"]},
+        {"from": "yura_siblings", "to": "yura_stavrakidi", "type": "sibling", "label": "Братья и сёстры", "confidence": "explicit", "evidence": ["последним сыном в многочисленной семье"]},
+        {"from": "yura_stavrakidi", "to": "yura_painter_father", "type": "works_with", "label": "Помогает отцу-маляру", "confidence": "explicit", "evidence": ["Юра вместе с отцом помогали"]},
+        {"from": "foreign_school_caretaker", "to": "narrator", "type": "conflict", "label": "Прогоняет ребят со школьного двора", "confidence": "explicit", "evidence": ["а он нас гнал"]},
+        {"from": "yura_stavrakidi", "to": "apsny_ticket_boy", "type": "conflict", "label": "Несправедливо провоцирует на драку", "confidence": "explicit", "evidence": ["схватив его за грудки, тряхнул"]},
+        {"from": "apsny_greek_boys", "to": "apsny_ticket_boy", "type": "protects", "label": "Защищают от Юры", "confidence": "explicit", "evidence": ["Не стыдно, грек… кендрепесо"]}
+      ]
     }
   ]
 }
