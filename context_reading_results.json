@@ -421,6 +421,82 @@
         {"from": "yura_stavrakidi", "to": "apsny_ticket_boy", "type": "conflict", "label": "Несправедливо провоцирует на драку", "confidence": "explicit", "evidence": ["схватив его за грудки, тряхнул"]},
         {"from": "apsny_greek_boys", "to": "apsny_ticket_boy", "type": "protects", "label": "Защищают от Юры", "confidence": "explicit", "evidence": ["Не стыдно, грек… кендрепесо"]}
       ]
+    },
+    {
+      "title": "Слово",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Взрослый рассказчик отождествлён с Чиком по редкому комплексу семейных признаков: мать — одна из примерно десяти детей горного деда, дед дважды переселялся в Турцию, а семейный дом расположен на дороге между Джгердой и Ахутсой. Эти признаки совпадают с Хабугом и материнской ветвью Чика.",
+      "summary": "Взрослый Чик пересказывает семейную историю сестры своей матери Айши. Она выходит за Теймраза, умирает беременной после ошибочно принятого снадобья, а Теймраз, не выдержав её смерти, кончает с собой; их хоронят рядом.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Это мамина сестра Айша", "Я никогда не видел ни Айши, ни Теймраза"]},
+        {"person": "chik_mother", "role": "secondary", "evidence": ["Мама говорит, что Айша была любимицей", "Моя мама, тогда еще девочка-подросток"]},
+        {"person": "father_sandro", "role": "secondary", "evidence": ["Он прожил длинную жизнь, полную вольных трудов", "И за этого выродка я отдал свою дочь"]}
+      ],
+      "people": [
+        {"id": "aisha_chik_aunt", "name": "Айша", "description": "Сестра матери Чика и дочь Хабуга; любимица большой семьи. Выходит замуж за Теймраза, беременной принимает опасное снадобье, рожает мёртвого ребёнка и умирает от заражения крови.", "role": "main", "evidence": ["Это мамина сестра Айша", "Айша родила мертвого ребенка"]},
+        {"id": "teimraz_aisha_husband", "name": "Теймраз", "description": "Дальний родственник и муж Айши. После её смерти нарушает траурный обычай, прощается с семьёй и кончает с собой, чтобы быть похороненным рядом с женой.", "role": "main", "evidence": ["Звали его Теймраз", "Теймраз лежал в тени орехового дерева"]},
+        {"id": "aisha_unborn_child", "name": "Нерождённый ребёнок Айши и Теймраза", "description": "Мёртворождённый ребёнок Айши и Теймраза; беременность делает принятое Айшей снадобье смертельно опасным.", "role": "mention", "evidence": ["Айша родила мертвого ребенка"]},
+        {"id": "teimraz_father", "name": "Отец Теймраза", "description": "Старик, особенно полюбивший невестку Айшу; после самоубийства сына устраивает общие поминки супругам.", "role": "secondary", "evidence": ["Отец его, говорят, полюбил Айшу", "отец устроил поминки"]},
+        {"id": "teimraz_stepmother", "name": "Мачеха Теймраза", "description": "Вторая жена отца Теймраза и дальняя родственница Хабуга; присутствует при последних сборах Теймраза и первой обнаруживает его смертельное ранение.", "role": "secondary", "evidence": ["Мачеха Теймраза приходилась двоюродной сестрой дедушке", "Теймраз попросил у мачехи чистое белье"]},
+        {"id": "teimraz_brothers", "name": "Братья Теймраза", "description": "Известные в Абхазии абреки; после самоубийства Теймраза скрывают причину смерти и хоронят его без обычного оповещения.", "kind": "collective", "role": "secondary", "evidence": ["его братья, известные в Абхазии абреки", "Братья Теймраза оскорбились"]},
+        {"id": "aisha_brothers", "name": "Братья Айши", "description": "Сыновья Хабуга и братья Айши и матери Чика; охраняют девушку до свадьбы и спорят с Теймразом у её гроба.", "kind": "collective", "role": "secondary", "evidence": ["Братья не выпускали ее из виду", "Братья велели увести его лошадь"]},
+        {"id": "aisha_rabid_neighbor", "name": "Старая соседка Айши", "description": "Соседка, укушенная лисой или куницей; заболевает бешенством и умирает, несмотря на уход Айши.", "role": "secondary", "evidence": ["старушка, соседка Айши", "старушка заразилась бешенством"]},
+        {"id": "aisha_healer", "name": "Знахарка", "description": "Готовит профилактическую настойку для людей, ухаживавших за больной бешенством соседкой.", "role": "episode", "evidence": ["Пригласили знахарку"]},
+        {"id": "aisha_doctor", "name": "Врач Айши", "description": "Привезённый Хабугом городской врач; определяет заражение крови и объясняет опасность снадобья для беременной.", "role": "episode", "evidence": ["с большим трудом привез врача"]}
+      ],
+      "relations": [
+        {"from": "chik_mother", "to": "aisha_chik_aunt", "type": "sibling", "label": "Сёстры", "confidence": "explicit", "evidence": ["Это мамина сестра Айша"]},
+        {"from": "aisha_chik_aunt", "to": "chik", "type": "aunt", "label": "Тётя → племянник", "confidence": "explicit", "evidence": ["Это мамина сестра Айша"]},
+        {"from": "father_sandro", "to": "aisha_chik_aunt", "type": "parent", "label": "Отец → дочь", "confidence": "explicit", "evidence": ["И за этого выродка я отдал свою дочь"]},
+        {"from": "father_sandro", "to": "chik_mother", "type": "parent", "label": "Отец → дочь", "confidence": "strongly_implied", "evidence": ["В те времена в доме дедушки"]},
+        {"from": "aisha_chik_aunt", "to": "teimraz_aisha_husband", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["Сыграли свадьбу, и молодые стали жить"]},
+        {"from": "aisha_chik_aunt", "to": "aisha_unborn_child", "type": "parent", "label": "Мать → ребёнок", "confidence": "explicit", "evidence": ["Айша родила мертвого ребенка"]},
+        {"from": "teimraz_aisha_husband", "to": "aisha_unborn_child", "type": "parent", "label": "Отец → ребёнок", "confidence": "strongly_implied", "evidence": ["Айша родила мертвого ребенка"]},
+        {"from": "teimraz_father", "to": "teimraz_aisha_husband", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Отец Теймраза привязал веревку"]},
+        {"from": "teimraz_stepmother", "to": "teimraz_aisha_husband", "type": "stepparent", "label": "Мачеха → пасынок", "confidence": "explicit", "evidence": ["Теймраз попросил у мачехи чистое белье"]},
+        {"from": "teimraz_brothers", "to": "teimraz_aisha_husband", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["его братья, известные в Абхазии абреки"]},
+        {"from": "aisha_brothers", "to": "aisha_chik_aunt", "type": "sibling", "label": "Братья и сестра", "confidence": "explicit", "evidence": ["Братья не выпускали ее из виду"]},
+        {"from": "aisha_chik_aunt", "to": "aisha_rabid_neighbor", "type": "cares_for", "label": "Ухаживает во время болезни", "confidence": "explicit", "evidence": ["Айша не отходила от нее ни на шаг"]},
+        {"from": "aisha_doctor", "to": "aisha_chik_aunt", "type": "treats", "label": "Пытается лечить", "confidence": "explicit", "evidence": ["Врач сказал, что у нее началось заражение крови"]}
+      ]
+    },
+    {
+      "title": "Мальчик-рыболов",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Взрослый приморский рассказчик с лодкой и автобиографическим школьным прошлым. Семейных признаков Чика в настоящем рассказе недостаточно для надёжного слияния, поэтому сохранён общий литературный рассказчик.",
+      "summary": "Рассказчик знакомится на пристани с увлечённым рыболовом Павликом. По пути домой мальчик рассказывает о депортации семьи в Казахстан, умершем деде, отце-инвалиде, матери и двух братьях; рассказчик кормит его и обещает взять в море, но встреча не происходит.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["Я сразу заметил его живую фигурку", "мы пошли"]}
+      ],
+      "people": [
+        {"id": "pavlik_fisher_boy", "name": "Павлик", "description": "Опытный и гордый мальчик-рыболов с окраины приморского города; родился во время высылки семьи в Казахстан и рассказывает взрослому собеседнику о своей семье.", "role": "main", "evidence": ["Давай, Павлик, сматывай шнуры", "Он живет на окраине города"]},
+        {"id": "pavlik_father", "name": "Отец Павлика", "description": "Бывший каменщик, после травмы и ампутации ноги работающий чистильщиком у Красного моста; прежде был сторожем военного санатория.", "role": "secondary", "evidence": ["А папа живой, только ему отрезали ногу", "Он чистильщик"]},
+        {"id": "pavlik_mother", "name": "Мать Павлика", "description": "Мать Павлика и его братьев; её бельевую верёвку дети использовали как якорный канат для самодельной лодки.", "role": "mention", "evidence": ["это была мамина веревка для белья", "А мама сказала"]},
+        {"id": "pavlik_grandfather", "name": "Дед Павлика", "description": "Вместе с сыном строил семейный дом в Казахстане; умер от разрыва сердца, переживая из-за тяжёлой травмы сына.", "role": "secondary", "evidence": ["Папа и дедушка строили", "у него разорвалось сердце"]},
+        {"id": "pavlik_boat_brother", "name": "Брат Павлика-шестиклассник", "description": "Школьник, сделавший из старых досок лодку; вместе с Павликом рыбачил напротив дока и спасался вплавь после её затопления.", "role": "secondary", "evidence": ["Брат ее сделал из старых досточек", "он учится в шестом классе"]},
+        {"id": "pavlik_soldier_brother", "name": "Старший брат Павлика-военнослужащий", "description": "Старший брат, помогавший строить дом в Казахстане и затем служивший в армии; отец во время отпуска отрезал ему один ус.", "role": "secondary", "evidence": ["это другой брат, он сейчас в армии", "Брат мой, когда приезжал из армии"]},
+        {"id": "aunt_manya_pavlik", "name": "Тётя Маня", "description": "Знакомая или родственница Павлика, в огороде которой братья прячутся после гибели самодельной лодки.", "role": "episode", "evidence": ["спрятались у тети Мани в огороде"]},
+        {"id": "fisherman_bait_lender", "name": "Рыбак, давший Павлику наживку", "description": "Пожилой рыболов на пристани, одалживающий Павлику маленькую рыбу для наживки и получающий за это крупного ласкиря.", "role": "episode", "evidence": ["попросил наживку у одного из рыбаков", "передал его тому рыбаку"]},
+        {"id": "pavlik_hostile_boy", "name": "Мальчик, дразнивший Павлика", "description": "Безымянный мальчик, пытающийся напасть на Павлика с этнической дразнилкой, но отступающий при виде взрослого спутника.", "role": "episode", "evidence": ["Попался, гречонок"]},
+        {"id": "fisher_story_schoolmate", "name": "Школьный товарищ рассказчика, высланный в Казахстан", "description": "Давний школьный товарищ рассказчика, также высланный в Казахстан; рассказчик пытается узнать о нём у Павлика.", "role": "mention", "evidence": ["Я вспомнил своего школьного товарища"]},
+        {"id": "fisher_cafe_old_man", "name": "Старик с чётками в кофейне", "description": "Посетитель за соседним столиком, улыбающийся рассказчику и Павлику и разглядывающий рыбу мальчика.", "role": "mention", "evidence": ["Старик с четками"]},
+        {"id": "fisher_cafe_waitress", "name": "Официантка летней кофейни", "description": "Приносит рассказчику и Павлику заказанный кофе.", "role": "mention", "evidence": ["Официантка принесла две чашки кофе"]},
+        {"id": "fisher_confectioner", "name": "Буфетчица кондитерской", "description": "Продаёт рассказчику пирожные для Павлика и с любопытством спрашивает, кем мальчик ему приходится.", "role": "episode", "evidence": ["Кто он вам? — спросила буфетчица"]}
+      ],
+      "relations": [
+        {"from": "pavlik_father", "to": "pavlik_fisher_boy", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Мой папа не любит усатых"]},
+        {"from": "pavlik_mother", "to": "pavlik_fisher_boy", "type": "parent", "label": "Мать → сын", "confidence": "strongly_implied", "evidence": ["это была мамина веревка для белья"]},
+        {"from": "pavlik_grandfather", "to": "pavlik_father", "type": "parent", "label": "Отец → сын", "confidence": "strongly_implied", "evidence": ["Ему было так жалко папу"]},
+        {"from": "pavlik_grandfather", "to": "pavlik_fisher_boy", "type": "grandparent", "label": "Дед → внук", "confidence": "explicit", "evidence": ["но умер дедушка"]},
+        {"from": "pavlik_boat_brother", "to": "pavlik_fisher_boy", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["Мы с братом ловили рыбу"]},
+        {"from": "pavlik_soldier_brother", "to": "pavlik_fisher_boy", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["это другой брат, он сейчас в армии"]},
+        {"from": "pavlik_father", "to": "pavlik_soldier_brother", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["папа отрезал ему один ус"]},
+        {"from": "narrator", "to": "pavlik_fisher_boy", "type": "acquaintance", "label": "Знакомятся на рыбалке", "confidence": "explicit", "evidence": ["Мы с ним договорились"]},
+        {"from": "fisherman_bait_lender", "to": "pavlik_fisher_boy", "type": "helps", "label": "Даёт наживку", "confidence": "explicit", "evidence": ["протянул небольшую рыбешку"]},
+        {"from": "pavlik_hostile_boy", "to": "pavlik_fisher_boy", "type": "conflict", "label": "Дразнит и пытается напасть", "confidence": "explicit", "evidence": ["Попался, гречонок"]}
+      ]
     }
   ]
 }
