@@ -684,6 +684,64 @@
         {"from": "english_case_detectives", "to": "english_family_thief", "type": "arrests", "label": "Находят и задерживают", "confidence": "explicit", "evidence": ["через три дня вор был пойман"]},
         {"from": "english_case_woman_judge", "to": "english_family_thief", "type": "judges", "label": "Ведёт уголовный процесс", "confidence": "explicit", "evidence": ["вора судили"]}
       ]
+    },
+    {
+      "title": "Летним днем",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Взрослый приморский рассказчик беседует с западногерманским туристом у лодочного причала. Семейных маркеров Чика нет; сохранён общий литературный рассказчик.",
+      "summary": "Рассказчик знакомится с западногерманским физиком, приехавшим с женой и дочерью. За шампанским тот рассказывает о юношеских антинацистских листовках, попытке гестапо завербовать его и разрушенной подозрением дружбе с адвокатом Эмилем; рядом пенсионер поучает случайную собеседницу.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["В жаркий летний день я сидел у лодочного причала", "что, если мы разопьем бутылку шампанского"]}
+      ],
+      "rejected_appearances": [
+        {"person": "bulk_a908ff19b30a04c3bd501a06", "reason": "«Западная Германия» — название страны, а не персонаж."},
+        {"person": "bulk_cf453ba51aa528a78bba4eb9", "reason": "«Красная Армия» — организация, а не персонаж."}
+      ],
+      "people": [
+        {"id": "summer_day_german_physicist", "name": "Западногерманский физик", "description": "Немецкий турист примерно пятидесяти пяти лет, физик и знаток русского языка. В юности распространял антинацистские листовки, позднее отказался стать осведомителем гестапо.", "role": "main", "evidence": ["я догадался, что он немец", "подающим надежды физиком"]},
+        {"id": "summer_day_german_wife", "name": "Жена немецкого физика", "description": "Жена собеседника рассказчика; во время войны тревожится, когда мужа уводит сотрудник гестапо, а много лет спустя приезжает с ним и дочерью на Чёрное море.", "role": "secondary", "evidence": ["голоса жены и незнакомого мужчины", "подошел к столику вместе с женой и дочкой"]},
+        {"id": "summer_day_german_daughter", "name": "Дочь немецкого физика", "description": "Молодая дочь немецкого физика и его жены, приехавшая с родителями отдыхать на Чёрное море.", "role": "episode", "evidence": ["приехал с женой и дочкой", "девушка с удовольствием выпила бы шампанского"]},
+        {"id": "summer_day_german_mother", "name": "Мать немецкого физика", "description": "Мать рассказчика-физика и сестра арестованного социал-демократа; сын и муж скрывают от неё предположение о гибели брата.", "role": "mention", "evidence": ["из-за маминого брата", "Маме мы говорили"]},
+        {"id": "summer_day_german_father", "name": "Отец немецкого физика", "description": "Отец физика; вместе с сыном подозревает, что пропавший в лагере брат его жены был убит.", "role": "mention", "evidence": ["мы с отцом подозревали"]},
+        {"id": "summer_day_social_democrat_uncle", "name": "Дядя немецкого физика — социал-демократ", "description": "Брат матери физика, арестованный нацистами в 1934 году и погибший после нескольких лет лагерной переписки.", "role": "secondary", "evidence": ["Он был социал-демократом", "Так оно и оказалось после войны"]},
+        {"id": "summer_day_leaflet_comrades", "name": "Два товарища по антинацистским листовкам", "description": "Два университетских товарища молодого физика, вместе с ним ночью разбросавшие листовки с неграмотными цитатами из «Майн кампф».", "kind": "collective", "role": "secondary", "evidence": ["Мы с двумя товарищами однажды ночью"]},
+        {"id": "summer_day_student_detainees", "name": "Два задержанных студента", "description": "Студенты философского факультета, отказавшиеся отдавать конспекты при расследовании листовок и ненадолго попавшие в гестапо; освобождены благодаря влиятельной родне.", "kind": "collective", "role": "episode", "evidence": ["Двое отказались отдавать конспекты"]},
+        {"id": "summer_day_goebbels_office_uncle", "name": "Дядя задержанного студента", "description": "Высокопоставленный родственник одного из задержанных студентов, работавший, по рассказу физика, почти в канцелярии Геббельса.", "role": "mention", "evidence": ["дядя работал чуть ли не в канцелярии"]},
+        {"id": "professor_garz", "name": "Профессор Гарц", "description": "Знаменитый руководитель физического института, куда молодой немецкий учёный поступает после университета.", "role": "mention", "evidence": ["институт знаменитого профессора Гарца"]},
+        {"id": "summer_day_gestapo_courier", "name": "Сотрудник гестапо, пришедший за физиком", "description": "Штатский сотрудник в тёмно-синем макинтоше, под видом вызова на совещание уводящий физика из дома в гестапо.", "role": "secondary", "evidence": ["Я из гестапо", "Мой провожатый"]},
+        {"id": "summer_day_gestapo_recruiter", "name": "Гестаповец-вербовщик", "description": "Молодой сотрудник с узким выбритым лицом, несколько часов пытающийся склонить физика к доносам на коллег; бывший соученик Эмиля.", "role": "main", "evidence": ["Помогать нам в работе", "мой гестаповец"]},
+        {"id": "summer_day_gestapo_chief", "name": "Начальник гестапо", "description": "Крупный начальник, подражающий Герингу и пытающийся пафосной речью додавить отказавшегося учёного; разговор прерывает звонок из Берлина.", "role": "secondary", "evidence": ["к своему начальнику", "понял, что он подражает Герингу"]},
+        {"id": "summer_day_gestapo_secretary", "name": "Секретарша начальника гестапо", "description": "Немолодая женщина в приёмной, разговаривающая с дочерью о пикнике и затем сообщающая начальнику о звонке из Берлина.", "role": "episode", "evidence": ["за столом, уставленным множеством телефонов, сидела немолодая женщина", "кивнув на телефон"]},
+        {"id": "summer_day_gestapo_secretary_daughter", "name": "Дочь секретарши гестапо", "description": "Дочь секретарши, по телефону восторженно рассказывающая матери о загородном пикнике.", "role": "mention", "evidence": ["Она разговаривала с дочерью"]},
+        {"id": "emil_criminal_lawyer", "name": "Эмиль", "description": "Давний школьный друг физика и известный берлинский адвокат по уголовным делам; единственный знает об истории листовок. Подозрение физика в предательстве разрушает их дружбу.", "role": "main", "evidence": ["Слушай, Эмиль", "известным адвокатом по уголовным делам"]},
+        {"id": "summer_day_pensioner", "name": "Пенсионер у лодочного причала", "description": "Розоволицый старик в чесучовом кителе с чётками, уверенно рассуждающий о политике, медицине и книгах и обещающий собеседнице редкое издание.", "role": "secondary", "evidence": ["местный пенсионер", "розовый старик в чистом чесучовом кителе"]},
+        {"id": "summer_day_pensioner_companion", "name": "Собеседница пенсионера", "description": "Крупная одинокая женщина с деревянными бусами, спорящая с пенсионером о литературе и политике и надеющаяся получить от него книгу Моруа.", "role": "secondary", "evidence": ["крупная, как-то неряшливо накрашенная женщина", "Как вы думаете, придет"]},
+        {"id": "summer_day_icecream_seller", "name": "Юная продавщица мороженого", "description": "Молчаливая продавщица в белом халате, равномерно обслуживающая посетителей кафе у причала.", "role": "mention", "evidence": ["Юная продавщица в белоснежном халате"]},
+        {"id": "summer_day_buffet_family", "name": "Семья буфетчика", "description": "Буфетчик открытого кафе, его жена и ребёнок, находящиеся вместе за стеклянной стойкой.", "kind": "collective", "role": "mention", "evidence": ["Внутри этого пластика и стекла сидел буфетчик"]},
+        {"id": "summer_day_waitress", "name": "Официантка кафе у причала", "description": "Независимая и ироничная официантка, приносящая рассказчику и немецкому физику яблоки, бокалы и шампанское.", "role": "episode", "evidence": ["Единственная официантка", "Подошла официантка со свежей бутылкой шампанского"]},
+        {"id": "summer_day_coin_boys", "name": "Мальчики — ловцы монет", "description": "Группа мальчишек, ныряющих у причала за монетами пляжников и покупающих на заработанное мороженое.", "kind": "collective", "role": "episode", "evidence": ["голоса мальчишек", "уселись ловцы монет"]}
+      ],
+      "relations": [
+        {"from": "summer_day_german_physicist", "to": "narrator", "type": "acquaintance", "label": "Знакомятся в кафе и беседуют", "confidence": "explicit", "evidence": ["душа его жаждет общения"]},
+        {"from": "summer_day_german_physicist", "to": "summer_day_german_wife", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["голоса жены и незнакомого мужчины"]},
+        {"from": "summer_day_german_physicist", "to": "summer_day_german_daughter", "type": "parent", "label": "Отец → дочь", "confidence": "explicit", "evidence": ["приехал с женой и дочкой"]},
+        {"from": "summer_day_german_wife", "to": "summer_day_german_daughter", "type": "parent", "label": "Мать → дочь", "confidence": "strongly_implied", "evidence": ["подошел к столику вместе с женой и дочкой"]},
+        {"from": "summer_day_german_mother", "to": "summer_day_german_physicist", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["из-за маминого брата"]},
+        {"from": "summer_day_german_father", "to": "summer_day_german_physicist", "type": "parent", "label": "Отец → сын", "confidence": "strongly_implied", "evidence": ["мы с отцом подозревали"]},
+        {"from": "summer_day_german_mother", "to": "summer_day_social_democrat_uncle", "type": "sibling", "label": "Сестра и брат", "confidence": "explicit", "evidence": ["из-за маминого брата"]},
+        {"from": "summer_day_social_democrat_uncle", "to": "summer_day_german_physicist", "type": "uncle", "label": "Дядя → племянник", "confidence": "explicit", "evidence": ["У вас, кажется, дядюшка социал-демократ"]},
+        {"from": "summer_day_leaflet_comrades", "to": "summer_day_german_physicist", "type": "friend", "label": "Товарищи по университету и подпольной акции", "confidence": "explicit", "evidence": ["Мы с двумя товарищами однажды ночью"]},
+        {"from": "summer_day_goebbels_office_uncle", "to": "summer_day_student_detainees", "type": "relative", "label": "Влиятельный дядя одного из студентов", "confidence": "explicit", "evidence": ["У одного из них дядя"]},
+        {"from": "professor_garz", "to": "summer_day_german_physicist", "type": "supervisor", "label": "Руководитель института", "confidence": "strongly_implied", "evidence": ["институт знаменитого профессора Гарца"]},
+        {"from": "summer_day_gestapo_courier", "to": "summer_day_german_physicist", "type": "detains", "label": "Уводит на допрос", "confidence": "explicit", "evidence": ["Я из гестапо"]},
+        {"from": "summer_day_gestapo_recruiter", "to": "summer_day_german_physicist", "type": "recruits", "label": "Пытается завербовать осведомителем", "confidence": "explicit", "evidence": ["с вами будет встречаться наш человек"]},
+        {"from": "summer_day_gestapo_chief", "to": "summer_day_german_physicist", "type": "recruits", "label": "Давит на учёного при вербовке", "confidence": "explicit", "evidence": ["отказывается с нами работать"]},
+        {"from": "summer_day_gestapo_secretary", "to": "summer_day_gestapo_secretary_daughter", "type": "parent", "label": "Мать → дочь", "confidence": "explicit", "evidence": ["Она разговаривала с дочерью"]},
+        {"from": "emil_criminal_lawyer", "to": "summer_day_german_physicist", "type": "friend", "label": "Школьные друзья; дружба разрушается подозрением", "confidence": "explicit", "evidence": ["моему давнему школьному товарищу", "нашей давней дружбе пришел конец"]},
+        {"from": "emil_criminal_lawyer", "to": "summer_day_gestapo_recruiter", "type": "classmate", "label": "Учились вместе", "confidence": "explicit", "evidence": ["Мы с ним учились"]},
+        {"from": "summer_day_pensioner", "to": "summer_day_pensioner_companion", "type": "acquaintance", "label": "Знакомятся и договариваются о книге", "confidence": "explicit", "evidence": ["ждите меня завтра на этом же месте"]}
+      ]
     }
   ]
 }
