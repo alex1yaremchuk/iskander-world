@@ -7,22 +7,31 @@ from inventory import ROOT, digest
 
 results = json.loads((ROOT / "context_reading_results.json").read_text(encoding="utf-8"))["works"]
 assert results
-assert len({item["title"] for item in results}) == len(results)
+def result_key(item):
+    return item.get("work_id") or item["title"]
+
+
+assert len({result_key(item) for item in results}) == len(results)
 assert all(item["status"] == "read" for item in results)
 
 db = sqlite3.connect(ROOT / "data" / "inventory.sqlite")
 db.row_factory = sqlite3.Row
 stored = {
-    row["canonical_title"]: row
+    row["work_id"]: row
     for row in db.execute(
         """SELECT w.canonical_title, c.*
            FROM ContextReadingWork c JOIN Work w ON w.id=c.work_id"""
     )
 }
-assert set(stored) == {item["title"] for item in results}
+works_by_title = {}
+for row in db.execute("SELECT id,canonical_title,rowid FROM Work ORDER BY rowid"):
+    works_by_title.setdefault(row["canonical_title"], row["id"])
+expected_ids = {item.get("work_id") or works_by_title[item["title"]] for item in results}
+assert set(stored) == expected_ids
 
 for item in results:
-    row = stored[item["title"]]
+    work_id = item.get("work_id") or works_by_title[item["title"]]
+    row = stored[work_id]
     expected_hash = digest(json.dumps(item, ensure_ascii=False, sort_keys=True))
     assert row["result_sha256"] == expected_hash, item["title"]
     assert row["narrator_id"] == item["narrator"]
@@ -32,9 +41,8 @@ for item in results:
         r[0]
         for r in db.execute(
             """SELECT a.person_id FROM Appearance a
-               JOIN Work w ON w.id=a.work_id
-               WHERE w.canonical_title=?""",
-            (item["title"],),
+               WHERE a.work_id=?""",
+            (work_id,),
         )
     }
     assert people <= actual, (item["title"], people - actual)
@@ -45,10 +53,9 @@ for item in results:
             """SELECT 1 FROM Relation r
                JOIN RelationEvidence re ON re.relation_id=r.id
                JOIN Evidence e ON e.id=re.evidence_id
-               JOIN Work w ON w.id=e.work_id
-               WHERE w.canonical_title=? AND r.from_person=?
+               WHERE e.work_id=? AND r.from_person=?
                  AND r.to_person=? AND r.type=?""",
-            (item["title"], relation["from"], relation["to"], relation["type"]),
+            (work_id, relation["from"], relation["to"], relation["type"]),
         ).fetchone()
         assert found, (item["title"], relation)
 

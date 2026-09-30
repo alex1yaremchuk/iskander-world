@@ -20,7 +20,14 @@ def main():
 
     with db:
         for result in results["works"]:
-            work = next(w for w in registry if w.get("source") and w["title"] == result["title"])
+            work = next(
+                w for w in registry
+                if w.get("source") and (
+                    w["id"] == result.get("work_id")
+                    if result.get("work_id")
+                    else w["title"] == result["title"]
+                )
+            )
             ps = paragraphs(work)
             evidence_cache = {}
 
