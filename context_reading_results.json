@@ -341,6 +341,52 @@
         {"from": "kukla_new_owner", "to": "kyzym_horse_kukla", "type": "owner", "label": "Новый хозяин после продажи", "confidence": "explicit", "evidence": ["новый хозяин ее приехал на скачки"]},
         {"from": "kyzym_dog_hated_neighbor", "to": "chik", "type": "triggers_event", "label": "Его появление вызывает опасную скачку", "confidence": "strongly_implied", "evidence": ["Они ринулись в его сторону"]}
       ]
+    },
+    {
+      "title": "Время счастливых находок",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Рассказчик отождествлён с Чиком по старшему брату, матери и отцу, тёте Соне и Соньке из общего дворового окружения.",
+      "summary": "Чик вспоминает детскую славу находчика: деньги у лавки, пропавшую курицу, вещи соседей, гребень Любы и древнегреческую стелу в море. История соединяет дворовую жизнь с доверием любимого учителя.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Вот что было со мною в детстве", "все счастливые находки детства"]},
+        {"person": "chik_older_brother", "role": "secondary", "evidence": ["моему старшему брату", "Ты все деньги показал"]},
+        {"person": "chik_mother", "role": "secondary", "evidence": ["пришла мама", "Так не бывает, — грустно сказала она"]},
+        {"person": "chik_father", "role": "mention", "evidence": ["Ты, как твой отец"]},
+        {"person": "aunt_sonya_nurse", "role": "episode", "evidence": ["всегда спокойная тетя Соня"]},
+        {"person": "sonka", "role": "episode", "evidence": ["Сонька, бестолковая спутница моего детства"]}
+      ],
+      "people": [
+        {"id": "happy_findings_host_uncle", "name": "Дядя, у которого собрались гости", "description": "Безымянный дядя Чика, в доме которого мальчика посылают за вином и празднуют найденные им деньги.", "role": "episode", "evidence": ["собрались гости у моего дяди"]},
+        {"id": "uncle_yura_driver", "name": "Дядя Юра", "description": "Шофёр, шумный гость дяди Чика, приписывающий находку своей лёгкой руке.", "role": "episode", "evidence": ["шофер дядя Юра"]},
+        {"id": "uncle_pasha", "name": "Дядя Паша", "description": "Рабочий, раненный белоказаком; рассказывает о Кубани, Гражданской войне и язве желудка.", "role": "episode", "evidence": ["угрюмо возразил дядя Паша", "белоказак рубанул шашкой"]},
+        {"id": "uncle_alikhan", "name": "Дядя Алихан", "description": "Тихий продавец козинаков, предлагающий прекратить спор и выпить за здоровье Чика.", "role": "episode", "evidence": ["дядя Алихан, самый мирный"]},
+        {"id": "uncle_fima", "name": "Дядя Фима", "description": "Самый образованный человек на улице Чика; участник Гражданской войны и один из гостей.", "role": "episode", "evidence": ["провозгласил последним дядя Фима", "самым образованным человеком"]},
+        {"id": "lost_chicken_woman", "name": "Хозяйка пропавшей курицы", "description": "Женщина из соседнего двора, попросившая Чика найти курицу; обещает ему спелый инжир.", "role": "episode", "evidence": ["у нее пропала курица"]},
+        {"id": "lyuba_neighbor", "name": "Люба", "description": "Взрослая девушка из двора; теряет гребень после тайной встречи, затем уезжает с лётчиком.", "role": "secondary", "evidence": ["Звали ее Люба", "летчик уехал с Любушкой"]},
+        {"id": "lyuba_father", "name": "Отец Любы", "description": "Отец Любы, выясняющий у Чика обстоятельства находки гребня.", "role": "episode", "evidence": ["отец ее окликнул меня"]},
+        {"id": "lyuba_mother", "name": "Мать Любы", "description": "Мать Любы; после отъезда дочери тоскует у окна под граммофон.", "role": "episode", "evidence": ["ее мать грустила у окна"]},
+        {"id": "lyuba_pilot", "name": "Лётчик Любы", "description": "Безымянный лётчик, появившийся в доме Любы и через неделю уехавший вместе с ней.", "role": "episode", "evidence": ["у них в доме появился летчик"]},
+        {"id": "stela_beach_boy", "name": "Мальчик, нашедший стелу вместе с Чиком", "description": "Безымянный товарищ Чика по нырянию на Собачьем пляже, вместе с ним увидевший подводную стелу.", "role": "secondary", "evidence": ["мы с одним пацаном состязались"]},
+        {"id": "stela_teacher", "name": "Учитель истории и географии Чика", "description": "Могучий учитель с высохшими ногами и на костылях; серьёзно относится к рассказу Чика о древнегреческой стеле и защищает его от насмешек.", "role": "secondary", "evidence": ["Он вел у нас уроки по географии и истории", "Если бы я не верил"]},
+        {"id": "chik_pe_teacher", "name": "Физрук школы Чика", "description": "Боксёр и сильный пловец, отправленный помогать искать стелу; отвлекается на московскую купальщицу.", "role": "secondary", "evidence": ["с нами отправили физрука", "я вас научу нырять"]},
+        {"id": "moscow_swimmer", "name": "Московская девушка на пляже", "description": "Девушка в красной косынке, знакомство с которой отвлекает физрука от поисков стелы.", "role": "episode", "evidence": ["Из Москвы, а что"]},
+        {"id": "stela_finder_brother", "name": "Брат товарища Чика, нашедший стелу", "description": "Через пятнадцать лет обнаруживает древнегреческую стелу недалеко от места первой находки Чика.", "role": "mention", "evidence": ["нашел ее, между прочим, брат моего товарища"]}
+      ],
+      "relations": [
+        {"from": "chik_mother", "to": "chik", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["пришла мама"]},
+        {"from": "chik_father", "to": "chik", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Ты, как твой отец"]},
+        {"from": "chik_older_brother", "to": "chik", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["моему старшему брату"]},
+        {"from": "sonka", "to": "chik", "type": "friend", "label": "Дворовые друзья", "confidence": "explicit", "evidence": ["спутница моего детства"]},
+        {"from": "lyuba_father", "to": "lyuba_neighbor", "type": "parent", "label": "Отец → дочь", "confidence": "explicit", "evidence": ["отец ее окликнул меня"]},
+        {"from": "lyuba_mother", "to": "lyuba_neighbor", "type": "parent", "label": "Мать → дочь", "confidence": "explicit", "evidence": ["ее мать грустила у окна"]},
+        {"from": "lyuba_pilot", "to": "lyuba_neighbor", "type": "romantic", "label": "Уезжают вместе", "confidence": "explicit", "evidence": ["летчик уехал с Любушкой"]},
+        {"from": "stela_beach_boy", "to": "chik", "type": "friend", "label": "Вместе находят подводную стелу", "confidence": "explicit", "evidence": ["попытались сдвинуть ее"]},
+        {"from": "stela_teacher", "to": "chik", "type": "teacher", "label": "Учитель истории и географии", "confidence": "explicit", "evidence": ["Если бы я не верил, я бы не пришел"]},
+        {"from": "chik_pe_teacher", "to": "chik", "type": "teacher", "label": "Школьный физрук", "confidence": "explicit", "evidence": ["с нами отправили физрука"]},
+        {"from": "chik_pe_teacher", "to": "moscow_swimmer", "type": "flirts", "label": "Знакомятся на пляже", "confidence": "explicit", "evidence": ["я вас научу нырять"]},
+        {"from": "stela_finder_brother", "to": "stela_beach_boy", "type": "sibling", "label": "Братья", "confidence": "explicit", "evidence": ["брат моего товарища"]}
+      ]
     }
   ]
 }
