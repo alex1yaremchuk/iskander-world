@@ -622,6 +622,68 @@
         {"from": "kodor_fishing_student_father", "to": "kodor_fishing_student", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["у них с отцом моторная лодка"]},
         {"from": "kodor_schoolchildren", "to": "narrator", "type": "conflict", "label": "Забрасывают камнями", "confidence": "explicit", "evidence": ["десяток камушков посыпался вниз"]}
       ]
+    },
+    {
+      "title": "Англичанин с женой и ребенком",
+      "status": "read",
+      "narrator": "narrator",
+      "narrator_note": "Взрослый автобиографический рассказчик живёт в приморском абхазском городе, знает Анзора с детства и владеет лодкой. Семейных маркеров Чика нет; сохранён общий литературный рассказчик.",
+      "summary": "Рассказчик знакомится с английским социологом, его египетской женой и сыном. Вместе они безуспешно ищут затонувший город, снимают подводные фотографии и лечат ногу мальчика; позднее милиция возвращает семье похищенные вещи. Параллельно раскрывается судьба экскурсовода Анзора и история его ложного обвинения.",
+      "appearances": [
+        {"person": "narrator", "role": "main", "evidence": ["В кофейне я узнал, что к нам в город приехал англичанин", "У меня есть лодка"]}
+      ],
+      "rejected_appearances": [
+        {"person": "bagrat", "reason": "В тексте названы развалины крепости Баграта; царь Баграт как действующее или упоминаемое лицо не появляется."}
+      ],
+      "people": [
+        {"id": "english_sociologist", "name": "Английский социолог", "description": "Знаменитый английский профессор левых взглядов, бывший танкист, энергичный аквалангист и отец семейства; исследует легендарный затонувший город и позднее пишет политические статьи.", "role": "main", "evidence": ["К тому же меня предупредили, что он профессор", "Да, — сказала она и вдруг улыбнулась"]},
+        {"id": "english_sociologist_wife", "name": "Жена английского социолога", "description": "Египтянка, хорошо владеющая русским языком; прежде преподавала его в Лондоне, теперь растит детей и помогает мужу собирать русские источники по социологии.", "role": "main", "evidence": ["она и в самом деле египтянка", "она целиком занимается семьей"]},
+        {"id": "english_sociologist_son", "name": "Сын английского социолога", "description": "Храбрый маленький сын английского профессора и его египетской жены; участвует в лодочной прогулке, получает помощь врача и позднее пытается остановить вора в коттедже.", "role": "main", "evidence": ["Ребенку надо поесть", "мальчик мужественно пытался его остановить"]},
+        {"id": "english_sociologist_other_children", "name": "Двое других детей английского социолога", "description": "Двое детей английской пары, не участвующие в поездке и отдыхающие в это время на Средиземном море.", "kind": "collective", "role": "mention", "evidence": ["у нее еще двое детей"]},
+        {"id": "anzor_guide", "name": "Анзор", "description": "Друг детства рассказчика, бывший талантливый футбольный вратарь и местный экскурсовод; живёт с больной матерью. Был ложно обвинён в нападении на туристок и оправдан благодаря друзьям и записи в книге жалоб.", "role": "main", "evidence": ["Зовут его Анзор", "Анзор живет один с больной матерью"]},
+        {"id": "anzor_mother", "name": "Мать Анзора", "description": "Больная пожилая мать Анзора, за которой он постоянно ухаживает и ищет редкие лекарства; друзья скрывают от неё арест сына.", "role": "secondary", "evidence": ["Анзор живет один с больной матерью", "оградили мать Анзора от слухов"]},
+        {"id": "anzor_friends", "name": "Друзья Анзора", "description": "Компания местных друзей, подтверждающая алиби Анзора, заботящаяся о его матери и находящая запись в книге жалоб теплохода.", "kind": "collective", "role": "secondary", "evidence": ["И тут опять пришли на помощь друзья", "товарищи Анзора и он сам"]},
+        {"id": "anzor_dynamo_coach", "name": "Тренер местного «Динамо»", "description": "Знаменитый тренер, заметивший юного Анзора после невероятно отражённого мяча и предложивший испытать его в команде.", "role": "mention", "evidence": ["знаменитый тренер местной команды «Динамо»"]},
+        {"id": "anzor_coach_assistant", "name": "Помощник тренера «Динамо»", "description": "Помощник, которому тренер говорит, что юного Анзора следует попробовать в команде.", "role": "mention", "evidence": ["сказал своему помощнику"]},
+        {"id": "anzor_accusing_tourist", "name": "Туристка, ошибочно обвинившая Анзора", "description": "Одна из двух девушек турбазы, указавшая на Анзора как на нападавшего и продолжавшая обвинение после очной ставки.", "role": "secondary", "evidence": ["одна из них указала на него", "продолжала стоять на своем"]},
+        {"id": "anzor_second_tourist", "name": "Вторая девушка из турбазы", "description": "Вторая из двух туристок, подвергшихся угрозам возле крепости Баграта и обратившихся в милицию.", "role": "mention", "evidence": ["двух девушек из турбазы"]},
+        {"id": "anzor_actual_attackers", "name": "Двое нападавших у крепости", "description": "Два безымянных мужчины, угрожавшие девушкам из турбазы и дававшие им ложные обещания жениться; их преступление ошибочно приписали Анзору.", "kind": "collective", "role": "mention", "evidence": ["какие-то два негодяя соблазнили двух девушек"]},
+        {"id": "english_trip_border_guard", "name": "Пограничник у выхода в море", "description": "Пограничник, контролирующий выход лодок; рассказчик тайно проводит к иностранным пассажирам свою лодку, а позднее страж наблюдает её в бинокль.", "role": "secondary", "evidence": ["пограничник заметит", "рассматривал нас из бинокля"]},
+        {"id": "english_trip_music_boat", "name": "Компания в лодке с гармошкой", "description": "Подвыпившая прогулочная компания из гармониста, певицы, гребца и нескольких спутников, которую англичанин объявляет плохими спортсменами.", "kind": "collective", "role": "episode", "evidence": ["лодку с музыкой", "Плохой спортсмэн"]},
+        {"id": "german_pow_preacher", "name": "Немецкий пленный с корзиной", "description": "Военнопленный, во время лагерного концерта собирающий у горожан еду и папиросы со словами о конце Гитлера, но не Германии.", "role": "episode", "evidence": ["прошел немец со странной корзинкой", "повторял страстным голосом проповедника"]},
+        {"id": "german_camp_guard", "name": "Часовой лагеря военнопленных", "description": "Часовой, дожидающийся, пока пленный обойдёт слушателей с корзиной, а затем разгоняющий собравшуюся толпу.", "role": "episode", "evidence": ["Часовой со стороны ворот"]},
+        {"id": "sanatorium_shouting_woman", "name": "Хозяйственница военного санатория", "description": "Пожилая служащая, громко останавливающая полураздетого англичанина на территории санатория и сообщающая администрации о нарушении.", "role": "secondary", "evidence": ["Пожилая женщина в хозяйственном халате", "Голый англичанин"]},
+        {"id": "sanatorium_duty_girl", "name": "Дежурная медицинского корпуса", "description": "Девушка за столиком у входа, направляющая рассказчика и английскую семью в кабинет кожного врача.", "role": "episode", "evidence": ["У входа за столиком сидела девушка-дежурная"]},
+        {"id": "sanatorium_dermatologist", "name": "Врач военного санатория", "description": "Женщина-кожник, бесплатно осматривающая рану английского мальчика, накладывающая повязку и выдающая мазь.", "role": "secondary", "evidence": ["За столом сидела миловидная женщина в халате", "Мальчику не стоит купаться дней шесть"]},
+        {"id": "english_family_thief", "name": "Вор, ограбивший английскую семью", "description": "Проникает в коттедж английской семьи, складывает вещи в их чемоданы и похищает фамильное колье; задержан после обмена колье на коньяк.", "role": "secondary", "evidence": ["какой-то вор пробрался", "вор обменял колье"]},
+        {"id": "gudauta_saleswoman", "name": "Продавщица из Гудауты", "description": "Обменивает у вора бутылку дагестанского коньяка на фамильное колье и приходит в нём на танцплощадку, где её задерживают.", "role": "secondary", "evidence": ["у местной продавщицы на бутылку", "продавщица пришла в этом колье"]},
+        {"id": "english_case_detectives", "name": "Сотрудники уголовного розыска", "description": "Разыскивают похищенные у английской семьи вещи и за три дня находят вора через появившееся на танцплощадке колье.", "kind": "collective", "role": "secondary", "evidence": ["ребятам из уголовного розыска", "через три дня вор был пойман"]},
+        {"id": "english_case_woman_judge", "name": "Женщина-судья по делу о краже", "description": "Безупречно ведёт суд над вором и отказывается незаконно смягчать наказание по просьбе английских потерпевших.", "role": "secondary", "evidence": ["судья женщина", "твердость женщины-судьи"]}
+      ],
+      "relations": [
+        {"from": "english_sociologist", "to": "english_sociologist_wife", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["Англичанин с женой и ребенком"]},
+        {"from": "english_sociologist", "to": "english_sociologist_son", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Папи, папи"]},
+        {"from": "english_sociologist_wife", "to": "english_sociologist_son", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["мать поцеловала его в щеку"]},
+        {"from": "english_sociologist", "to": "english_sociologist_other_children", "type": "parent", "label": "Отец → дети", "confidence": "strongly_implied", "evidence": ["у нее еще двое детей"]},
+        {"from": "english_sociologist_wife", "to": "english_sociologist_other_children", "type": "parent", "label": "Мать → дети", "confidence": "explicit", "evidence": ["у нее еще двое детей"]},
+        {"from": "anzor_guide", "to": "narrator", "type": "friend", "label": "Знакомы с детства", "confidence": "explicit", "evidence": ["Я его знаю с детства"]},
+        {"from": "anzor_mother", "to": "anzor_guide", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["Анзор живет один с больной матерью"]},
+        {"from": "anzor_friends", "to": "anzor_guide", "type": "friend", "label": "Друзья и свидетели алиби", "confidence": "explicit", "evidence": ["товарищи Анзора и он сам"]},
+        {"from": "anzor_friends", "to": "anzor_guide", "type": "helps", "label": "Доказывают невиновность", "confidence": "explicit", "evidence": ["опять пришли на помощь друзья"]},
+        {"from": "anzor_accusing_tourist", "to": "anzor_guide", "type": "accuses", "label": "Ошибочно обвиняет в нападении", "confidence": "explicit", "evidence": ["одна из них указала на него"]},
+        {"from": "anzor_actual_attackers", "to": "anzor_accusing_tourist", "type": "conflict", "label": "Угрожают и обманывают", "confidence": "explicit", "evidence": ["угрожали, одновременно давая ложные обещания жениться"]},
+        {"from": "anzor_actual_attackers", "to": "anzor_second_tourist", "type": "conflict", "label": "Угрожают и обманывают", "confidence": "explicit", "evidence": ["угрожали, одновременно давая ложные обещания жениться"]},
+        {"from": "english_sociologist", "to": "narrator", "type": "acquaintance", "label": "Знакомятся и исследуют бухту", "confidence": "explicit", "evidence": ["Я подошел, и мы познакомились"]},
+        {"from": "narrator", "to": "english_sociologist", "type": "helps", "label": "Даёт лодку и делает подводные снимки", "confidence": "explicit", "evidence": ["У меня есть лодка", "мне удавалось заснять его"]},
+        {"from": "english_sociologist_wife", "to": "english_sociologist", "type": "works_with", "label": "Собирает русские источники для его работы", "confidence": "explicit", "evidence": ["помогает мужу, собирая ему русские источники"]},
+        {"from": "sanatorium_dermatologist", "to": "english_sociologist_son", "type": "treats", "label": "Осматривает и перевязывает рану", "confidence": "explicit", "evidence": ["стала смазывать рану", "перевязала ее бинтом"]},
+        {"from": "english_family_thief", "to": "english_sociologist", "type": "conflict", "label": "Грабит семейный коттедж", "confidence": "explicit", "evidence": ["Вор ограбил их коттедж"]},
+        {"from": "english_family_thief", "to": "english_sociologist_wife", "type": "conflict", "label": "Похищает фамильное колье", "confidence": "explicit", "evidence": ["прихватил драгоценное колье"]},
+        {"from": "english_sociologist_son", "to": "english_family_thief", "type": "conflict", "label": "Пытается остановить", "confidence": "explicit", "evidence": ["мальчик мужественно пытался его остановить"]},
+        {"from": "gudauta_saleswoman", "to": "english_family_thief", "type": "trade", "label": "Обменивает коньяк на краденое колье", "confidence": "explicit", "evidence": ["вор обменял колье у местной продавщицы"]},
+        {"from": "english_case_detectives", "to": "english_family_thief", "type": "arrests", "label": "Находят и задерживают", "confidence": "explicit", "evidence": ["через три дня вор был пойман"]},
+        {"from": "english_case_woman_judge", "to": "english_family_thief", "type": "judges", "label": "Ведёт уголовный процесс", "confidence": "explicit", "evidence": ["вора судили"]}
+      ]
     }
   ]
 }
