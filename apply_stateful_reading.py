@@ -61,9 +61,23 @@ def main():
                            (json.dumps(merged_evidence), merged_notes, new_id))
                 # The complete-reading appearance below supersedes a bulk row in this work.
                 db.execute("DELETE FROM Appearance WHERE person_id=? AND work_id=?", (old_id, work["id"]))
+                for old_app in db.execute("SELECT * FROM Appearance WHERE person_id=?", (old_id,)).fetchall():
+                    new_app = db.execute(
+                        "SELECT * FROM Appearance WHERE person_id=? AND work_id=?",
+                        (new_id, old_app["work_id"]),
+                    ).fetchone()
+                    if new_app:
+                        combined = list(dict.fromkeys(
+                            json.loads(new_app["evidence_json"]) + json.loads(old_app["evidence_json"])
+                        ))
+                        db.execute("UPDATE Appearance SET evidence_json=? WHERE id=?",
+                                   (json.dumps(combined), new_app["id"]))
+                        db.execute("DELETE FROM Appearance WHERE id=?", (old_app["id"],))
+                    else:
+                        db.execute("UPDATE Appearance SET person_id=? WHERE id=?", (new_id, old_app["id"]))
                 for table, column in [
                     ("Alias", "person_id"), ("MentionResolution", "person_id"),
-                    ("Appearance", "person_id"), ("PersonPlace", "person_id"),
+                    ("PersonPlace", "person_id"),
                     ("CorpusHit", "person_id"), ("ReviewItem", "candidate_person_id"),
                 ]:
                     db.execute(f"UPDATE {table} SET {column}=? WHERE {column}=?", (new_id, old_id))

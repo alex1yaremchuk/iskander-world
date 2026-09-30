@@ -244,6 +244,67 @@
         {"from": "kindergarten_aunt_vera", "to": "chik", "type": "deceives", "label": "Забирает грушу под предлогом общего компота", "confidence": "strongly_implied", "evidence": ["Груша пойдет на компот", "на дне которой лежала моя груша"]},
         {"from": "kindergarten_aunt_polya", "to": "chik", "type": "cares_for", "label": "Кормит и проверяет самочувствие", "confidence": "explicit", "evidence": ["тронула шершавой ладонью мой лоб"]}
       ]
+    },
+    {
+      "title": "Дедушка",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Рассказчик — Чик: мать приезжает из города, дядя Кязым назван хозяином дома, а дед и бабушка являются родителями Кязыма. Дед уверенно отождествлён с Хабугом, материнским дедом Чика.",
+      "summary": "Чик проводит день с дедом Хабугом: работает в лесу, слушает рассказы об абреках и махаджирстве, несёт домой прутья и наблюдает жизнь семьи Кязыма. Через детское сопротивление он приходит к жалости и уважению к деду, всю жизнь преодолевающему трудности.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Мы с дедушкой на лесистом гребне горы", "горячая жалость к дедушке пронизывает меня"]},
+        {"person": "father_sandro", "role": "main", "evidence": ["Странный он какой-то, мой дедушка", "Когда я вернулся из Турции"]},
+        {"person": "wife_habug", "role": "secondary", "evidence": ["мама женила меня на твоей бабушке", "бабке, которая высовывается из кухни"]},
+        {"person": "kyzym", "role": "secondary", "evidence": ["Дядя Кязым вдруг останавливается", "Дядя мой работает бригадиром"]},
+        {"person": "nutsa", "role": "secondary", "evidence": ["На шум из кухни выходит моя тетушка", "Тетушка наливает мужу воду"]},
+        {"person": "chik_mother", "role": "mention", "evidence": ["скоро должна приехать из города моя мама"]},
+        {"person": "chik_father", "role": "mention", "evidence": ["однажды отец мне сказал"]}
+      ],
+      "people": [
+        {"id": "kyzym", "name": "Кязым", "description": "Один из сыновей Хабуга, брат матери Чика; муж Нуцы и отец большой семьи. В «Дедушке» работает бригадиром.", "role": "secondary", "evidence": ["Дядя Кязым вдруг останавливается"], "merge_ids": ["bulk_1d37b27c70be3e76842c9eba", "bulk_192588adf33e0fc6dbc32951"]},
+        {"id": "nutsa", "name": "Тётя Нуца", "description": "Жена Кязыма и хозяйка Большого Дома; заботится о Чике, детях и всей семье, одновременно споря с деятельным Хабугом.", "role": "secondary", "evidence": ["На шум из кухни выходит моя тетушка"], "merge_ids": ["bulk_c575b1b99ee7441b09ec78a2", "bulk_aebfabe67a59d3d7b802b25d"]},
+        {"id": "remzik", "name": "Ремзик", "description": "Младший сын Кязыма и Нуцы, крепкий мальчик с тяжёлыми веками; двоюродный брат Чика и погодок Зины.", "role": "secondary", "evidence": ["Лавровишни! — кричит Ремзик", "У меня уже рука болит"]},
+        {"id": "zina_kyzym", "name": "Зина", "description": "Младшая дочь Кязыма и Нуцы, хорошенькая девочка с длинными бровями; двоюродная сестра Чика и погодок Ремзика.", "role": "secondary", "evidence": ["Черника, черника, — радостно поправила Зина", "Зина исчезает за изгородью"]},
+        {"id": "kyzym_older_daughter", "name": "Старшая дочь Кязыма", "description": "Старшая дочь Кязыма и Нуцы; вместе с женщинами нижет табак в сарае.", "role": "mention", "evidence": ["обед для старшей дочки"]},
+        {"id": "uncle_azis", "name": "Дядя Азис", "description": "Сын бабушки Чика и брат Кязыма; погиб на охоте за год до событий рассказа.", "role": "mention", "evidence": ["ее сын, дядя Азис, погиб на охоте"]},
+        {"id": "chik_giant_cousin", "name": "Голубоглазый двоюродный брат Чика", "description": "Взрослый могучий родственник, живущий по соседству; жалеет Чика, несущего тяжёлую вязанку.", "role": "episode", "evidence": ["Это могучий гигант, голубоглазый красавец"]},
+        {"id": "habug_mother", "name": "Мать Хабуга", "description": "Решительная прабабушка Чика: на сельском сходе верхом и камчой заставляет старшину отказаться от обвинения семьи в укрывательстве абреков.", "role": "secondary", "evidence": ["На этой самой сходке была моя мама", "отчаянная была моя мама"]},
+        {"id": "grandfather_aslan_story", "name": "Аслан из рассказа Хабуга", "description": "Старинный хороший хозяин, презрительно отнёсшийся к другу, лежавшему из-за пулевого ранения.", "role": "mention", "evidence": ["Как-то приходит Аслан"]},
+        {"id": "aslan_wounded_friend", "name": "Раненый друг Аслана", "description": "Хозяин, лежавший в постели после пулевого ранения в ногу.", "role": "mention", "evidence": ["Да вот ногу мне прострелили"]},
+        {"id": "jgerda_headman", "name": "Старшина на сходе в Джгердах", "description": "Сельский старшина, публично предложивший выслать семью Хабуга за укрывательство абреков; после нападения его матери отступает.", "role": "secondary", "evidence": ["старшина на сходке в Джгердах объявил"]},
+        {"id": "habug_six_abreks", "name": "Шесть абреков, укрытых семьёй Хабуга", "description": "Группа абреков, которую семья три дня кормит и прячет; уходя, они сжигают табачный сарай.", "kind": "collective", "role": "mention", "evidence": ["Нагрянуло шесть человек"]},
+        {"id": "habug_calf_companion", "name": "Товарищ молодого Хабуга", "description": "Вместе с молодым Хабугом уводит заблудившуюся тёлку; по рассказу Хабуга, вдвоём они съедают её за ночь.", "role": "mention", "evidence": ["по глупости телку увели с товарищем"]},
+        {"id": "datiko", "name": "Датико", "description": "Хозяин буйвола, постоянно прорывающегося в колхозную кукурузу.", "role": "mention", "evidence": ["буйвол Датико опять залез"]},
+        {"id": "datiko_buffalo", "name": "Буйвол Датико", "description": "Неудержимый буйвол, постоянно ломающий изгородь и забирающийся в колхозный кукурузник.", "kind": "animal", "role": "mention", "evidence": ["буйвол Датико опять залез"]},
+        {"id": "farm_manager_climber", "name": "Заведующий фермой — охотник и скалолаз", "description": "Безымянный заведующий фермой, отказавшийся лезть на огромный каштан над табачной плантацией.", "role": "mention", "evidence": ["заведующий фермой, охотник и скалолаз"]},
+        {"id": "rapka_dog", "name": "Рапка", "description": "Одна из двух собак во дворе семьи Кязыма.", "kind": "animal", "role": "mention", "evidence": ["Две собаки, Рапка и Рыжая"]},
+        {"id": "ryzhaya_dog", "name": "Рыжая", "description": "Одна из двух собак во дворе семьи Кязыма.", "kind": "animal", "role": "mention", "evidence": ["Две собаки, Рапка и Рыжая"]}
+      ],
+      "relations": [
+        {"from": "father_sandro", "to": "chik", "type": "grandparent", "label": "Дед → внук", "confidence": "explicit", "evidence": ["Мы с дедушкой на лесистом гребне горы"]},
+        {"from": "wife_habug", "to": "chik", "type": "grandparent", "label": "Бабушка → внук", "confidence": "explicit", "evidence": ["твоей бабушке"]},
+        {"from": "father_sandro", "to": "wife_habug", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["мама женила меня на твоей бабушке"]},
+        {"from": "father_sandro", "to": "kyzym", "type": "parent", "label": "Отец → сын", "confidence": "strongly_implied", "evidence": ["В головах дед, потом бабушка, потом дядя"]},
+        {"from": "wife_habug", "to": "kyzym", "type": "parent", "label": "Мать → сын", "confidence": "strongly_implied", "evidence": ["В головах дед, потом бабушка, потом дядя"]},
+        {"from": "kyzym", "to": "nutsa", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["Тетушка наливает мужу воду"]},
+        {"from": "kyzym", "to": "remzik", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Пепе идет! — кричит Ремзик"]},
+        {"from": "nutsa", "to": "remzik", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["грозит в сторону сына"]},
+        {"from": "kyzym", "to": "zina_kyzym", "type": "parent", "label": "Отец → дочь", "confidence": "explicit", "evidence": ["А-а, это он подымает Зину"]},
+        {"from": "nutsa", "to": "zina_kyzym", "type": "parent", "label": "Мать → дочь", "confidence": "explicit", "evidence": ["Зина исчезает за изгородью"]},
+        {"from": "kyzym", "to": "kyzym_older_daughter", "type": "parent", "label": "Отец → дочь", "confidence": "strongly_implied", "evidence": ["обед для старшей дочки"]},
+        {"from": "nutsa", "to": "kyzym_older_daughter", "type": "parent", "label": "Мать → дочь", "confidence": "explicit", "evidence": ["Тетушка укладывает", "обед для старшей дочки"]},
+        {"from": "remzik", "to": "chik", "type": "cousin", "label": "Двоюродные братья", "confidence": "strongly_implied", "evidence": ["Мои двоюродные братишка и сестренка"]},
+        {"from": "zina_kyzym", "to": "chik", "type": "cousin", "label": "Двоюродные брат и сестра", "confidence": "strongly_implied", "evidence": ["Мои двоюродные братишка и сестренка"]},
+        {"from": "wife_habug", "to": "uncle_azis", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["ее сын, дядя Азис"]},
+        {"from": "habug_mother", "to": "father_sandro", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["На этой самой сходке была моя мама"]},
+        {"from": "grandfather_aslan_story", "to": "aslan_wounded_friend", "type": "friend", "label": "Друзья", "confidence": "explicit", "evidence": ["к своему другу"]},
+        {"from": "jgerda_headman", "to": "father_sandro", "type": "conflict", "label": "Обвиняет семью в укрывательстве абреков", "confidence": "explicit", "evidence": ["нас надо выслать"]},
+        {"from": "habug_mother", "to": "jgerda_headman", "type": "conflict", "label": "Нападает на сходе и защищает сына", "confidence": "explicit", "evidence": ["давай давить его лошадью и лупцевать камчой"]},
+        {"from": "father_sandro", "to": "habug_six_abreks", "type": "shelters", "label": "Семья укрывает и кормит", "confidence": "explicit", "evidence": ["мы их в самом деле прятали"]},
+        {"from": "father_sandro", "to": "habug_calf_companion", "type": "friend", "label": "Товарищи молодости", "confidence": "explicit", "evidence": ["телку увели с товарищем"]},
+        {"from": "datiko", "to": "datiko_buffalo", "type": "owner", "label": "Хозяин животного", "confidence": "explicit", "evidence": ["Кого, буйвола или Датико"]},
+        {"from": "kyzym", "to": "chik_mother", "type": "sibling", "label": "Брат и сестра", "confidence": "strongly_implied", "evidence": ["Дядя Кязым вдруг останавливается", "скоро должна приехать из города моя мама"]}
+      ]
     }
   ]
 }
