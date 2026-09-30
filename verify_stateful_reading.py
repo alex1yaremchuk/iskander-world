@@ -38,6 +38,8 @@ for item in results:
         )
     }
     assert people <= actual, (item["title"], people - actual)
+    rejected = {entry["person"] for entry in item.get("rejected_appearances", [])}
+    assert not (rejected & actual), (item["title"], "rejected appearances remain", rejected & actual)
     for relation in item.get("relations", []):
         found = db.execute(
             """SELECT 1 FROM Relation r

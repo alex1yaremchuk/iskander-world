@@ -46,6 +46,14 @@ def main():
             entities = [{"id": a["person"], "role": a["role"], "evidence": a["evidence"]}
                         for a in result.get("appearances", [])]
 
+            # A complete reading can disprove a name-only hit from an earlier
+            # automatic pass (for example, «Машина» mistaken for «Маша»).
+            for rejected in result.get("rejected_appearances", []):
+                db.execute(
+                    "DELETE FROM Appearance WHERE person_id=? AND work_id=?",
+                    (rejected["person"], work["id"]),
+                )
+
             def merge_person(old_id, new_id):
                 """Fold a disposable bulk-extraction identity into a read identity."""
                 if old_id == new_id:
