@@ -206,6 +206,44 @@
         {"from": "older_brother_teacher", "to": "chik_older_brother", "type": "teacher", "label": "Учитель → ученик", "confidence": "explicit", "evidence": ["как сказал его учитель"]},
         {"from": "chik_father", "to": "chik", "type": "punishes", "label": "Наказывает за предательство сестры", "confidence": "explicit", "evidence": ["отец схватил меня за уши"]}
       ]
+    },
+    {
+      "title": "Детский сад",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Рассказчик отождествлён с Чиком по общему дому с тётушкой, Лёсику и устойчивому дворовому окружению.",
+      "summary": "Чик вспоминает детский сад, властную дружбу с безымянным будущим прокурором, обмен серёжки Лёсика на леденцы и историю груши, которую воспитательница обещала отдать на общий компот, но унесла домой.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Первое время, когда я скучал по дому", "Так окончилась моя вторая попытка стать взрослым"]},
+        {"person": "chik_aunt", "role": "mention", "evidence": ["Обычно на балконе сидела тетя"]},
+        {"person": "chik_mother", "role": "episode", "evidence": ["мама, побледнев от гнева"]},
+        {"person": "lesik", "role": "secondary", "evidence": ["Лёсик был бледный, застенчивый мальчик", "Он радостно выворачивает карманы"]}
+      ],
+      "people": [
+        {"id": "kindergarten_prosecutor_friend", "name": "Друг Чика, будущий прокурор", "description": "Безымянный мальчик из одного двора и детского сада с Чиком. Чик тиранит его, но любит и защищает; во взрослом возрасте друг становится прокурором.", "role": "secondary", "evidence": ["Он жил со мной в одном дворе", "он теперь стал прокурором"]},
+        {"id": "prosecutor_friend_father", "name": "Отец друга-прокурора", "description": "Отец детсадовского друга Чика; некоторое время работает на предприятии, где производят халву.", "role": "mention", "evidence": ["Отец моего друга работал"]},
+        {"id": "prosecutor_friend_mother", "name": "Мать друга-прокурора", "description": "Мать единственного ребёнка, вместе с мужем водящая его гулять и терпящая дружбу с Чиком.", "role": "mention", "evidence": ["между сияющими родителями"]},
+        {"id": "prosecutor_friend_grandmother", "name": "Бабушка друга-прокурора", "description": "Строгая бабушка мальчика: кормит внука, недолюбливает прожорливого Чика и однажды наказывает его за вылазку через форточку.", "role": "secondary", "evidence": ["Обычно на стол подавала бабка", "появилась бабка, держа в руке проклятый трофей"]},
+        {"id": "uncle_mesrop_candyman", "name": "Дядя Месроп", "description": "Пожилой частник, продающий фигурные леденцы у детского сада. Покупает у Чика серёжку Лёсика, опасаясь семейного и милицейского «халам-балама».", "role": "secondary", "evidence": ["звали его дядя Месроп", "Месропу хватит свой халам-балам"], "merge_ids": ["bulk_deab8ef3b50e4c0547db6266"]},
+        {"id": "kindergarten_lenochka", "name": "Леночка", "description": "Чистенькая девочка из другой группы, к которой Чик неравнодушен; заявляет права на найденную им грушу и льстит воспитательнице.", "role": "secondary", "evidence": ["Что случилось, Леночка", "Хорошие девочки отдают грушу"]},
+        {"id": "kindergarten_aunt_vera", "name": "Тётя Вера", "description": "Воспитательница группы Леночки. Забирает у Чика грушу якобы для общего компота, но после работы уносит её в сетке.", "role": "secondary", "evidence": ["воспитательница из группы девочки — тетя Вера", "на дне которой лежала моя груша"]},
+        {"id": "kindergarten_aunt_polya", "name": "Тётя Поля", "description": "Добрая работница детского сада, кормившая детей и заметившая подавленное состояние Чика.", "role": "episode", "evidence": ["добрая тетя Поля, кормившая нас"]}
+      ],
+      "relations": [
+        {"from": "chik_aunt", "to": "chik", "type": "avuncular", "label": "Тётя → племянник", "confidence": "strongly_implied", "evidence": ["Обычно на балконе сидела тетя"]},
+        {"from": "chik_mother", "to": "chik", "type": "parent", "label": "Мать → сын", "confidence": "explicit", "evidence": ["мама, побледнев от гнева"]},
+        {"from": "chik", "to": "lesik", "type": "protects", "label": "Защищает и принимает в игру", "confidence": "explicit", "evidence": ["предупредил ребят, чтобы его не трогали"]},
+        {"from": "kindergarten_prosecutor_friend", "to": "chik", "type": "friend", "label": "Друзья с детского сада", "confidence": "explicit", "evidence": ["И все-таки я его очень любил"]},
+        {"from": "chik", "to": "kindergarten_prosecutor_friend", "type": "protects", "label": "Защищает от уличных задир", "confidence": "explicit", "evidence": ["нередко защищал его от задиристых ребят"]},
+        {"from": "prosecutor_friend_father", "to": "kindergarten_prosecutor_friend", "type": "parent", "label": "Отец → сын", "confidence": "explicit", "evidence": ["Отец моего друга работал"]},
+        {"from": "prosecutor_friend_mother", "to": "kindergarten_prosecutor_friend", "type": "parent", "label": "Мать → сын", "confidence": "strongly_implied", "evidence": ["между сияющими родителями"]},
+        {"from": "prosecutor_friend_grandmother", "to": "kindergarten_prosecutor_friend", "type": "grandparent", "label": "Бабушка → внук", "confidence": "explicit", "evidence": ["Бабка начинала нервничать", "Внук смотрел мне в рот"]},
+        {"from": "uncle_mesrop_candyman", "to": "chik", "type": "trade", "label": "Обменивает серёжку на леденцы", "confidence": "explicit", "evidence": ["передает мне увесистый пучок леденцов"]},
+        {"from": "kindergarten_lenochka", "to": "chik", "type": "classmate", "label": "Дети одного детского сада", "confidence": "explicit", "evidence": ["Он взял мою грушу, тетя Вера"]},
+        {"from": "kindergarten_aunt_vera", "to": "kindergarten_lenochka", "type": "teacher", "label": "Воспитательница → воспитанница", "confidence": "explicit", "evidence": ["воспитательница из группы девочки"]},
+        {"from": "kindergarten_aunt_vera", "to": "chik", "type": "deceives", "label": "Забирает грушу под предлогом общего компота", "confidence": "strongly_implied", "evidence": ["Груша пойдет на компот", "на дне которой лежала моя груша"]},
+        {"from": "kindergarten_aunt_polya", "to": "chik", "type": "cares_for", "label": "Кормит и проверяет самочувствие", "confidence": "explicit", "evidence": ["тронула шершавой ладонью мой лоб"]}
+      ]
     }
   ]
 }
