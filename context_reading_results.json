@@ -305,6 +305,42 @@
         {"from": "datiko", "to": "datiko_buffalo", "type": "owner", "label": "Хозяин животного", "confidence": "explicit", "evidence": ["Кого, буйвола или Датико"]},
         {"from": "kyzym", "to": "chik_mother", "type": "sibling", "label": "Брат и сестра", "confidence": "strongly_implied", "evidence": ["Дядя Кязым вдруг останавливается", "скоро должна приехать из города моя мама"]}
       ]
+    },
+    {
+      "title": "Лошадь дяди Кязыма",
+      "status": "read",
+      "narrator": "chik",
+      "narrator_note": "Рассказчик — Чик: Кязым назван дядей, Нуца — его женой, Хабуг присутствует как дедушка, а соседний взрослый назван двоюродным братом рассказчика.",
+      "summary": "Чик вспоминает знаменитую скаковую лошадь Кязыма Куклу. Во время войны её мобилизуют для подвоза боеприпасов; она возвращается физически израненной и внутренне сломленной. Кязым больше не может относиться к ней как прежде, а позднее Кукла на миг вспоминает скачки.",
+      "appearances": [
+        {"person": "chik", "role": "main", "evidence": ["Стоя на берегу ручья, я любовался", "тогда я этого не знал"]},
+        {"person": "kyzym", "role": "main", "evidence": ["У дяди Кязыма была замечательная", "После Куклы дядя Кязым"]},
+        {"person": "nutsa", "role": "secondary", "evidence": ["Тетка Нуца, дядина жена", "Какой ты жестокий"]},
+        {"person": "father_sandro", "role": "secondary", "evidence": ["Это у нас от коз, — сказал дедушка", "У ней гордость убили"]},
+        {"person": "chik_giant_cousin", "role": "episode", "evidence": ["если б не мой двоюродный брат"]}
+      ],
+      "people": [
+        {"id": "kyzym_horse_kukla", "name": "Кукла", "description": "Рыжая скаковая лошадь Кязыма, многократная призёрша скачек и чераза. После военной мобилизации возвращается домой физически истощённой и утратившей прежнюю гордость.", "kind": "animal", "role": "main", "evidence": ["Звали ее Кукла", "У ней гордость убили"]},
+        {"id": "horseman_mustafa", "name": "Мустафа-лошадник", "description": "Известный знаток лошадей из соседней деревни, друг Кязыма. Предлагает подменить Куклу перед мобилизацией и подковывает её для тяжёлой дороги.", "role": "secondary", "evidence": ["известный лошадник Мустафа", "Стоит перебить передние"]},
+        {"id": "village_council_horse_collector", "name": "Парень из сельсовета", "description": "Безымянный посланец сельсовета, забирающий Куклу по мобилизации; отъехав от дома, сам садится на неё.", "role": "secondary", "evidence": ["пришел парень из сельсовета", "Меблизация! — крикнул он"]},
+        {"id": "wartime_village_chairman", "name": "Председатель военного времени", "description": "Председатель, объявивший временную мобилизацию ослов и лошадей для перевозки боеприпасов на перевал.", "role": "mention", "evidence": ["Однажды председатель объявил"]},
+        {"id": "kukla_new_owner", "name": "Новый хозяин Куклы", "description": "Безымянный житель соседнего села, купивший Куклу за пятнадцать пудов кукурузы и позднее привёзший её на скачки.", "role": "mention", "evidence": ["новый хозяин ее приехал на скачки"]},
+        {"id": "kyzym_dog_hated_neighbor", "name": "Сосед, которого не любили собаки", "description": "Безымянный сосед семьи Кязыма; его появление вызывает собачью погоню, из-за которой Кукла уносит Чика.", "role": "episode", "evidence": ["один из наших соседей, которого почему-то особенно не любили собаки"]}
+      ],
+      "relations": [
+        {"from": "kyzym", "to": "kyzym_horse_kukla", "type": "owner", "label": "Хозяин лошади", "confidence": "explicit", "evidence": ["никого не признает, кроме своего хозяина"]},
+        {"from": "kyzym", "to": "kyzym_horse_kukla", "type": "loves", "label": "Взаимная привязанность", "confidence": "explicit", "evidence": ["как он любит свою лошадь", "любила по-своему дядю"]},
+        {"from": "nutsa", "to": "kyzym", "type": "spouse", "label": "Супруги", "confidence": "explicit", "evidence": ["Тетка Нуца, дядина жена"]},
+        {"from": "chik_giant_cousin", "to": "chik", "type": "cousin", "label": "Двоюродные братья", "confidence": "explicit", "evidence": ["если б не мой двоюродный брат"]},
+        {"from": "chik_giant_cousin", "to": "chik", "type": "rescues", "label": "Останавливает Куклу и спасает после падения", "confidence": "explicit", "evidence": ["подскочил мой брат, выхватил из рук поводья"]},
+        {"from": "horseman_mustafa", "to": "kyzym", "type": "friend", "label": "Друг и советчик-лошадник", "confidence": "explicit", "evidence": ["Сегодня же найду тебе — сдай другую"]},
+        {"from": "horseman_mustafa", "to": "kyzym_horse_kukla", "type": "cares_for", "label": "Осматривает и подковывает", "confidence": "explicit", "evidence": ["Стоит перебить передние"]},
+        {"from": "village_council_horse_collector", "to": "kyzym_horse_kukla", "type": "requisitions", "label": "Забирает по военной мобилизации", "confidence": "explicit", "evidence": ["взял Куклу за повод и повел ее со двора"]},
+        {"from": "wartime_village_chairman", "to": "kyzym", "type": "requisitions", "label": "Требует предоставить лошадь", "confidence": "strongly_implied", "evidence": ["назначили день, когда будут брать лошадей"]},
+        {"from": "father_sandro", "to": "kyzym_horse_kukla", "type": "cares_for", "label": "Понимает состояние и использует в хозяйстве", "confidence": "explicit", "evidence": ["У ней гордость убили", "дедушка отправился с ней на мельницу"]},
+        {"from": "kukla_new_owner", "to": "kyzym_horse_kukla", "type": "owner", "label": "Новый хозяин после продажи", "confidence": "explicit", "evidence": ["новый хозяин ее приехал на скачки"]},
+        {"from": "kyzym_dog_hated_neighbor", "to": "chik", "type": "triggers_event", "label": "Его появление вызывает опасную скачку", "confidence": "strongly_implied", "evidence": ["Они ринулись в его сторону"]}
+      ]
     }
   ]
 }
