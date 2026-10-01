@@ -2691,6 +2691,91 @@
       {"from":"lakoba","to":"sarya_lakoba","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Налево от Лакобы сидела жена его, смуглянка Сарья"]},
       {"from":"beria","to":"nina_beria","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["красавица Нина, жена Берии, а дальше сидел ее муж"]},
       {"from":"tsulukidze","to":"tsulukidze_brother","type":"sibling","label":"Братья","confidence":"explicit","evidence":["У него, по-моему, был брат"]}
-    ]}
+    ]},
+    {
+      "title":"Рассказ мула старого Хабуга","work_id":"work_d3f1dc6f7f396775cb8d1979d0fc7185039447f0224dc22bd730ce91252cb7ce","status":"read","narrator":"mule_arapka","narrator_note":"Всю главу от первого лица рассказывает Арапка — мул Хабуга; животная перспектива удерживает единый контекст семьи и оценивает человеческие порядки.","summary":"Мул Арапка вспоминает службу Хабугу, дорогу хозяина в город и множество встреч по пути. Он наблюдает, как Хабуг отвергает выгодную покупку дома репрессированной греческой семьи, возвращает Сандро в Чегем и отстаивает крестьянскую совесть; частная история завершается комическим эпизодом с огурцами Сандро.",
+      "appearances":[
+        {"person":"mule_arapka","role":"main","evidence":["Так он меня называет, хотя я не такой уж черный"]},
+        {"person":"father_sandro","role":"main","evidence":["мой старик появился на склоне котловины Сабида"]},
+        {"person":"wife_habug","role":"secondary","evidence":["стал разговаривать со своей старухой"]},
+        {"person":"sandro","role":"main","evidence":["Этот сын его Сандро живет в городе"]},
+        {"person":"daur","role":"secondary","evidence":["Звали его Даур. Этот Даур оказался еще упрямей"]},
+        {"person":"samuel","role":"main","evidence":["странствующий еврей по имени Самуил"]},
+        {"person":"kolcheruky","role":"secondary","evidence":["Я еду на оплакивание Карамана, — ответил Колчерукий"]},
+        {"person":"isa","role":"secondary","evidence":["Рядом с ним сидел его сын, добрая душа, охотник Иса"]},
+        {"person":"kyzym","role":"secondary","evidence":["дети его сына Кязыма"]},
+        {"person":"nutsa","role":"secondary","evidence":["жена Кязыма, сына моего старика"]},
+        {"person":"omar_forester","role":"secondary","evidence":["вздорного и глупого лесника Омара"]},
+        {"person":"omar_foal","role":"secondary","evidence":["этого жеребенка я дней сорок тому назад спас от волков"]}
+      ],"people":[],"relations":[
+        {"from":"father_sandro","to":"mule_arapka","type":"owner","label":"Хозяин и любимый рабочий мул","confidence":"explicit","evidence":["ты мой хозяин, и я не хочу иметь никакого другого хозяина"]},
+        {"from":"father_sandro","to":"sandro","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["идем к его сыну в город, где тот сейчас живет"]},
+        {"from":"father_sandro","to":"wife_habug","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["старик зашел в кухню и стал разговаривать со своей старухой"]},
+        {"from":"father_sandro","to":"isa","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Рядом с ним сидел его сын, добрая душа, охотник Иса"]},
+        {"from":"father_sandro","to":"kyzym","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["дети его сына Кязыма"]},
+        {"from":"kyzym","to":"nutsa","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["жена Кязыма, сына моего старика"]},
+        {"from":"mule_arapka","to":"omar_foal","type":"protects","label":"Спасает жеребёнка от волков","confidence":"explicit","evidence":["этого жеребенка я дней сорок тому назад спас от волков"]},
+        {"from":"father_sandro","to":"sandro","type":"protects","label":"Отговаривает от конфискованного дома и возвращает в Чегем","confidence":"explicit","evidence":["Так вот мой совет: возвращайся в деревню"]}
+      ]
+    },
+    {
+      "title":"Дядя Сандро и его любимец","work_id":"work_7868839ed017c3f608f0740285347735d5a52b9346d57bd4aed5f71a7264b568","status":"read","narrator":"narrator","narrator_note":"Писатель-рассказчик знакомится с Тенгизом у Сандро, слушает их совместную историю о сталинской рыбалке, а затем наблюдает нравы любимца в позднесоветской повседневности.","summary":"После сердечного приступа Сандро устраивает пир в честь выздоровления, где рассказчик знакомится с Тенгизом — эффектным дорожным инспектором и любимцем хозяина. Тенгиз и Сандро рассказывают о рыбалке для Сталина; позднее Тенгиз добывает золотые коронки для Кати и демонстрирует опасное соединение чести, власти и взяточничества.",
+      "appearances":[
+        {"person":"narrator","role":"main","evidence":["С Тенгизом я познакомился в доме дяди Сандро"]},
+        {"person":"sandro","role":"main","evidence":["благополучного выздоровления хозяина дома"]},
+        {"person":"tengo","role":"main","evidence":["безутешный Тенгиз привез к нему тайного светилу"]},
+        {"person":"katya","role":"main","evidence":["несмотря на протесты тети Кати"]},
+        {"person":"brother_sandro","role":"secondary","evidence":["брат дяди Сандро, тот самый старик Махаз"]},
+        {"person":"tendel","role":"secondary","evidence":["Рядом с ним, опершись на посох, стоял старый охотник Тендел"]},
+        {"person":"stalin","role":"main","evidence":["Рыбалка эта была замечательна тем, что была устроена для товарища Сталина"]},
+        {"person":"poskrebyshev","role":"secondary","evidence":["вместе со Сталиным здесь был его секретарь Поскребышев"]},
+        {"person":"sarya_lakoba","role":"secondary","evidence":["Сарье, жене Лакобы, нужно памятник поставить"]},
+        {"person":"rauf_lakoba","role":"secondary","evidence":["Рауфу удалось переправить из тюрьмы"]}
+      ],"people":[],"relations":[
+        {"from":"sandro","to":"katya","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Что ж, моя жена, — сказал он"]},
+        {"from":"sandro","to":"tengo","type":"friend","label":"Любимец и близкий младший друг Сандро","confidence":"strongly_implied","evidence":["Придется опять моего Тенго просить"]},
+        {"from":"tengo","to":"sandro","type":"helps","label":"Привозит врача после приступа","confidence":"explicit","evidence":["Тенгиз привез к нему тайного светилу закрытой поликлиники"]},
+        {"from":"tengo","to":"katya","type":"helps","label":"Добивается обещанных золотых коронок","confidence":"explicit","evidence":["Придется опять моего Тенго просить"]},
+        {"from":"brother_sandro","to":"sandro","type":"sibling","label":"Братья","confidence":"explicit","evidence":["брат дяди Сандро, тот самый старик Махаз"]},
+        {"from":"lakoba","to":"sarya_lakoba","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Сарье, жене Лакобы, нужно памятник поставить"]}
+      ]
+    },
+    {
+      "title":"Тали — чудо Чегема","work_id":"work_49125da18a477cc7e8228efb0cc9a76d245d30fff957787434d4755482eebd07","status":"read","narrator":"narrator","narrator_note":"Всеведущий придворный историограф Чегема ведёт Тали от младенческих чудес через семейные и колхозные эпизоды к бегству с Багратом, сохраняя перспективы всей родственной общины.","summary":"Пятнадцатилетняя Тали побеждает Цицу в соревновании низальщиц табака и получает патефон. История возвращается к её детству, состраданию больному Адгуру и первой неудачной попытке бегства с сыном мельника; затем Тали тайно уходит с Багратом. Родичи преследуют пару, но признают свершившийся брак, Хабуг безуспешно пытается вернуть несовершеннолетнюю внучку через прокурора, а через год рождение близнецов начинает примирение семей.",
+      "appearances":[
+        {"person":"tali","role":"main","evidence":["пятнадцатилетняя дочь дяди Сандро Тали"]},
+        {"person":"sandro","role":"main","evidence":["дочь дяди Сандро Тали"]},
+        {"person":"katya","role":"main","evidence":["Тетя Катя оставила здесь спящего в люльке ребенка"]},
+        {"person":"father_sandro","role":"main","evidence":["Хабуг привез из соседней деревни муллу"]},
+        {"person":"bagrat","role":"main","evidence":["Звали его Баграт. Был он по происхождению наполовину лаз"]},
+        {"person":"tsitsa","role":"main","evidence":["девятнадцатилетняя внучка охотника Тендела, Цица"]},
+        {"person":"tendel","role":"main","evidence":["Преследователи во главе с Тенделом шли вниз по течению"]},
+        {"person":"chunka","role":"main","evidence":["Чунка, двоюродный брат Тали"]},
+        {"person":"masha","role":"main","evidence":["Муж тети Маши, которого она отчасти презирала"]},
+        {"person":"lena_masha","role":"secondary","evidence":["а именно Лена. Ей он отдавал часы"]},
+        {"person":"firuza","role":"secondary","evidence":["Фируза в прошлом году замуж вышла"]},
+        {"person":"isa","role":"secondary","evidence":["открылась болезнь у сына Исы"]},
+        {"person":"adgur","role":"main","evidence":["сына Исы, огнеглазого Адгура"]},
+        {"person":"zarifa","role":"secondary","evidence":["его младшая сестра Зарифа"]},
+        {"person":"katusha","role":"secondary","evidence":["старшая дочь Катуша и умерла"]},
+        {"person":"miller_son","role":"main","evidence":["Тали было двенадцать лет, когда сын мельника"]},
+        {"person":"kunta","role":"secondary","evidence":["спросил у помогавшего ему Кунты"]},
+        {"person":"makhty","role":"secondary","evidence":["возле сарая раздался бодрый голос Махты"]},
+        {"person":"kengur_prosecutor","role":"secondary","evidence":["у ворот дома кенгурийского прокурора"]}
+      ],"people":[],"relations":[
+        {"from":"sandro","to":"tali","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["пятнадцатилетняя дочь дяди Сандро Тали"]},
+        {"from":"katya","to":"tali","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["мать вынесла ребенка во двор"]},
+        {"from":"father_sandro","to":"tali","type":"grandparent","label":"Дед и внучка","confidence":"explicit","evidence":["так любил свою внучку"]},
+        {"from":"tali","to":"bagrat","type":"spouse","label":"Бегут из Чегема и становятся мужем и женой","confidence":"explicit","evidence":["мы хотели пролить кровь похитителя нашей девочки, но не ее мужа"]},
+        {"from":"tali","to":"miller_son","type":"former_romance","label":"Первая неудачная попытка бегства","confidence":"explicit","evidence":["сын мельника, весь в кудрявых завитках"]},
+        {"from":"tendel","to":"tsitsa","type":"grandparent","label":"Дед и внучка","confidence":"explicit","evidence":["Цица была его прямой внучкой"]},
+        {"from":"tali","to":"chunka","type":"cousin","label":"Двоюродные брат и сестра","confidence":"explicit","evidence":["Чунка, двоюродный брат Тали"]},
+        {"from":"isa","to":"adgur","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["сына Исы, огнеглазого Адгура"]},
+        {"from":"isa","to":"zarifa","type":"parent","label":"Отец и дочь","confidence":"strongly_implied","evidence":["В доме осталось всего два человека: Адгур и его младшая сестра Зарифа"]},
+        {"from":"adgur","to":"zarifa","type":"sibling","label":"Брат и сестра","confidence":"explicit","evidence":["его младшая сестра Зарифа"]},
+        {"from":"isa","to":"katusha","type":"parent","label":"Отец и дочь","confidence":"strongly_implied","evidence":["старшая дочь Катуша и умерла"]},
+        {"from":"tali","to":"adgur","type":"supports","label":"Навещает больного родственника вопреки страху семьи","confidence":"explicit","evidence":["сердце ее сжималось от жалости к нему"]}
+      ]
+    }
   ]
 }
