@@ -2305,6 +2305,42 @@
       {"from":"chik","to":"bocho","type":"friend","label":"Друзья и будущие партнёры по игре","confidence":"explicit","evidence":["Чик любил Бочо"]},
       {"from":"chik","to":"anesti_boatswain","type":"rival","label":"Соперники в игре на деньги","confidence":"explicit","evidence":["Чик его полностью обыграл"]},
       {"from":"chik","to":"slavik","type":"rival","label":"Обида и игровое возмездие","confidence":"explicit","evidence":["час возмездия настал"]}
+    ]},
+    {"title":"Чик на охоте","work_id":"work_12c5fb02edac3a1bf7d068da0618cc09983313844dcbe98ebd7a2358c01bcbbc","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование сопровождает Чика на протяжении одного охотничьего дня и противопоставляет его детское восхищение охотой состраданию к животным.","summary":"Чик тайком отправляется с Белочкой охотиться из лука, знакомится со строителями-охотниками и стариком Бадрой, участвует в ястребиной охоте и слышит историю Михи и мстительного ворона. Под конец он ранит голубя, но вместо жаркого пытается приручить его и выпускает на свободу.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик проснулся рано утром"]},
+      {"person":"belka_chik","role":"main","evidence":["Белочка приподняла голову и посмотрела на Чика"]},
+      {"person":"chik_mother","role":"mention","evidence":["не видела мама или тетушка"]},
+      {"person":"chik_aunt","role":"mention","evidence":["не видела мама или тетушка"]},
+      {"person":"chik_older_brother","role":"mention","evidence":["пояс брата"]},
+      {"person":"old_gabunia","role":"mention","evidence":["охранял старик Габуния"]},
+      {"person":"poor_seamstress","role":"mention","evidence":["Вчера Сонькина мать принесла с базара перепелок"]},
+      {"person":"sonka","role":"secondary","evidence":["Чик попросил Соньку тайком взять одну перепелку"]},
+      {"person":"akakiy_makedonovich","role":"mention","evidence":["директор школы, Акакий Македонович"]},
+      {"person":"father_sandro","role":"mention","evidence":["Чик жил в горах в доме дедушки"]}
+    ],"people":[
+      {"id":"chichiko_teimurovich_engineer","name":"Чичико Теймурович","description":"Невысокий чернявый главный инженер и охотник, взрослый тёзка Чика; вместе со школьным товарищем объясняет мальчику, что настоящие вредители — невежество и недобросовестность.","role":"secondary","evidence":["Порядочные люди называют меня Чичико Теймурович"]},
+      {"id":"tall_builder_hunter_chik","name":"Высокий охотник-строитель","description":"Красивый высокий строитель, школьный товарищ Чичико Теймуровича; дружески разыгрывает его и серьёзно разговаривает с Чиком о невежестве и мнимых вредителях.","role":"secondary","evidence":["сказал высокий и красивый"]},
+      {"id":"badra_old_hunter","name":"Бадра — старый охотник","description":"Пожилой охотник с ястребом и собакой Снежком; доверяет Чику бросить ястреба на перепелку и рассказывает историю Михи и его ворона.","role":"main","evidence":["Спроси Бадру, все тебе скажут, где я"]},
+      {"id":"snezhok_badra_dog","name":"Снежок — собака Бадры","description":"Охотничья собака старика Бадры, делающая стойку на перепелку перед первым участием Чика в ястребиной охоте.","kind":"animal","role":"secondary","evidence":["Где мой Снежок"]},
+      {"id":"badra_hawk","name":"Ястреб Бадры","description":"Молодой охотничий ястреб Бадры, которого Чик выпускает на перепелку; одновременно восхищает мальчика полётом и потрясает жестокостью к добыче.","kind":"animal","role":"main","evidence":["вложил в нее ястреба"]},
+      {"id":"mikha_raven_owner","name":"Миха — хозяин ворона","description":"Крестьянин из деревни Бадры, приручивший ворона; из ревности убивает его ворониху и спустя годы погибает вместе с вороном от молнии.","role":"secondary","evidence":["Звали его Миха"]},
+      {"id":"mikha_wife_raven_story","name":"Жена Михи","description":"Крикливая жена Михи, стыдившаяся его ворона и привычно проклинавшая мужа; после общей гибели Михи и птицы родня подозревает её в колдовстве.","role":"secondary","evidence":["жена Михи не любила ворона"]},
+      {"id":"mikha_raven","name":"Ворон Михи","description":"Приручённый ворон, привязанный к Михе, но нашедший ворониху; после её убийства годами вынашивает месть и приводит хозяина под удар молнии.","kind":"animal","role":"main","evidence":["у этого Михи всегда на плече сидел ворон"]},
+      {"id":"mikha_she_raven","name":"Ворониха — подруга ворона Михи","description":"Дикая подруга приручённого ворона, которую ревнивый Миха выслеживает и убивает.","kind":"animal","role":"secondary","evidence":["его ворон сидит на ольхе рядом с воронихой"]},
+      {"id":"wounded_pigeon_chik_hunt","name":"Раненый голубь Чика","description":"Светло-пепельный дикий голубь, сбитый Чиком стрелой; мальчик отказывается его жарить, пытается приручить и выпускает после двух дней голодовки.","kind":"animal","role":"main","evidence":["красивый, светло-пепельный голубь"]},
+      {"id":"hunter_dog_dik","name":"Дик — собака охотника","description":"Охотничья собака первого встреченного Чиком стрелка, доставшая из колючих зарослей раненого голубя.","kind":"animal","role":"secondary","evidence":["Ко мне, Дик"]}
+    ],"relations":[
+      {"from":"chik","to":"belka_chik","type":"companion","label":"Хозяин и спутница на охоте","confidence":"explicit","evidence":["Иду на охоту с Белкой"]},
+      {"from":"chichiko_teimurovich_engineer","to":"tall_builder_hunter_chik","type":"friend","label":"Школьные товарищи и коллеги-строители","confidence":"explicit","evidence":["они учились со мной в школе"]},
+      {"from":"badra_old_hunter","to":"snezhok_badra_dog","type":"owns","label":"Охотник и собака","confidence":"explicit","evidence":["Где мой Снежок"]},
+      {"from":"badra_old_hunter","to":"badra_hawk","type":"owns","label":"Охотник и приручённый ястреб","confidence":"explicit","evidence":["мой ястреб сейчас слушает"]},
+      {"from":"badra_old_hunter","to":"chik","type":"mentor","label":"Учит ястребиной охоте и рассказывает","confidence":"explicit","evidence":["Так вот, Чик, слушай, что я тебе расскажу"]},
+      {"from":"mikha_raven_owner","to":"mikha_wife_raven_story","type":"spouse","label":"Супруги","confidence":"explicit","evidence":["жена Михи не любила ворона"]},
+      {"from":"mikha_raven_owner","to":"mikha_raven","type":"owns","label":"Хозяин и приручённый ворон","confidence":"explicit","evidence":["Они любили друг друга"]},
+      {"from":"mikha_raven","to":"mikha_she_raven","type":"mate","label":"Птичья пара","confidence":"explicit","evidence":["они теперь как муж и жена"]},
+      {"from":"mikha_raven_owner","to":"mikha_she_raven","type":"kills","label":"Убивает из ревности","confidence":"explicit","evidence":["выстрелил и убил ворониху"]},
+      {"from":"mikha_raven","to":"mikha_raven_owner","type":"kills","label":"Приводит под удар молнии в отместку","confidence":"strongly_implied","evidence":["ворон ему отомстил за ворониху"]},
+      {"from":"chik","to":"wounded_pigeon_chik_hunt","type":"protects","label":"Отказывается убивать и выпускает","confidence":"explicit","evidence":["к концу второго дня он его выпустил"]}
     ]}
   ]
 }
