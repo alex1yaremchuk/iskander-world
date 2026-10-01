@@ -2157,6 +2157,46 @@
       {"from":"chik","to":"daredevil_diver_boy","type":"helps","label":"Подменяет замёрзшего ныряльщика","confidence":"explicit","evidence":["Давай я половлю? — предложил Чик"]},
       {"from":"young_lifeguard_chik","to":"drowned_young_man_chik","type":"rescues","label":"Извлекает тело из моря","confidence":"explicit","evidence":["спасатель, тот, что был помоложе, накинул на тело петлю"]},
       {"from":"ananatsi_cat","to":"apapatsi_cat","type":"parent","label":"Мать → дочь","confidence":"explicit","evidence":["Ананаци мать Апапаци"]}
+    ]},
+    {"title":"Животные в городе","work_id":"work_bd69bc729ca0a048a9577fa5b733941ebe735aa3e3d970ce5686cdf405b5b618","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование последовательно держится восприятия Чика: от катания на дедушкиной лошади до поисков разрешённого городского пастбища для коровы.","summary":"Приехавший из деревни дедушка привозит тётушке корову с телёнком и на глазах Чика наказывает хулигана Кабана за издевательство над лошадью. Затем Чик с дядей Колей и дворовыми друзьями пасёт корову, попадает в милицию и едва уходит от вооружённого топором душевнобольного.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик сначала на корову и ее теленка не обратил внимания"]},
+      {"person":"father_sandro","role":"main","evidence":["Из деревни приехал дедушка с коровой и теленком"]},
+      {"person":"chik_aunt","role":"main","evidence":["Корова эта была записана на имя тетушки"]},
+      {"person":"chik_aunt_husband","role":"secondary","evidence":["Муж ее, дядя Чика, отворачивался и молчал"]},
+      {"person":"persian_consul","role":"mention","evidence":["бывший муж, персидский консул"]},
+      {"person":"chik_uncle_kolya","role":"main","evidence":["со своим сумасшедшим дядей Колей"]},
+      {"person":"chik_grandmother","role":"mention","evidence":["брезглив не только по отношению к животным, но и ко всем людям, кроме бабушки"]},
+      {"person":"onik","role":"main","evidence":["вышел Оник с велосипедом"]},
+      {"person":"nika_chik","role":"secondary","evidence":["за ним Ника, Сонька и Лёсик"]},
+      {"person":"sonka","role":"main","evidence":["за ним Ника, Сонька и Лёсик"]},
+      {"person":"lesik","role":"main","evidence":["Лёсик был инвалидом от рождения"]},
+      {"person":"rich_tailor_chik","role":"secondary","evidence":["отец Оника, Богатый Портной"]},
+      {"person":"old_gabunia","role":"secondary","evidence":["школьный сторож старик Габуния"]},
+      {"person":"doctor_zhdanov","role":"secondary","evidence":["Его доктор Жданов проверял"]}
+    ],"people":[
+      {"id":"kaban_chik_hooligan","name":"Кабан","description":"Восемнадцатилетний заводила и главный хулиган улицы Чика; издевается над дедушкиной лошадью, но терпит сокрушительное поражение от деда.","role":"secondary","evidence":["драчун и заводила по прозвищу Кабан"]},
+      {"id":"cow_fining_policeman","name":"Милиционер, оштрафовавший корову","description":"Безымянный милиционер, запрещающий Чику пасти корову у строящегося Дома правительства и задерживающий Чика с дядей Колей по подозрению в шпионаже.","role":"secondary","evidence":["к ним подошел милиционер","я вас всех забираю в милицию"]},
+      {"id":"abkhaz_policeman_chik_street","name":"Милиционер-абхазец с улицы Чика","description":"Знакомый семье милиционер, живущий на улице Чика; узнаёт мальчика во дворе милиции и помогает освободить его, дядю Колю и корову.","role":"secondary","evidence":["милиционер-абхазец, живший с Чиком на одной улице"]},
+      {"id":"police_chief_animals_city","name":"Начальник милиции в «Животных в городе»","description":"Добродушно настроенный начальник, проверивший историю дяди Коли и отпустивший задержанных с предупреждением не пасти корову в городе.","role":"secondary","evidence":["за деревянным барьером сидел начальник"]},
+      {"id":"voronezh_bright_woman","name":"Ярко одетая женщина из Воронежа","description":"Приведённая в милицию приезжая, которую подозревают в запрещённом промысле и предписывают выехать из города за сутки.","role":"secondary","evidence":["говорила, что приехала из Воронежа"]},
+      {"id":"madman_with_axe_chik","name":"Душевнобольной с топором","description":"Лохматый молодой хозяин коровы у городской окраины; с топором гонится за Чиком и детьми, но отступает перед своей матерью.","role":"secondary","evidence":["сумасшедший с топором выскочил из калитки"]},
+      {"id":"madman_with_axe_mother","name":"Мать душевнобольного с топором","description":"Мингрельская старушка из ветхого домика; спасает Соньку, отгораживая её от сына, и загоняет его обратно во двор палкой.","role":"secondary","evidence":["старушка вышла из калитки","палкой грозила своему сыну"]},
+      {"id":"grandfather_horse_chik","name":"Лошадь дедушки Чика","description":"Рыжая деревенская лошадь, на которой Чик катает друзей; дедушка жестоко наказывает Кабана за издевательство над ней.","kind":"animal","role":"main","evidence":["Дедушка приехал верхом на лошади"]},
+      {"id":"aunt_cow_chik","name":"Корова тётушки Чика","description":"Пригнанная из деревни корова, которую Чик с родственниками пытается пасти в городе вопреки запретам.","kind":"animal","role":"main","evidence":["Корова эта была записана на имя тетушки"]},
+      {"id":"aunt_calf_chik","name":"Телёнок тётушки Чика","description":"Телёнок городской коровы тётушки; помогает ей отпускать молоко во время дойки.","kind":"animal","role":"secondary","evidence":["а теленок сам шел за коровой"]}
+    ],"relations":[
+      {"from":"father_sandro","to":"chik","type":"grandparent","label":"Дед → внук","confidence":"explicit","evidence":["вон дедушка твой идет"]},
+      {"from":"father_sandro","to":"grandfather_horse_chik","type":"owns","label":"Хозяин лошади","confidence":"explicit","evidence":["глумится над моей лошадью"]},
+      {"from":"father_sandro","to":"kaban_chik_hooligan","type":"opponent","label":"Наказывает за издевательство над лошадью","confidence":"explicit","evidence":["дедушка сидит верхом на Кабане"]},
+      {"from":"chik_aunt","to":"chik_aunt_husband","type":"spouse","label":"Супруги","confidence":"explicit","evidence":["показывала мужу свои натруженные ладони"]},
+      {"from":"chik_aunt","to":"persian_consul","type":"former_spouse","label":"Бывшие супруги","confidence":"explicit","evidence":["бывший муж, персидский консул"]},
+      {"from":"rich_tailor_chik","to":"onik","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["отец Оника, Богатый Портной"]},
+      {"from":"chik","to":"lesik","type":"helps","label":"Помогает покататься верхом","confidence":"explicit","evidence":["Чику очень хотелось, чтобы Лёсик испытал это удовольствие"]},
+      {"from":"madman_with_axe_mother","to":"madman_with_axe_chik","type":"parent","label":"Мать → сын","confidence":"explicit","evidence":["палкой грозила своему сыну"]},
+      {"from":"madman_with_axe_mother","to":"sonka","type":"protects","label":"Защищает от вооружённого сына","confidence":"explicit","evidence":["продолжала отгораживать Соньку"]},
+      {"from":"doctor_zhdanov","to":"chik_uncle_kolya","type":"doctor","label":"Психиатрическое освидетельствование","confidence":"explicit","evidence":["Его доктор Жданов проверял"]},
+      {"from":"chik_aunt","to":"aunt_cow_chik","type":"owns","label":"Записана хозяйкой коровы","confidence":"explicit","evidence":["Корова эта была записана на имя тетушки"]},
+      {"from":"aunt_cow_chik","to":"aunt_calf_chik","type":"parent","label":"Корова → телёнок","confidence":"explicit","evidence":["теленок сам шел за коровой"]}
     ]}
   ]
 }
