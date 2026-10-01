@@ -2776,6 +2776,104 @@
         {"from":"isa","to":"katusha","type":"parent","label":"Отец и дочь","confidence":"strongly_implied","evidence":["старшая дочь Катуша и умерла"]},
         {"from":"tali","to":"adgur","type":"supports","label":"Навещает больного родственника вопреки страху семьи","confidence":"explicit","evidence":["сердце ее сжималось от жалости к нему"]}
       ]
+    },
+    {
+      "title":"Дядя Сандро и конец козлотура","work_id":"work_912ac36cfc786a8ecc1c0b095971d4dfd5a22922eff53c5fd5476876fc0d4e60","status":"read","narrator":"narrator","narrator_note":"Писатель-газетчик вместе с Сандро добывает документ о ликвидации козлотурной кампании и связывает нынешнюю бюрократию с исторической памятью старого героя.","summary":"Рассказчик пытается обезопасить себя в редакции секретным постановлением о переселении заболевших козлотуров. Вместе с Сандро он обменивает найденного огненного спаниеля на документ у внука Тендела; история соединяет конец газетной кампании с бюрократическим устройством республики и воспоминаниями Сандро о старом особняке.",
+      "appearances":[
+        {"person":"narrator","role":"main","evidence":["Мы с дядей Сандро подходили к старинному особняку"]},
+        {"person":"sandro","role":"main","evidence":["при помощи дяди Сандро вынужден был пуститься на небольшую авантюру"]},
+        {"person":"fire_spaniel","role":"main","evidence":["стук нетерпеливого хвоста огненного спаниеля"]},
+        {"person":"tendel_grandson","role":"main","evidence":["Внук Тендела, даже спустившись с гор и став чиновником"]},
+        {"person":"tendel","role":"secondary","evidence":["Внук Тендела, даже спустившись с гор и став чиновником"]},
+        {"person":"kunta","role":"secondary","evidence":["ее утащил один из наших чегемских земляков, а именно Кунта"]},
+        {"person":"platon_samsonovich","role":"secondary","evidence":["пострадал один Платон Самсонович"]},
+        {"person":"avtandil","role":"secondary","evidence":["представить ее Автандилу Автандиловичу"]}
+      ],"people":[],"relations":[
+        {"from":"tendel","to":"tendel_grandson","type":"grandparent","label":"Дед и внук","confidence":"explicit","evidence":["внук Тендела вспомнил"]},
+        {"from":"tendel_grandson","to":"fire_spaniel","type":"owner","label":"Хозяин собаки","confidence":"explicit","evidence":["Чует близость хозяина"]},
+        {"from":"narrator","to":"sandro","type":"collaborates","label":"Вместе добывают постановление о козлотурах","confidence":"explicit","evidence":["Нам предстояло обменять спаниеля на один совершенно секретный документ"]}
+      ]
+    },
+    {
+      "title":"Пастух Махаз","work_id":"work_d99fb9044320a32632d707839bf1586122d6e42c10712016b52486c420aaeaf4","status":"read","narrator":"narrator","narrator_note":"Всеведущий рассказчик последовательно восстанавливает семейную жизнь пастуха Махаза и внутреннюю логику его жестокой мести.","summary":"Пастух Махаз и тётя Маша растят семь дочерей. После того как городской родственник Шалико соблазняет Маяну, а затем пытается повторить это с Хикур, Махаз исполняет данную у молельного дерева клятву: убивает Шалико, выпивает его кровь и сам сдаётся милиции, считая месть восстановлением чести дочерей.",
+      "appearances":[
+        {"person":"brother_sandro","role":"main","evidence":["у него было семь дочерей и ни одного сына"]},
+        {"person":"masha","role":"main","evidence":["семь богатырских дочерей родила ему его неутомимая жена Маша"]},
+        {"person":"masha_daughter_mayana","role":"main","evidence":["отправила в город старшую после вышедшей замуж дочку Маяну"]},
+        {"person":"masha_daughter_hikur","role":"main","evidence":["следующую за Маяной дочку — Хикур"]}
+      ],"people":[
+        {"id":"masha_daughter_hikur","name":"Хикур","description":"Дочь пастуха Махаза и тёти Маши, которую собираются отправить в город на бухгалтерские курсы; попытка Шалико приблизиться к ней приводит отца к мести.","role":"main","evidence":["следующую за Маяной дочку — Хикур"]},
+        {"id":"shaliko_shopkeeper_mahaz","name":"Шалико","description":"Состоятельный городской родственник тёти Маши и работник магазина; соблазняет Маяну, затем пытается приблизиться к Хикур и погибает от руки Махаза.","role":"main","evidence":["Жена Шалико, так звали родственника Маяны"]},
+        {"id":"shaliko_wife_mahaz","name":"Жена Шалико","description":"Жена городского родственника, оставляющая Маяну присматривать за двумя детьми во время своих поездок к родным.","role":"secondary","evidence":["Жена Шалико продолжала время от времени навещать своих родственников"]}
+      ],"relations":[
+        {"from":"brother_sandro","to":"masha","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["его неутомимая жена Маша"]},
+        {"from":"brother_sandro","to":"masha_daughter_mayana","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["доходили до отца Маяны"]},
+        {"from":"masha","to":"masha_daughter_mayana","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["отправила в город старшую после вышедшей замуж дочку Маяну"]},
+        {"from":"brother_sandro","to":"masha_daughter_hikur","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["покусится на его дочь Хикур"]},
+        {"from":"masha","to":"masha_daughter_hikur","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["дочку — Хикур"]},
+        {"from":"shaliko_shopkeeper_mahaz","to":"shaliko_wife_mahaz","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Жена Шалико, так звали родственника Маяны"]},
+        {"from":"shaliko_shopkeeper_mahaz","to":"masha_daughter_mayana","type":"exploits","label":"Соблазняет зависимую от него юную родственницу","confidence":"explicit","evidence":["он полез к Маяне в постель"]},
+        {"from":"brother_sandro","to":"shaliko_shopkeeper_mahaz","type":"kills","label":"Убивает, исполняя клятву мести за дочерей","confidence":"explicit","evidence":["Махаз полоснул его ножом по горлу"]}
+      ]
+    },
+    {
+      "title":"Умыкание, или Загадка эндурцев","work_id":"work_4082a340066d85306237eaa00bf7f53d9927c222665afc3c8efef4eb775241f4","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик воспроизводит версию Сандро о собственной женитьбе и затем обсуждает её с престарелыми супругами.","summary":"Сандро помогает другу Аслану умыкнуть невесту Катю, хотя сам любит её и любим ею. Головорез Теймыр по ошибке хватает Шазину; Сандро превращает путаницу в обмен невестами: сам женится на Кате, а Аслан — на Шазине. Поздняя рамка показывает устойчивый брак Сандро и Кати и переводит семейную легенду в сатиру об «эндурцах».",
+      "appearances":[
+        {"person":"sandro","role":"main","evidence":["на лице дяди Сандро, может быть, в первый и последний раз"]},
+        {"person":"katya","role":"main","evidence":["Эх, Катя, Катя! — сказал Аслан"]},
+        {"person":"aslan","role":"main","evidence":["дружок дяди Сандро по имени Аслан"]},
+        {"person":"shazina","role":"main","evidence":["наша Шазина и хорошенькая, и стройная, как косуля"]},
+        {"person":"teimyr","role":"main","evidence":["Рядом с Асланом стоял веселый головорез Теймыр"]},
+        {"person":"narrator","role":"secondary","evidence":["нам пришлось устроить спиритический сеанс"]}
+      ],"people":[],"relations":[
+        {"from":"sandro","to":"katya","type":"spouse","label":"Женятся после подмены невест","confidence":"explicit","evidence":["Так закончилась история женитьбы дяди Сандро"]},
+        {"from":"aslan","to":"shazina","type":"spouse","label":"Женятся после ошибочного умыкания","confidence":"explicit","evidence":["чья она теперь невеста"]},
+        {"from":"sandro","to":"aslan","type":"friend","label":"Друзья и участники умыкания","confidence":"explicit","evidence":["Друг дяди Сандро, а именно Аслан"]},
+        {"from":"sandro","to":"teimyr","type":"accomplice","label":"Участники двойного умыкания","confidence":"explicit","evidence":["Теймыр появился с милой невестой Аслана"]},
+        {"from":"aslan","to":"teimyr","type":"accomplice","label":"Теймыр исполняет умыкание для Аслана","confidence":"explicit","evidence":["Теймыр для выполнения черновой, но почетной работы умыкания"]}
+      ]
+    },
+    {
+      "title":"Молния-мужчина, или Чегемский пушкинист","work_id":"work_7869edd0d4fcd29dfb7533645f3d9ccfbbe6d29f8ad92858c094bf1a8e37b048","status":"read","narrator":"narrator","narrator_note":"Всеведущий рассказчик следует за Чункой в город, удерживая его семейный, любовный и литературный контекст, а затем показывает политические последствия случайной фразы героя.","summary":"Чунка отправляется продавать орехи и мечтает об Анастасии, Пушкине и тигриной свободе. В городе его задерживают, но он унижает следователя и невольно сообщает начальнику милиции о заговоре заместителя; начальник через вора Тико устраняет соперника. Чунка ничего об этом не знает и завершает ночь у Анастасии.",
+      "appearances":[
+        {"person":"chunka","role":"main","evidence":["Чунка слегка приподнял и тряхнул мешки"]},
+        {"person":"nutsa","role":"main","evidence":["Когда приедешь? — спросила Нуца"]},
+        {"person":"kunta","role":"secondary","evidence":["Рядом с ним молча стоял Кунта"]}
+      ],"people":[
+        {"id":"lilisha_chunka_sister","name":"Лилиша","description":"Большеглазая сестра Чунки, тревожащаяся из-за его поездок к Анастасии.","role":"secondary","evidence":["большеглазая Лилиша, сестра Чунки"]},
+        {"id":"anastasia_anastasovka","name":"Анастасия из Анастасовки","description":"Молодая гречанка, возлюбленная Чунки; живёт с матерью и тайно принимает его после городской истории.","role":"main","evidence":["соблазнительной Анастасии из Анастасовки"]},
+        {"id":"anastasia_mother_anastasovka","name":"Мать Анастасии","description":"Старая мать Анастасии, распоряжающаяся платными свиданиями дочери и поддерживающая старших дочерей.","role":"secondary","evidence":["Ее красотой исподтишка, хотя об этом все знали, подторговывала ее старая, безобразная мать"]},
+        {"id":"mukhus_police_chief_pushkinist","name":"Начальник мухусской милиции","description":"Опытный оперативник, использующий случайные слова Чунки, чтобы раскрыть угрозу своей должности и организовать убийство заместителя.","role":"main","evidence":["начальник мухусской милиции спускался к машине"]},
+        {"id":"tiko_thief_pushkinist","name":"Тико","description":"Известный мухусский вор, которого начальник милиции привлекает к устранению своего заместителя.","role":"secondary","evidence":["известного вора Тико"]}
+      ],"relations":[
+        {"from":"chunka","to":"lilisha_chunka_sister","type":"sibling","label":"Брат и сестра","confidence":"explicit","evidence":["Лилиша, сестра Чунки"]},
+        {"from":"chunka","to":"anastasia_anastasovka","type":"lover","label":"Тайные любовники","confidence":"explicit","evidence":["Анастасия Чунке очень нравилась"]},
+        {"from":"anastasia_mother_anastasovka","to":"anastasia_anastasovka","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["Ее красотой исподтишка, хотя об этом все знали, подторговывала ее старая, безобразная мать"]},
+        {"from":"mukhus_police_chief_pushkinist","to":"tiko_thief_pushkinist","type":"recruits","label":"Привлекает к убийству заместителя","confidence":"explicit","evidence":["Они быстро договорились, хотя такого рода услугу начальник вообще просил первый раз"]}
+      ]
+    },
+    {
+      "title":"Харлампо и Деспина","work_id":"work_4a840b980fdf341d0c1b487ccbd26cad2365dfc9bf75ce1820799029e7245cc5","status":"read","narrator":"narrator","narrator_note":"Автобиографический рассказчик Большого Дома прослеживает многолетнюю любовь Харлампо и Деспины от обручения до семейного счастья и депортации.","summary":"Бедный пастух Харлампо семь лет ждёт Деспину, чей отец требует собственного дома и хозяйства. После слухов о связи Харлампо с козой Хабуг отделяет ему тридцать коз, позволяя построить дом и жениться; супруги растят детей. В 1949 году Харлампо, Деспину, детей и тётушку Хрисулу вместе со всеми черноморскими греками высылают в Казахстан.",
+      "appearances":[
+        {"person":"kharlampo_shepherd","role":"main","evidence":["великой любви Харлампо к Деспине"]},
+        {"person":"father_sandro","role":"main","evidence":["Харлампо, пастух старого Хабуга"]},
+        {"person":"nutsa","role":"main","evidence":["тетя Нуца, моя тетя"]},
+        {"person":"isa","role":"secondary","evidence":["по договоренности с дядей Исой"]},
+        {"person":"chunka","role":"secondary","evidence":["мой двоюродный брат Чунка"]},
+        {"person":"omar_forester","role":"secondary","evidence":["вздорный лесник Омар"]},
+        {"person":"sandro","role":"secondary","evidence":["тамадой на свадьбе был, конечно, дядя Сандро"]}
+      ],"people":[
+        {"id":"despina_iordanidi","name":"Деспина Иорданиди","description":"Гречанка из Анастасовки, семь лет ожидающая Харлампо; после свадьбы становится матерью его детей и в 1949 году выслана с семьёй в Казахстан.","role":"main","evidence":["Деспина Иорданиди была дочерью зажиточного крестьянина"]},
+        {"id":"despina_father_iordanidi","name":"Отец Деспины","description":"Зажиточный греческий крестьянин, разрешивший обручение, но требующий от Харлампо собственного дома и хозяйства.","role":"main","evidence":["отец Деспины разрешил им обручиться"]},
+        {"id":"aunt_chrysoula","name":"Тётушка Хрисула","description":"Сестра отца Деспины, воспитавшая племянницу и неотступно сопровождающая её; позднее живёт с семьёй Харлампо и разделяет депортацию.","role":"main","evidence":["тетушки Хрисулы, которая играла при своей племяннице роль девохранительницы"]}
+      ],"relations":[
+        {"from":"kharlampo_shepherd","to":"despina_iordanidi","type":"spouse","label":"Обручённые, затем супруги","confidence":"explicit","evidence":["Харлампо, пастух старого Хабуга, был обручен с Деспиной"]},
+        {"from":"despina_father_iordanidi","to":"despina_iordanidi","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["Деспина Иорданиди была дочерью зажиточного крестьянина"]},
+        {"from":"despina_father_iordanidi","to":"aunt_chrysoula","type":"sibling","label":"Брат и сестра","confidence":"explicit","evidence":["Тетушка Хрисула, сестра отца Деспины"]},
+        {"from":"aunt_chrysoula","to":"despina_iordanidi","type":"aunt","label":"Тётя и воспитанница","confidence":"explicit","evidence":["в сущности, она воспитывала Деспину"]},
+        {"from":"father_sandro","to":"kharlampo_shepherd","type":"employer","label":"Хозяин и пастух","confidence":"explicit","evidence":["Харлампо, пастух старого Хабуга"]},
+        {"from":"father_sandro","to":"kharlampo_shepherd","type":"helps","label":"Отделяет тридцать коз и помогает создать хозяйство","confidence":"explicit","evidence":["старый Хабуг вместе с тридцатью отделенными козами"]}
+      ]
     }
   ]
 }
