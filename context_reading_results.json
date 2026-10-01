@@ -2197,6 +2197,49 @@
       {"from":"doctor_zhdanov","to":"chik_uncle_kolya","type":"doctor","label":"Психиатрическое освидетельствование","confidence":"explicit","evidence":["Его доктор Жданов проверял"]},
       {"from":"chik_aunt","to":"aunt_cow_chik","type":"owns","label":"Записана хозяйкой коровы","confidence":"explicit","evidence":["Корова эта была записана на имя тетушки"]},
       {"from":"aunt_cow_chik","to":"aunt_calf_chik","type":"parent","label":"Корова → телёнок","confidence":"explicit","evidence":["теленок сам шел за коровой"]}
+    ]},
+    {"title":"Защита Чика","work_id":"work_30a6ea36d5d5d9cd6dadaa300d230c480a877c59e0d84ee0b2fef4102dc84fc6","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование целиком следует мыслям Чика: от страха перед вызовом родителей до удачной школьной хитрости с дядей Колей.","summary":"После насмешки над грамматическими стихами Акакия Македоновича Чик должен привести взрослого в школу. Боясь расстроить семью, он покупает дяде Коле лимонад, надевает на него отцовский пиджак и выдаёт его странности за глухоту и необразованность.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик сидел на вершине груши"]},
+      {"person":"akakiy_makedonovich","role":"main","evidence":["Учитель русского языка, Акакий Македонович"]},
+      {"person":"chik_uncle_kolya","role":"main","evidence":["он приведет в школу дядю Колю"]},
+      {"person":"chik_aunt","role":"secondary","evidence":["гордость тетушки"]},
+      {"person":"persian_consul","role":"mention","evidence":["бросила персидского консула"]},
+      {"person":"chik_grandmother","role":"secondary","evidence":["верхней лестничной площадке второго этажа сидела бабушка"]},
+      {"person":"chik_older_brother","role":"secondary","evidence":["старшему брату, который плохо учился"]},
+      {"person":"chik_mother","role":"mention","evidence":["а мать Чика"]},
+      {"person":"chik_father","role":"secondary","evidence":["пиджаком отца","пиджак принадлежит отцу Чика"]},
+      {"person":"sonka","role":"secondary","evidence":["Сонька и Ника играли в «классики»"]},
+      {"person":"nika_chik","role":"mention","evidence":["Сонька и Ника играли в «классики»"]},
+      {"person":"lesik","role":"secondary","evidence":["Лёсик покачивал в коляске своих братьев-двойняшек"]},
+      {"person":"onik","role":"secondary","evidence":["Оник бежал домой"]},
+      {"person":"belka_chik","role":"secondary","evidence":["Белочка, любимая собака Чика"]},
+      {"person":"poor_seamstress","role":"secondary","evidence":["Сонькина мать, тетя Фаина"]},
+      {"person":"faina_husband_shoemaker","role":"mention","evidence":["муж тети Фаины, по профессии сапожник"]},
+      {"person":"chik_uncle_riza","role":"mention","evidence":["самый умный дядя Риза"]},
+      {"person":"uncle_alikhan","role":"secondary","evidence":["Во двор вошел дядя Алихан"]},
+      {"person":"rich_tailor_chik","role":"secondary","evidence":["во двор вышел Богатый Портной"]},
+      {"person":"uncle_mesrop_candyman","role":"secondary","evidence":["толстый продавец Месроп"]}
+    ],"people":[
+      {"id":"sevastyanov_chik_classmate","name":"Севастьянов","description":"Одноклассник Чика, вместе с ним первым замечающий смешное и нелепое на уроках; поддерживает Чика смехом над стихами Акакия Македоновича.","role":"secondary","evidence":["учеником Севастьяновым"]},
+      {"id":"fat_schoolboy_neighbor_chik","name":"Толстый школьник — сосед Чика","description":"Маменькин сынок из другого класса, живущий на третьем этаже рядом с грушей Чика; выпрашивает у него фрукты и невольно обсуждает его решение не слезать с дерева.","role":"secondary","evidence":["торчала голова толстого мальчика"]},
+      {"id":"fat_schoolboy_neighbor_mother","name":"Мать толстого школьника — соседа Чика","description":"Безымянная соседка, отвечающая сыну из комнаты и закрывающая окно, чтобы Чик не отвлекал его от уроков.","role":"secondary","evidence":["Мать мальчика закрыла окно"]},
+      {"id":"kostya_sleeping_football_fan","name":"Костя — разбуженный болельщик","description":"Сосед стадиона, которого жена будит по просьбе зрителя с крыши ради новости о футбольном счёте; предпочитает продолжить сон и есть арбуз.","role":"mention","evidence":["Костя спит"]},
+      {"id":"tamara_kostya_wife","name":"Тамара — жена Кости","description":"Жена спящего Кости, разбудившая мужа после клятвы соседа детьми и подавшая ему охлаждённый арбуз.","role":"mention","evidence":["Разбуди его, Тамара"]},
+      {"id":"roof_football_fan_chik","name":"Болельщик на соседской крыше","description":"Безымянный сосед, бесплатно наблюдающий матч со своей крыши и будящий Костю сообщением о голах местной команды.","role":"mention","evidence":["один из мужчин, обернувшись в колодец своего двора"]},
+      {"id":"lesik_twin_brothers","name":"Братья-двойняшки Лёсика","description":"Два младших брата Лёсика, которых он покачивает в коляске во дворе.","role":"mention","evidence":["своих братьев-двойняшек"]},
+      {"id":"alikhan_wife_chik","name":"Жена дяди Алихана","description":"Безымянная жена Алихана, вынесшая стулья для его партии в нарды с Богатым Портным.","role":"mention","evidence":["Жена Алихана вынесла два стульчика"]}
+    ],"relations":[
+      {"from":"sevastyanov_chik_classmate","to":"chik","type":"classmate","label":"Одноклассники и союзники по смеху","confidence":"explicit","evidence":["вместе с Чиком всегда первым чувствовал что-нибудь смешное"]},
+      {"from":"chik_uncle_kolya","to":"poor_seamstress","type":"in_love","label":"Безответно влюблён","confidence":"explicit","evidence":["Он ее любил с незапамятных времен безответной, упорной любовью"]},
+      {"from":"poor_seamstress","to":"faina_husband_shoemaker","type":"spouse","label":"Супруги","confidence":"explicit","evidence":["муж тети Фаины, по профессии сапожник"]},
+      {"from":"fat_schoolboy_neighbor_mother","to":"fat_schoolboy_neighbor_chik","type":"parent","label":"Мать → сын","confidence":"explicit","evidence":["Мать мальчика закрыла окно"]},
+      {"from":"tamara_kostya_wife","to":"kostya_sleeping_football_fan","type":"spouse","label":"Супруги","confidence":"strongly_implied","evidence":["женщина разбудила мужа"]},
+      {"from":"lesik","to":"lesik_twin_brothers","type":"sibling","label":"Старший брат → младшие двойняшки","confidence":"explicit","evidence":["своих братьев-двойняшек"]},
+      {"from":"uncle_alikhan","to":"alikhan_wife_chik","type":"spouse","label":"Супруги","confidence":"explicit","evidence":["Жена Алихана вынесла два стульчика"]},
+      {"from":"rich_tailor_chik","to":"onik","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["Оника, сына Богатого Портного"]},
+      {"from":"chik_uncle_kolya","to":"chik","type":"uncle","label":"Дядя → племянник","confidence":"explicit","evidence":["Это мой дядя"]},
+      {"from":"chik","to":"chik_uncle_kolya","type":"cares_for","label":"Переживает нежность и бережёт от унижения","confidence":"explicit","evidence":["что он его любит и никогда, никогда его больше не будет дразнить"]},
+      {"from":"akakiy_makedonovich","to":"chik","type":"teacher","label":"Учитель русского языка → ученик","confidence":"explicit","evidence":["Учитель русского языка, Акакий Македонович"]}
     ]}
   ]
 }
