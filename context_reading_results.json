@@ -2341,6 +2341,36 @@
       {"from":"mikha_raven_owner","to":"mikha_she_raven","type":"kills","label":"Убивает из ревности","confidence":"explicit","evidence":["выстрелил и убил ворониху"]},
       {"from":"mikha_raven","to":"mikha_raven_owner","type":"kills","label":"Приводит под удар молнии в отместку","confidence":"strongly_implied","evidence":["ворон ему отомстил за ворониху"]},
       {"from":"chik","to":"wounded_pigeon_chik_hunt","type":"protects","label":"Отказывается убивать и выпускает","confidence":"explicit","evidence":["к концу второго дня он его выпустил"]}
+    ]},
+    {"title":"Подвиг Чика","work_id":"work_9d03b93f481f8a0c667d2d5efd7232d05f00f55a1eb1643df41811892955a12b","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование следует замыслу, тренировкам и исполнению Чиком операции по освобождению собак, а затем его разговору с дядей Ризой.","summary":"Увидев жестокость собаколова, Чик конструирует верёвочное приспособление, срывает дверь его колымаги и освобождает около пятнадцати собак. Семья защищает Чика, а дядя Риза возмещает ущерб и впервые говорит с ним о невиновном отце Ники и времени массового безумия.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик шел из школы"]},
+      {"person":"anesti_boatswain","role":"secondary","evidence":["поиграл с Анести в деньги"]},
+      {"person":"rich_tailor_chik","role":"secondary","evidence":["Выбор Чика пал на веревку Богатого Портного"]},
+      {"person":"chik_grandmother","role":"secondary","evidence":["бабушка была в деревне"]},
+      {"person":"chik_uncle_kolya","role":"secondary","evidence":["сумасшедшему дядюшке Чика стереть ее"]},
+      {"person":"uncle_alikhan","role":"mention","evidence":["Возле каморки Алихана"]},
+      {"person":"poor_seamstress","role":"secondary","evidence":["тетя Фаина и Сонька"]},
+      {"person":"sonka","role":"secondary","evidence":["тетя Фаина и Сонька"]},
+      {"person":"ananatsi_cat","role":"secondary","evidence":["Ананаци съела всю котлету"]},
+      {"person":"bocho","role":"main","evidence":["он догнал Бочо"]},
+      {"person":"belka_chik","role":"main","evidence":["его собака Белочка"]},
+      {"person":"chik_aunt","role":"main","evidence":["Тетушка появилась на верхней лестничной площадке"]},
+      {"person":"chik_uncle_riza","role":"main","evidence":["во двор не вошел дядя Риза"]},
+      {"person":"pata","role":"secondary","evidence":["Кто же тогда арестовал отца Ники"]}
+    ],"people":[
+      {"id":"dogcatcher_chik","name":"Собаколов","description":"Грузный городской ловец собак, приманивающий их хлебом и запирающий в колымаге; преследует Чика после освобождения животных, но принимает компенсацию дяди Ризы.","role":"main","evidence":["Хозяин колымаги, грузный мужчина в брезентовой робе"]},
+      {"id":"dogcatcher_assistant_chik","name":"Помощник собаколова","description":"Рыжий помощник, едущий с собаколовом во время операции Чика и затем приносящий во двор сорванную красную верёвку.","role":"secondary","evidence":["во двор вошел помощник собаколова"]},
+      {"id":"dogcatcher_captured_dogs","name":"Собаки из колымаги собаколова","description":"Около пятнадцати пойманных городских собак, которых Чик освобождает, сорвав замок и дверь колымаги.","kind":"animal","role":"secondary","evidence":["Собаки радостным потоком стали выпрыгивать из колымаги"]}
+    ],"relations":[
+      {"from":"dogcatcher_chik","to":"dogcatcher_assistant_chik","type":"associate","label":"Работают вместе","confidence":"explicit","evidence":["С ним рядом сидит второй человек"]},
+      {"from":"dogcatcher_chik","to":"dogcatcher_captured_dogs","type":"captures","label":"Ловит и удерживает собак","confidence":"explicit","evidence":["в клетке сразу же заметались и завыли другие собаки"]},
+      {"from":"chik","to":"dogcatcher_captured_dogs","type":"rescues","label":"Освобождает из колымаги","confidence":"explicit","evidence":["Чик открыл дверь его ящика! Все собаки сбежали"]},
+      {"from":"chik","to":"dogcatcher_chik","type":"opponent","label":"Срывает отлов собак","confidence":"explicit","evidence":["Надо во что бы то ни стало освободить собак"]},
+      {"from":"chik_aunt","to":"chik","type":"protects","label":"Защищает от собаколова","confidence":"explicit","evidence":["увлеченная борьбой за Чика"]},
+      {"from":"chik_uncle_riza","to":"dogcatcher_chik","type":"pays","label":"Возмещает ущерб и прекращает конфликт","confidence":"explicit","evidence":["достал оттуда красненькую тридцатку и дал ему"]},
+      {"from":"chik_uncle_riza","to":"pata","type":"friend","label":"Друг репрессированного отца Ники","confidence":"explicit","evidence":["отец Ники был моим другом"]},
+      {"from":"chik_uncle_riza","to":"chik","type":"uncle","label":"Любимый дядя и нравственный наставник","confidence":"explicit","evidence":["любимый дядя Чика"]},
+      {"from":"sonka","to":"chik","type":"helps","label":"Сохраняет тайну и спасает портфель","confidence":"explicit","evidence":["Белочка начала грызть, но я у нее отняла его"]}
     ]}
   ]
 }
