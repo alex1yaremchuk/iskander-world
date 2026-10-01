@@ -2602,6 +2602,95 @@
       {"from":"sandro","to":"koli_zarkhidi","type":"helps","label":"Срывает игру и спасает остаток состояния","confidence":"explicit","evidence":["Пока у вас есть я, не бойся, Даша"]},
       {"from":"uncle_alikhan","to":"alikhan_dasha","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["вместе со своей простоволосой, неряшливой женой"]},
       {"from":"koli_zarkhidi_mother","to":"koli_zarkhidi","type":"parent","label":"Мать и сын","confidence":"explicit","evidence":["мать Коли Зархиди"]}
+    ]},
+    {"title":"Битва на Кодоре, или Деревянный броневик имени Ной Жордания","work_id":"work_71f44bc3dd937e20af4c159b7fad908146d771d874502538db912945c18c30d2","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик воспроизводит героико-комическую военную историю Сандро, но удерживает в центре человеческую цену политического балагана.","summary":"Гостя у свиновода Михи, Сандро наблюдает меньшевистскую мобилизацию и узнаёт о деревянном броневике. Он безуспешно предупреждает красного комиссара; нелепая машина прорывает оборону, а добровольческий поход заканчивается гибелью сына Кунты, превращая комическое сражение в семейную трагедию.","appearances":[
+      {"person":"sandro","role":"main","evidence":["В тот же день дядя Сандро гостил у своего друга в селе Анхара"]},
+      {"person":"mikha_hunter","role":"main","evidence":["Друга дяди Сандро звали Миха"]},
+      {"person":"kunta","role":"main","evidence":["это был Кунта Маргания"]}
+    ],"people":[
+      {"id":"kunta_son","name":"Сын Кунты","description":"Взрослый сын Кунты, отправленный отцом добровольцем к меньшевикам; тонет в Кодоре во время отступления.","role":"main","merge_ids":["bulk_1fb6f89f7853c70eb98deb89"],"evidence":["Сын Кунты сидел на белой лошади"]},
+      {"id":"nakhabey_old_fighter","name":"Нахарбей","description":"Дряхлый, некогда знаменитый головорез, выставленный меньшевистскими агитаторами живым символом старой воинской славы.","role":"secondary","evidence":["Это был известный в прошлом головорез Нахарбей"]},
+      {"id":"menshevik_orator_ankhara","name":"Меньшевистский оратор в Анхаре","description":"Приезжий агитатор, призывающий сельчан к «эртоба» и набору добровольцев для похода на Мухус.","role":"secondary","evidence":["оратор продолжал говорить"]},
+      {"id":"red_commissar_kodor","name":"Красный комиссар на Кодоре","description":"Комиссар на правом берегу, с раздражением отвергающий сведения Сандро о броневике и едва не приказывающий его застрелить.","role":"main","evidence":["Это был комиссар. Боец, как только скрипнула дверь"]},
+      {"id":"mikha_wife_ankhara","name":"Жена Михи","description":"Хозяйка дома Михи, сообщающая новости со сходки и поддерживающая семью во время боя.","role":"secondary","evidence":["жена его прибежала от соседей"]},
+      {"id":"mikha_son_ankhara","name":"Десятилетний сын Михи","description":"Сын Михи, готовый исполнять поручения отца и гостя Сандро.","role":"secondary","evidence":["Здесь их встретил десятилетний хозяйский мальчик"]}
+    ],"relations":[
+      {"from":"sandro","to":"mikha_hunter","type":"friend","label":"Давние друзья","confidence":"explicit","evidence":["Друга дяди Сандро звали Миха"]},
+      {"from":"kunta","to":"kunta_son","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Я-то сам не иду, сына посылаю"]},
+      {"from":"mikha_hunter","to":"mikha_wife_ankhara","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["жена его прибежала от соседей"]},
+      {"from":"mikha_hunter","to":"mikha_son_ankhara","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["десятилетний хозяйский мальчик"]},
+      {"from":"sandro","to":"red_commissar_kodor","type":"warns","label":"Предупреждает о конструкции броневика","confidence":"explicit","evidence":["в крепость нужно стрелять сбоку и снизу"]}
+    ]},
+    {"title":"Чегемские сплетни","work_id":"work_34351d27ab9ae3a4ebcb98c13392e9972f37763df50937a05cffd0a858f625c3","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик начинает с опасного слуха вокруг Сандро и Щащико, затем восстанавливает биографию абрека и позднюю семейную память о его гибели.","summary":"Слух о мнимом предательстве заставляет Сандро встретиться у родника с абреком Щащико, но родичи выясняют источник клеветы и мирятся. После амнистии Щащико пытается вернуться к семье, затем вместе с младшим братом оказывается арестован и расстрелян; Сандро выкупает у охраны их останки и возвращает домой.","appearances":[
+      {"person":"sandro","role":"main","evidence":["В жаркий июльский полдень дядя Сандро лежал у себя во дворе"]},
+      {"person":"katya","role":"main","evidence":["двух шагах от него на овечьей шкуре сидела его двухлетняя дочка Тали, а жена возилась в огороде"]},
+      {"person":"tali","role":"secondary","evidence":["сидела его двухлетняя дочка Тали"]},
+      {"person":"shashiko","role":"main","evidence":["Щащико жив"]},
+      {"person":"valiko","role":"main","evidence":["Валико, прошу как брата"]},
+      {"person":"isa","role":"secondary","evidence":["старый Хабуг вместе с сыном Исой варили водку"]},
+      {"person":"father_sandro","role":"secondary","evidence":["старый Хабуг вместе с сыном Исой"]},
+      {"person":"shashiko_mother","role":"secondary","evidence":["вернулся к себе домой, к матери и младшему брату"]},
+      {"person":"shashiko_brother","role":"main","evidence":["Брат его уверял, что власти этим призывом"]},
+      {"person":"shashiko_wife","role":"main","evidence":["Однажды он пошел в село, где жила его бедная жена"]},
+      {"person":"shashiko_son","role":"secondary","evidence":["сына тайно увезли в другое село"]},
+      {"person":"narrator_mother","role":"secondary","evidence":["Мама состояла с Щащико примерно в таком же родстве"]},
+      {"person":"narrator_father","role":"secondary","evidence":["уже через отца"]}
+    ],"people":[],"relations":[
+      {"from":"sandro","to":"katya","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["жена дяди Сандро и, послушав взрыв смеха"]},
+      {"from":"sandro","to":"tali","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["его двухлетняя дочка Тали"]},
+      {"from":"sandro","to":"shashiko","type":"relative","label":"Дальние родственники, считавшие себя двоюродными братьями","confidence":"explicit","evidence":["Щащико ему даже не двоюродный брат"]},
+      {"from":"shashiko_mother","to":"shashiko_brother","type":"parent","label":"Мать и младший сын","confidence":"explicit","evidence":["вернулся к себе домой, к матери и младшему брату"]},
+      {"from":"shashiko","to":"shashiko_brother","type":"sibling","label":"Братья","confidence":"explicit","evidence":["Тела Щащико и его брата обошлись в пятьсот рублей"]},
+      {"from":"shashiko","to":"shashiko_wife","type":"spouse","label":"Разлучённые супруги","confidence":"explicit","evidence":["несмотря ни на что, любимому мужу"]},
+      {"from":"shashiko","to":"shashiko_son","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Они знали, что он очень тоскует по сыну"]},
+      {"from":"sandro","to":"shashiko","type":"recovers_remains","label":"Выкупает и возвращает останки","confidence":"explicit","evidence":["Тела Щащико и его брата обошлись в пятьсот рублей"]}
+    ]},
+    {"title":"История молельного дерева","work_id":"work_2c2df446f939bdfaa8c0b6dc72f05f77bb6184ddcec3e8ad627787cde301457f","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик соединяет семейную память Хабуга и Сандро, сельскую легенду и позднейшую газетно-научную полемику о найденных костях.","summary":"Во время коллективизации Хабуг приносит жертву молельному ореху, но слышит в его гуле неизбежность колхоза. Комсомольцы позднее сжигают дерево, обнаруживают человеческие кости, а Сандро оказывается под подозрением и через Лакобу попадает в город; Хабуг узнаёт в находке пропавшего отца Кунты, тогда как печать превращает историю в спор об древнем воздушном погребении.","appearances":[
+      {"person":"father_sandro","role":"main","evidence":["Отец дяди Сандро, старый Хабуг"]},
+      {"person":"sandro","role":"main","evidence":["Притихший дядя Сандро сидел рядом с отцом"]},
+      {"person":"kunta","role":"main","evidence":["рассказал обо всем этом Кунте"]},
+      {"person":"kunta_father","role":"main","evidence":["отец Кунты, таинственно исчезнувший двадцать лет тому назад"]},
+      {"person":"timur_zhvanba","role":"main","evidence":["Председатель колхоза, звали его Тимур Жванба"]},
+      {"person":"makhty","role":"main","evidence":["Махты, так звали председателя сельсовета"]},
+      {"person":"tendel","role":"secondary","evidence":["старый охотник Тендел подсыпал пороху"]},
+      {"person":"kolcheruky","role":"secondary","evidence":["известный острослов по прозвищу Колчерукий"]},
+      {"person":"siko","role":"secondary","evidence":["один из чегемцев по имени Сико"]},
+      {"person":"lakoba","role":"main","evidence":["там он увиделся с Лакобой"]},
+      {"person":"narrator","role":"main","evidence":["просматривая подшивки тех лет"]}
+    ],"people":[
+      {"id":"levan_golba_journalist","name":"Леван Гольба","description":"Приспособляющийся журналист, меняющий форму псевдонима вслед за политической конъюнктурой и полемизирующий об обычаях погребения.","role":"secondary","evidence":["псевдонимом Леван Гольба"]},
+      {"id":"young_historian_prayer_tree","name":"Молодой историк молельного дерева","description":"Будущий московский профессор, выдвинувший гипотезу о древнем воздушном погребении и десятилетия спустя всё ещё опасающийся местной полемики.","role":"main","evidence":["спросить об этом у нашего историка оказалось не так-то просто"]}
+    ],"relations":[
+      {"from":"father_sandro","to":"timur_zhvanba","type":"conflict","label":"Спорят о коллективизации и хозяйстве","confidence":"explicit","evidence":["Председатель колхоза особенно нажимал на Хабуга"]},
+      {"from":"kunta_father","to":"kunta","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["отец Кунты, таинственно исчезнувший двадцать лет тому назад"]},
+      {"from":"father_sandro","to":"kunta","type":"tells","label":"Раскрывает вероятную судьбу отца","confidence":"explicit","evidence":["рассказал обо всем этом Кунте"]},
+      {"from":"lakoba","to":"sandro","type":"recruits","label":"После ареста переводит Сандро в город","confidence":"explicit","evidence":["тот его выманил в город"]},
+      {"from":"father_sandro","to":"sandro","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["дядя Сандро сидел рядом с отцом"]}
+    ]},
+    {"title":"Пиры Валтасара","work_id":"work_5cd46c2d8174acd430931b4ad08b8b6e51afd5230dc96a7d8713c270815c8204","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик следует воспоминанию Сандро о пире со Сталиным, попеременно показывая сознание танцора и гротескные внутренние реакции вождей.","summary":"Лакоба делает Сандро комендантом ЦИКа и танцором ансамбля Панцулая. Попав на гагринский пир Сталина, Сандро блестяще танцует, становится тамадой и наблюдает застольные игры власти между Сталиным, Берией, Ворошиловым, Калининым и Лакобой; утреннее возвращение вызывает воспоминание о возможной встрече с молодым Сталиным-разбойником.","appearances":[
+      {"person":"sandro","role":"main","evidence":["Хорошей жизнью зажил дядя Сандро"]},
+      {"person":"lakoba","role":"main","evidence":["Нестор Аполлонович Лакоба взял его в город"]},
+      {"person":"platon","role":"main","evidence":["под руководством Платона Панцулая"]},
+      {"person":"pata","role":"main","evidence":["соперничать с самим Патой Патарая"]},
+      {"person":"mahaz_dancer","role":"main","evidence":["танцор и запевала по имени Махаз"]},
+      {"person":"stalin","role":"main","evidence":["Совещание, по слухам, проводил сам Сталин, отдыхавший в это время в Гаграх"]},
+      {"person":"beria","role":"main","evidence":["Товарищ Сталин, что делать с этим Цулукидзе? — спросил Берия"]},
+      {"person":"voroshilov","role":"main","evidence":["поднял голову Ворошилов"]},
+      {"person":"kalinin","role":"main","evidence":["кричал Калинин"]},
+      {"person":"sarya_lakoba","role":"main","evidence":["Прекрасную Сарью, просим, просим!"]},
+      {"person":"nina_beria","role":"secondary","evidence":["красавица Нина, жена Берии"]},
+      {"person":"tsulukidze","role":"secondary","evidence":["что делать с этим Цулукидзе"]},
+      {"person":"tsulukidze_brother","role":"secondary","evidence":["У него, по-моему, был брат"]}
+    ],"people":[
+      {"id":"gagra_sanatorium_director_feast","name":"Директор гагринского санатория","description":"Распорядитель места пира, исполняющий требования Лакобы и утром открывающий занавеси банкетного зала.","role":"secondary","evidence":["директор санатория раздвинул тяжелые занавески"]},
+      {"id":"gagra_old_cook_feast","name":"Старый повар гагринского санатория","description":"Повар, развлекающий гостей историями о принце Ольденбургском и демонстрирующий рискованный способ переносить яйцо в волосах.","role":"secondary","evidence":["рассказывал повар одному из секретарей райкома"]}
+    ],"relations":[
+      {"from":"lakoba","to":"sandro","type":"patron","label":"Берёт на службу и продвигает","confidence":"explicit","evidence":["Лакоба взял его в город, сделал комендантом Цика"]},
+      {"from":"platon","to":"sandro","type":"leads","label":"Руководитель ансамбля и танцор","confidence":"explicit","evidence":["ансамбль песни и пляски под руководством Платона Панцулая"]},
+      {"from":"mahaz_dancer","to":"sandro","type":"colleague","label":"Товарищи по ансамблю","confidence":"explicit","evidence":["новая звезда Сандро Чегемский"]},
+      {"from":"lakoba","to":"sarya_lakoba","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Налево от Лакобы сидела жена его, смуглянка Сарья"]},
+      {"from":"beria","to":"nina_beria","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["красавица Нина, жена Берии, а дальше сидел ее муж"]},
+      {"from":"tsulukidze","to":"tsulukidze_brother","type":"sibling","label":"Братья","confidence":"explicit","evidence":["У него, по-моему, был брат"]}
     ]}
   ]
 }
