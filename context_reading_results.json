@@ -2240,6 +2240,39 @@
       {"from":"chik_uncle_kolya","to":"chik","type":"uncle","label":"Дядя → племянник","confidence":"explicit","evidence":["Это мой дядя"]},
       {"from":"chik","to":"chik_uncle_kolya","type":"cares_for","label":"Переживает нежность и бережёт от унижения","confidence":"explicit","evidence":["что он его любит и никогда, никогда его больше не будет дразнить"]},
       {"from":"akakiy_makedonovich","to":"chik","type":"teacher","label":"Учитель русского языка → ученик","confidence":"explicit","evidence":["Учитель русского языка, Акакий Македонович"]}
+    ]},
+    {"title":"Чик и Пушкин","work_id":"work_69fbd353ea02abdc9e829c1fe44eb5e397ca1ada922567a6ac0cd2f76cbbafe0","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ следует внутреннему взрослению Чика: от школьного спектакля и массового страха перед «вредителями» к самостоятельному открытию поэзии Пушкина.","summary":"Чик получает роль Балды в школьном спектакле, но из-за небрежности уступает её деревенскому Жоре Куркулия и выступает задними ногами лошади. Позже, разыскивая мнимую антисталинскую надпись на пушкинской тетради, он впервые переживает подлинное действие поэзии.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик ужасно любил эти минуты"]},
+      {"person":"alexandra_ivanovna","role":"main","evidence":["Александра Ивановна сидела за столом и читала «Капитанскую дочку»"]},
+      {"person":"sevastyanov_chik_classmate","role":"main","evidence":["Звали его Сева"]},
+      {"person":"akakiy_makedonovich","role":"mention","evidence":["директор школы Акакий Македонович"]},
+      {"person":"chik_uncle_riza","role":"mention","evidence":["Его любимый дядя Риза"]},
+      {"person":"chik_aunt","role":"main","evidence":["Чик как-то проговорился тетушке о своем драмкружке"]},
+      {"person":"chik_uncle_kolya","role":"main","evidence":["сумасшедший дядя Чика смеялся"]},
+      {"person":"chik_mother","role":"secondary","evidence":["Мама стирала во дворе"]},
+      {"person":"anesti_boatswain","role":"secondary","evidence":["крикнул Анести"]},
+      {"person":"remzik_abu","role":"secondary","evidence":["Становись вместо Абу нападающим"]},
+      {"person":"bocho","role":"secondary","evidence":["сиплому голосу Бочо"]},
+      {"person":"onik","role":"secondary","evidence":["Оник, не спи"]},
+      {"person":"shurik_cleaner_son","role":"mention","evidence":["ехидный голос Шурика"]},
+      {"person":"stalin","role":"secondary","evidence":["Сталин обнимал девочку Мамлакат"]},
+      {"person":"alexander_pushkin","role":"main","evidence":["произведению Пушкина «Сказка о попе и о работнике его Балде»"]}
+    ],"people":[
+      {"id":"evgeny_dmitrievich_drama_teacher","name":"Евгений Дмитриевич Левкоев","description":"Высокий артист городского театра и руководитель школьного драмкружка; сначала назначает Чика Балдой, затем отдаёт роль более старательному Жоре Куркулия.","role":"main","evidence":["Зовут меня Евгений Дмитриевич Левкоев"]},
+      {"id":"zhora_kurkuliya","name":"Жора Куркулия","description":"Светлоглазый деревенский школьник с сильным мингрельским акцентом; остаётся помогать труппе после отказа, выучивает всю пьесу и в итоге успешно заменяет Чика в роли Балды.","role":"main","evidence":["звали его Жора Куркулия"]},
+      {"id":"antsiferov_classmate","name":"Анциферов","description":"Тихий одноклассник Чика и единственный очкарик в классе, которого сердитый математик неизменно вызывает к доске.","role":"secondary","evidence":["Анциферов вздрагивает, поправляет очки"]},
+      {"id":"chik_history_teacher_greek","name":"Учитель истории — грек","description":"Хороший школьный учитель, чья особенная горячность в рассказе о древнегреческом полководце смешит Севу и Чика.","role":"secondary","evidence":["истории учитель рассказывал об одном древнегреческом полководце"]},
+      {"id":"chik_old_librarian","name":"Старая библиотекарша Чика","description":"Ехидная сотрудница городской библиотеки, разыскавшая Чика из-за потерянной книги и заставившая его отдать взамен другую.","role":"secondary","evidence":["старушенции библиотекарши"]},
+      {"id":"false_wrecker_business_traveler","name":"Командированный, принятый детьми за вредителя","description":"Толстый приезжий с портфелем, которого дети травят как предполагаемого вредителя; дядя Коля разгоняет толпу и помогает ему уйти.","role":"secondary","evidence":["Я приехал в командировку, остановился в гостинице «Рица»"]},
+      {"id":"policeman_defused_wrecker_mob","name":"Милиционер у приморского пустыря","description":"Знакомый дяди Коли милиционер, который разгоняет возбужденную детскую толпу после травли приезжего.","role":"secondary","evidence":["к толпе ребят подошел милиционер"]}
+    ],"relations":[
+      {"from":"alexandra_ivanovna","to":"chik","type":"teacher","label":"Любимая учительница → ученик","confidence":"explicit","evidence":["Александру Ивановну он и всегда любил больше всех остальных учителей"]},
+      {"from":"sevastyanov_chik_classmate","to":"chik","type":"friend","label":"Друзья и наблюдатели смешного","confidence":"explicit","evidence":["Чик всегда переглядывался с Севой"]},
+      {"from":"evgeny_dmitrievich_drama_teacher","to":"chik","type":"teacher","label":"Руководитель драмкружка → актёр","confidence":"explicit","evidence":["Вот ты и будешь Балдой"]},
+      {"from":"evgeny_dmitrievich_drama_teacher","to":"zhora_kurkuliya","type":"teacher","label":"Руководитель драмкружка → актёр","confidence":"explicit","evidence":["Куркулия будет местным кавказским Балдой"]},
+      {"from":"zhora_kurkuliya","to":"chik","type":"rival","label":"Сменяет Чика в роли Балды","confidence":"explicit","evidence":["А ты будешь на его месте играть лошадь"]},
+      {"from":"chik_uncle_kolya","to":"false_wrecker_business_traveler","type":"protects","label":"Защищает от детской травли","confidence":"explicit","evidence":["слегка загородив его, ласково сказал"]},
+      {"from":"policeman_defused_wrecker_mob","to":"chik_uncle_kolya","type":"friend","label":"Давно знакомы","confidence":"strongly_implied","evidence":["дружески похлопывал его по плечу"]}
     ]}
   ]
 }
