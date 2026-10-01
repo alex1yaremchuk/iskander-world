@@ -2085,6 +2085,78 @@
       {"from":"zaira_grandfather","to":"zaira_scorpion","type":"grandparent","label":"Дед → внучка","confidence":"explicit","evidence":["суровый старик обожает свою внучку"]},
       {"from":"lena_bashkapsarov_cousin","to":"sergey_bashkapsarov","type":"cousin","label":"Двоюродные брат и сестра","confidence":"explicit","evidence":["его двоюродная сестра, звали ее Лена"]},
       {"from":"sundarev_artist","to":"andrei_tarkilov","type":"friend","label":"Хозяин и гость-художник","confidence":"explicit","evidence":["его гость из города, художник Андрей Таркилов"]}
+    ]},
+    {"title":"Ночь и день Чика","work_id":"work_a3473bb5209840d189b509f89d6d92b4831e1522b055553df17c8aa348796256","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ целиком держится восприятия Чика: ночной разговор в доме бабушки сменяется дневным походом его дворовой компании.","summary":"Ночью Чик слушает страшный рассказ вора Ясона и успокаивается рядом с тётей Наташей; днём ведёт Оника, Соньку, Нику и Лёсика за мастикой, возвращает себе авторитет в драке с Бочо и бережёт от Ники правду об арестованном отце.","appearances":[
+      {"person":"chik","role":"main","evidence":["А тебе, Ясон, — спросил Чик"]},
+      {"person":"chik_grandmother","role":"mention","evidence":["Чик лежал на высокой бабушкиной кровати"]},
+      {"person":"chik_uncle_kolya","role":"main","evidence":["сумасшедший дядюшка Чика"]},
+      {"person":"chik_aunt","role":"mention","evidence":["папирос «Рица», которые курила его тетушка"]},
+      {"person":"chik_older_brother","role":"mention","evidence":["а старшему брату не доверяла"]},
+      {"person":"yason","role":"main","evidence":["Дело в том, что Ясон был вором"]},
+      {"person":"chik_aunt_natasha","role":"main","evidence":["тетя Наташа, дальняя родственница Чика"]},
+      {"person":"onik","role":"main","evidence":["Оника, сына Богатого Портного"]},
+      {"person":"sonka","role":"main","evidence":["две девочки: Сонька и Ника"]},
+      {"person":"nika_chik","role":"main","evidence":["девочка Ника"]},
+      {"person":"lesik","role":"main","evidence":["Лёсик, который, как понимал Чик"]},
+      {"person":"bocho","role":"main","evidence":["Чику предстояло с ним подраться"]},
+      {"person":"rich_tailor_chik","role":"secondary","evidence":["Оника, сына Богатого Портного"]},
+      {"person":"belka_chik","role":"main","evidence":["свою собачку Белку"]},
+      {"person":"larisa_chik","role":"secondary","evidence":["Звали ее тетя Лариса"]},
+      {"person":"omar_chik","role":"secondary","evidence":["Это был ее сын Омар"]},
+      {"person":"pata","role":"mention","evidence":["не дочь Патарая"]},
+      {"person":"persian_consul","role":"mention","evidence":["старенькому персидскому консулу"]},
+      {"person":"chik_aunt_husband","role":"mention","evidence":["а уж второй раз дядя Чика"]},
+      {"person":"remzik_abu","role":"secondary","evidence":["соседским мальчишкой Абу"]},
+      {"person":"uncle_alikhan","role":"mention","evidence":["сутулую спину Алихана"]}
+    ],"people":[
+      {"id":"shurik_cleaner_son","name":"Шурик — сын школьной уборщицы","description":"Нервный мальчик с соседней улицы, подзадоривающий Чика на драку с Бочо; отделён от Александра Авдеенко.","role":"secondary","evidence":["Шурик, нервный сын школьной уборщицы"]},
+      {"id":"redheaded_elder_brother","name":"Старший из рыжих братьев","description":"Четырнадцатилетний предводитель живущих в пещере рыжих братьев, которые считают сосновую гору своей.","role":"secondary","evidence":["Самый старший из рыжей команды"]},
+      {"id":"redheaded_young_fighter","name":"Маленький рыжик — противник Чика","description":"Один из младших рыжих братьев; отчаянно дрался с Чиком в парке, после чего присвоил себе победу.","role":"secondary","evidence":["Это был рыжик"]},
+      {"id":"redheaded_brothers_father","name":"Рыжебородый отец братьев","description":"Отец живущей в пещере рыжей семьи, ездящий по городу на ослике и гадающий людям.","role":"mention","evidence":["их рыжебородый отец"]},
+      {"id":"wolfhound_puppy_larisa","name":"Щенок волкодава тёти Ларисы","description":"Крупный пепельный щенок в государственном саду, который в игре больно кусает Чика и мешает походу.","kind":"animal","role":"secondary","evidence":["щенок волкодава набрасывался на Чика"]},
+      {"id":"yason_greek_accomplice","name":"Грек — сообщник Ясона","description":"Трусливый сообщник Ясона при ночной краже, оставшийся сторожить на улице и унесший чемодан.","role":"secondary","evidence":["то был грек"]},
+      {"id":"yason_sleeping_victim","name":"Хозяин ограбленной квартиры","description":"Безымянный спящий хозяин квартиры, которого Ясон, по собственному рассказу, убил во время кражи.","role":"secondary","evidence":["на кровати спит мужчина"]},
+      {"id":"old_gabunia","name":"Старик Габуния","description":"Чудаковатый старик, рассказавший о дореволюционном скорпионе величиной с черепаху.","role":"mention","evidence":["Так рассказывал старик Габуния"]}
+    ],"relations":[
+      {"from":"yason","to":"chik","type":"relative","label":"Старшие родственники","confidence":"explicit","evidence":["он был сыном ее брата"]},
+      {"from":"chik_aunt_natasha","to":"chik","type":"relative","label":"Дальняя родственница","confidence":"explicit","evidence":["тетя Наташа, дальняя родственница Чика"]},
+      {"from":"chik_uncle_kolya","to":"chik","type":"uncle","label":"Дядя → племянник","confidence":"explicit","evidence":["сумасшедший дядюшка Чика"]},
+      {"from":"rich_tailor_chik","to":"onik","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["Оника, сына Богатого Портного"]},
+      {"from":"pata","to":"nika_chik","type":"parent","label":"Отец → дочь","confidence":"explicit","evidence":["не дочь Патарая"]},
+      {"from":"larisa_chik","to":"omar_chik","type":"parent","label":"Мать → сын","confidence":"explicit","evidence":["Это был ее сын Омар"]},
+      {"from":"chik","to":"lesik","type":"friend","label":"Друг и защитник","confidence":"explicit","evidence":["Чик часто защищал его от ребят"]},
+      {"from":"chik","to":"bocho","type":"rival","label":"Соперники в драке","confidence":"explicit","evidence":["Чику предстояло с ним подраться"]},
+      {"from":"chik","to":"shurik_cleaner_son","type":"rival","label":"Соперники за дворовый авторитет","confidence":"strongly_implied","evidence":["Шурик стал дерзить"]},
+      {"from":"redheaded_elder_brother","to":"redheaded_young_fighter","type":"sibling","label":"Братья","confidence":"explicit","evidence":["поглаживая своего братца по голове"]},
+      {"from":"redheaded_brothers_father","to":"redheaded_elder_brother","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["жили вместе с родителями"]},
+      {"from":"yason","to":"yason_greek_accomplice","type":"associate","label":"Сообщники при краже","confidence":"explicit","evidence":["Шли с кино с одним корешем"]},
+      {"from":"yason","to":"yason_sleeping_victim","type":"kills","label":"Убивает хозяина при краже","confidence":"explicit","evidence":["Убил, убил, — пробормотал Ясон"]}
+    ]},
+    {"title":"Чаепитие и любовь к морю","work_id":"work_04251de5ee9eab342caa084e6bfc13b39a78038a8220e895e13c28a58e501070","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование следует мыслям Чика во время чаепития, его воспоминаниям о море и уловке ради разрешения пойти купаться.","summary":"Пока тётушка принимает новую соседку, Чик вспоминает отчаянного мальчика-ныряльщика, утопленника и странного рыбака; затем провоцирует дядю Колю на ссору, чтобы тётушка отправила их обоих к морю.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик тоже пил чай"]},
+      {"person":"chik_aunt","role":"main","evidence":["Тетушка сидела на веранде"]},
+      {"person":"chik_uncle_kolya","role":"main","evidence":["Дядя Коля, сидевший в углу веранды"]},
+      {"person":"persian_consul","role":"secondary","evidence":["рассказ о персидском консуле"]},
+      {"person":"school_waltz_erik","role":"mention","evidence":["мужем и сыном Эриком"]},
+      {"person":"aunt_tamara_neighbor","role":"secondary","evidence":["тетя Тамара вышла из своей кухонной пристройки"]},
+      {"person":"belka_chik","role":"secondary","evidence":["раньше, чем кошки, на призыв ее отозвалась Белка"]},
+      {"person":"onik","role":"secondary","evidence":["у Оника вид был еще более унылый"]}
+    ],"people":[
+      {"id":"evgenia_alexandrovna_neighbor","name":"Евгения Александровна","description":"Новая соседка двора, недавно переехавшая с мужем и сыном Эриком; первая гостья щедрого чаепития тётушки.","role":"secondary","evidence":["Евгению Александровну, новую соседку по двору"],"merge_ids":["bulk_97332153e815702ee643dfd5"]},
+      {"id":"daredevil_diver_boy","name":"Отчаянный мальчик-ныряльщик","description":"Безымянный мальчик, прыгающий с вышки за деньги и вынужденный добывать мидии для Керопчика; Чик пытается заменить его в воде.","role":"secondary","evidence":["этот мальчик, ростом не больше Чика"]},
+      {"id":"keropchik","name":"Керопчик","description":"Известный хулиган, заставляющий замёрзшего мальчика нырять за мидиями для продажи на базаре.","role":"secondary","evidence":["Возле него в позе нетерпеливого ожидания стоял Керопчик"],"merge_ids":["bulk_61ddc3dc363516c534ef0900"]},
+      {"id":"drowned_young_man_chik","name":"Утонувший юноша","description":"Примерно двадцатилетний купальщик, тело которого после шторма вынесли из моря; пробуждает в Чике мысль о хрупкости и продолжении человеческой жизни.","role":"secondary","evidence":["труп примерно двадцатилетнего юноши"]},
+      {"id":"young_lifeguard_chik","name":"Молодой спасатель","description":"Восемнадцатилетний спасатель, накинувший петлю на тело утонувшего и предупредивший толпу об опасности шторма.","role":"secondary","evidence":["молодой, тонкий парень лет восемнадцати"]},
+      {"id":"strong_lifeguard_chik","name":"Старший спасатель","description":"Сильный тридцатилетний спасатель, управлявший лодкой при извлечении утонувшего.","role":"secondary","evidence":["мужчина лет тридцати, геркулесовского сложения"]},
+      {"id":"strange_boat_fisherman","name":"Странный рыбак с лодки","description":"Живущий у спортплощадки рыбак, пригласивший Чика в лодку; рассуждает о чае, чайке, чихании от дыни и неизвестности за далёкой горой.","role":"secondary","evidence":["какой-то человек ловил рыбу с лодки"]},
+      {"id":"ananatsi_cat","name":"Ананаци","description":"Кошка тётушки и мать Апапаци, невозмутимо игнорирующая зов хозяйки с соседнего чердака.","kind":"animal","role":"secondary","evidence":["звали их Ананаци и Апапаци"]},
+      {"id":"apapatsi_cat","name":"Апапаци","description":"Младшая кошка тётушки, дочь Ананаци; прибегает на зов и делит пирожок с Белочкой.","kind":"animal","role":"secondary","evidence":["Ананаци мать Апапаци"]}
+    ],"relations":[
+      {"from":"evgenia_alexandrovna_neighbor","to":"school_waltz_erik","type":"parent","label":"Мать → сын","confidence":"explicit","evidence":["мужем и сыном Эриком"]},
+      {"from":"keropchik","to":"daredevil_diver_boy","type":"exploits","label":"Заставляет добывать мидии","confidence":"explicit","evidence":["мальчик ныряет возле скалы и достает для них мидии"]},
+      {"from":"chik","to":"daredevil_diver_boy","type":"helps","label":"Подменяет замёрзшего ныряльщика","confidence":"explicit","evidence":["Давай я половлю? — предложил Чик"]},
+      {"from":"young_lifeguard_chik","to":"drowned_young_man_chik","type":"rescues","label":"Извлекает тело из моря","confidence":"explicit","evidence":["спасатель, тот, что был помоложе, накинул на тело петлю"]},
+      {"from":"ananatsi_cat","to":"apapatsi_cat","type":"parent","label":"Мать → дочь","confidence":"explicit","evidence":["Ананаци мать Апапаци"]}
     ]}
   ]
 }
