@@ -2273,6 +2273,38 @@
       {"from":"zhora_kurkuliya","to":"chik","type":"rival","label":"Сменяет Чика в роли Балды","confidence":"explicit","evidence":["А ты будешь на его месте играть лошадь"]},
       {"from":"chik_uncle_kolya","to":"false_wrecker_business_traveler","type":"protects","label":"Защищает от детской травли","confidence":"explicit","evidence":["слегка загородив его, ласково сказал"]},
       {"from":"policeman_defused_wrecker_mob","to":"chik_uncle_kolya","type":"friend","label":"Давно знакомы","confidence":"strongly_implied","evidence":["дружески похлопывал его по плечу"]}
+    ]},
+    {"title":"Чик знал, где зарыта собака","work_id":"work_685c0fa2ddeab867e5d16e836b99592e337882e65c79cf0f0bdeb0f95571d72a","status":"read","narrator":"chik","narrator_note":"Иронический третьеличный рассказ следует азарту и самооправданиям Чика; финальный авторский комментарий сохраняет дистанцию, не меняя центральной детской перспективы.","summary":"Поверив во сне открытому закону выпадения монеты, Чик обыгрывает Анести, Славика и близнецов. Он выдумывает для Бочо легенду о зарытых собаках, но затем проигрывает всё богатому сыну мясника с его «везучей» копейкой.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик играл в деньги"]},
+      {"person":"nika_chik","role":"main","evidence":["В таких носках, и даже именно в этих, любила ходить Ника"]},
+      {"person":"belka_chik","role":"secondary","evidence":["Белка была умнейшей собакой"]},
+      {"person":"remzik_abu","role":"secondary","evidence":["соседский мальчик Абу"]},
+      {"person":"anesti_boatswain","role":"main","evidence":["Он подошел к Боцману"]},
+      {"person":"bocho","role":"main","evidence":["Один из них был Бочо"]},
+      {"person":"slavik","role":"main","evidence":["другой Славик"]},
+      {"person":"onik","role":"mention","evidence":["Оник никогда не доходил до того"]},
+      {"person":"lesik","role":"mention","evidence":["Лёсик, Оник, Сонька и Ника будут кататься"]},
+      {"person":"sonka","role":"mention","evidence":["Лёсик, Оник, Сонька и Ника будут кататься"]},
+      {"person":"alexander_pushkin","role":"mention","evidence":["«Пиковую даму» Пушкина"]}
+    ],"people":[
+      {"id":"jack_abu_dog","name":"Джек — собака Абу","description":"Недалёкая собака Абу, которая каждый раз принимает знакомого Чика за чужака, а затем делает вид, что лаяла в шутку.","kind":"animal","role":"secondary","evidence":["владелец глупейшей собаки Джек"]},
+      {"id":"anesti_brother_christo","name":"Христо — брат Анести","description":"Старший брат Боцмана-Анести, шестнадцатилетний боксёр; судит поединок мальчиков и подсказывает брату по-гречески ускорить темп.","role":"secondary","evidence":["Брат Боцмана, звали его Христо"]},
+      {"id":"slavik_father_monkey_scientist","name":"Отец Славика-Суслика","description":"Добрый учёный из Москвы, работающий вместе с женой в обезьяньем питомнике.","role":"mention","evidence":["Его отец и мать оба работали в обезьяньем питомнике"]},
+      {"id":"slavik_mother_monkey_scientist","name":"Мать Славика-Суслика","description":"Учёная из Москвы, работающая вместе с мужем в обезьяньем питомнике; мать их единственного сына Славика.","role":"mention","evidence":["Его отец и мать оба работали в обезьяньем питомнике"]},
+      {"id":"grave_shovel_twins","name":"Близнецы «Гроб да Лопата»","description":"Два всегда одинаково одетых серьёзных брата-игрока, совместно распоряжающихся деньгами и меняющих тактику после совещаний.","role":"secondary","evidence":["общее прозвище «Два Брата — Гроб да Лопата»"]},
+      {"id":"chief_butcher_son","name":"Сын главного мясника","description":"Самый богатый мальчик города, приехавший к магазину на велосипеде; сначала крупно проигрывает Чику, затем возвращает всё одной серией ставок на везучую копейку.","role":"secondary","evidence":["Он сын главного мясника"]},
+      {"id":"chief_butcher_mukhus","name":"Главный мясник Мухуса","description":"Безымянный главный городской мясник, отец исключительно богатого мальчика-велосипедиста.","role":"mention","evidence":["Он сын главного мясника"]}
+    ],"relations":[
+      {"from":"remzik_abu","to":"jack_abu_dog","type":"owns","label":"Хозяин собаки","confidence":"explicit","evidence":["владелец глупейшей собаки Джек"]},
+      {"from":"anesti_brother_christo","to":"anesti_boatswain","type":"sibling","label":"Старший брат → младший брат","confidence":"explicit","evidence":["Брат Боцмана, звали его Христо"]},
+      {"from":"slavik_father_monkey_scientist","to":"slavik","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["Славик был единственным сыном своих родителей"]},
+      {"from":"slavik_mother_monkey_scientist","to":"slavik","type":"parent","label":"Мать → сын","confidence":"explicit","evidence":["Славик был единственным сыном своих родителей"]},
+      {"from":"slavik_father_monkey_scientist","to":"slavik_mother_monkey_scientist","type":"spouse","label":"Супруги и коллеги","confidence":"strongly_implied","evidence":["Профессорская семья, говорили на улице Чика"]},
+      {"from":"chief_butcher_mukhus","to":"chief_butcher_son","type":"parent","label":"Отец → сын","confidence":"explicit","evidence":["Он сын главного мясника"]},
+      {"from":"chik","to":"nika_chik","type":"in_love","label":"Детская влюблённость и ревность","confidence":"strongly_implied","evidence":["Чику стало так хорошо, что он совсем забыл о Славике"]},
+      {"from":"chik","to":"bocho","type":"friend","label":"Друзья и будущие партнёры по игре","confidence":"explicit","evidence":["Чик любил Бочо"]},
+      {"from":"chik","to":"anesti_boatswain","type":"rival","label":"Соперники в игре на деньги","confidence":"explicit","evidence":["Чик его полностью обыграл"]},
+      {"from":"chik","to":"slavik","type":"rival","label":"Обида и игровое возмездие","confidence":"explicit","evidence":["час возмездия настал"]}
     ]}
   ]
 }
