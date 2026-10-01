@@ -2460,6 +2460,148 @@
       {"from":"chik_cousin_lena","to":"chik","type":"cousin","label":"Взрослая двоюродная сестра","confidence":"explicit","evidence":["Чик со своей взрослой двоюродной сестрой, которую звали Лена"]},
       {"from":"slavik_father_monkey_scientist","to":"slavik","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Отец Славика был профессором"]},
       {"from":"slavik_mother_monkey_scientist","to":"slavik","type":"parent","label":"Мать и сын","confidence":"explicit","evidence":["Чик, запомни, пожалуйста, — сказала мама Славика"]}
+    ]},
+    {"title":"Возмездие","work_id":"work_38be85fbc1b4c97e30d5f35cd78d1813fc296d3b6cb78eb6d75141b24098536a","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ последовательно показывает глазами Чика превращение ожидания справедливой кары в отвращение к уголовному насилию.","summary":"Керопчик пьяной выходкой разбивает лоток Алихана, и Чик надеется, что знаменитый бандит Мотя Деревянный восстановит справедливость. Увидев, как Мотя режет Керопчику ноги ножом, стреляет у ног вмешавшихся взрослых и превращает дом свидетеля в застолье, Чик навсегда теряет романтический интерес к преступному миру.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик стоял рядом с дядей Алиханом"]},
+      {"person":"uncle_alikhan","role":"main","evidence":["продававшим сласти у входа на базар"]},
+      {"person":"keropchik","role":"main","evidence":["с базара вышел Керопчик с тремя друзьями"]},
+      {"person":"chik_older_brother","role":"secondary","evidence":["Недалеко от него на верхней же трибуне сидел его старший брат"]}
+    ],"people":[
+      {"id":"motya_wooden","name":"Мотя Деревянный","description":"Рослый вооружённый уголовник в матросском костюме и с медалью «За отвагу»; обещает наказать Керопчика, но своей жестокостью разрушает восхищение Чика преступным миром.","role":"main","evidence":["По тротуару, ведущему ко входу на базар, шел Мотя Пилипенко"]},
+      {"id":"piti_uriya_shoeshiner","name":"Пити-Урия","description":"Чистильщик обуви у входа на базар, свидетель нападения на Алихана; первым называет Моте виновника.","role":"secondary","evidence":["расположился чистильщик обуви Пити-Урия"]},
+      {"id":"keropchik_three_friends","name":"Трое приятелей Керопчика","description":"Пьяная компания Керопчика, одобряющая его издевательство над Алиханом.","role":"secondary","evidence":["Керопчик и его друзья повернулись и пошли к центру города"]},
+      {"id":"sports_ground_homeowner","name":"Домовладелец у спортплощадки","description":"Нервный хозяин соседнего дома, пытающийся позвать милицию, а после выстрелов Моти из страха превращающий вмешательство в гостеприимное застолье.","role":"secondary","evidence":["из окна в самом деле выпрыгнул нервный домовладелец"]},
+      {"id":"sports_ground_homeowner_wife","name":"Жена домовладельца у спортплощадки","description":"Жена свидетеля, бросающаяся на Мотю после выстрелов, а затем вынужденная готовить угощение.","role":"secondary","evidence":["Увидев, что муж ее жив, жена бросилась к Моте"]},
+      {"id":"military_man_motya_scene","name":"Военный на спортплощадке","description":"Высокий безоружный военный, пытающийся остановить расправу Моти над Керопчиком, но отступающий после выстрелов.","role":"secondary","evidence":["в воротах спортплощадки появился высокий человек в военной форме"]}
+    ],"relations":[
+      {"from":"keropchik","to":"uncle_alikhan","type":"harms","label":"Разбивает лоток и унижает","confidence":"explicit","evidence":["легким толчком ноги опрокинул лоток"]},
+      {"from":"motya_wooden","to":"keropchik","type":"harms","label":"Ранит ножом под видом возмездия","confidence":"explicit","evidence":["всадил нож в голое волосатое бедро Керопчика"]},
+      {"from":"piti_uriya_shoeshiner","to":"uncle_alikhan","type":"helps","label":"Свидетельствует за Алихана","confidence":"explicit","evidence":["Керопчик! — первым крикнул Пити-Урия"]},
+      {"from":"sports_ground_homeowner","to":"sports_ground_homeowner_wife","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Увидев, что муж ее жив, жена бросилась к Моте"]},
+      {"from":"keropchik","to":"keropchik_three_friends","type":"companion","label":"Приятели по пьяной компании","confidence":"explicit","evidence":["Керопчик с тремя друзьями"]}
+    ]},
+    {"title":"Чик чтит обычаи","work_id":"work_a7edee86b388cb45802c85d17f7ff967ce7a30650edb05e46321f31a3d81f169","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование следует попыткам двенадцатилетнего Чика применить городское объяснение чегемского этикета к живым и противоречивым семейным ситуациям.","summary":"Мать наставляет Чика соблюдать чегемские обычаи гостя. Из-за буквального следования правилам он остаётся без обеда в Большом доме, безуспешно ждёт приглашения у Сандро и Кати, а затем попадает к многодетной тёте Маше; к вечеру понимает условность правил и прощает рыжего родственника, дважды занявшего место за столом.","appearances":[
+      {"person":"chik","role":"main","evidence":["Ты уже не маленький, тебе двенадцать лет"]},
+      {"person":"chik_mother","role":"main","evidence":["сказала мама Чику перед тем, как отправить его в Чегем"]},
+      {"person":"kyzym","role":"secondary","evidence":["Чик поехал в Чегем с маминым братом дядей Кязымом"]},
+      {"person":"nutsa","role":"main","evidence":["Тетя Нуца, обслуживая всю эту ораву, сбивалась с ног"]},
+      {"person":"remzik","role":"secondary","evidence":["потом мальчик Ремзик и самый младший Гулик"]},
+      {"person":"sandro","role":"main","evidence":["Дядя Сандро жил ближе всех к Большому Дому"]},
+      {"person":"katya","role":"main","evidence":["тетя Катя, его жена"]},
+      {"person":"masha","role":"main","evidence":["дошел до ворот двора тети Маши"]},
+      {"person":"brother_sandro","role":"secondary","evidence":["муж тети Маши пастух Махаз"]},
+      {"person":"tali","role":"secondary","evidence":["Тали, дочь дяди Сандро"]},
+      {"person":"stalin","role":"mention","evidence":["с тех пор, как арестовали любимого дядю Чика и выслали отца, Чик окончательно возненавидел Сталина"]}
+    ],"people":[
+      {"id":"kyzym_daughter_ryziko","name":"Ризико","description":"Старшая дочь Кязыма и Нуцы, ровесница и двоюродная сестра Чика.","role":"secondary","evidence":["самая старшая, ровесница Чика, Ризико"]},
+      {"id":"kyzym_daughter_zinochka","name":"Зиночка","description":"Младшая сестра Ризико, дочь Кязыма и Нуцы и двоюродная сестра Чика.","role":"secondary","evidence":["ее сестрица помладше Зиночка"]},
+      {"id":"kyzym_son_gulik","name":"Гулик","description":"Самый младший ребёнок Кязыма и Нуцы, двоюродный брат Чика.","role":"secondary","evidence":["самый младший Гулик"]},
+      {"id":"ankhara_redheaded_boy","name":"Рыжик из Анхары","description":"Дальний родственник семьи из села Анхара, дважды садящийся обедать вместо Чика, но немедленно прощённый им во время детской игры.","role":"main","evidence":["Среди них был ровесник Чика, мальчик из села Анхара"]},
+      {"id":"masha_daughter_lyalya","name":"Ляля — дочь тёти Маши","description":"Одна из старших дочерей Махаза и Маши; убирает после обеда и заботится о младшей сестрёнке.","role":"main","evidence":["А ты, Ляля, взгляни, не опрокинула ли девочка люльку"]},
+      {"id":"masha_daughter_mayana","name":"Маяна — дочь тёти Маши","description":"Сильная и весёлая дочь Махаза и Маши, подающая Чику буйволиное мацони и собирающая персики.","role":"main","evidence":["Маяна подала Чику железную миску с мацони"]},
+      {"id":"masha_baby_daughter","name":"Младшая дочь тёти Маши","description":"Маленькая сестра Ляли и Маяны, лежащая в люльке под охраной огромной семейной собаки.","role":"secondary","evidence":["прогуливала свою толстоногую, стремящуюся оторваться от нее сестренку"]}
+    ],"relations":[
+      {"from":"kyzym","to":"kyzym_daughter_ryziko","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["дети дяди Кязыма и тети Нуцы: самая старшая, ровесница Чика, Ризико"]},
+      {"from":"nutsa","to":"kyzym_daughter_zinochka","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["дети дяди Кязыма и тети Нуцы"]},
+      {"from":"kyzym","to":"kyzym_son_gulik","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["потом мальчик Ремзик и самый младший Гулик"]},
+      {"from":"masha","to":"masha_daughter_lyalya","type":"parent","label":"Мать и дочь","confidence":"explicit","evidence":["Дом тети Маши славился тем, что здесь все лето ели персики"]},
+      {"from":"brother_sandro","to":"masha_daughter_mayana","type":"parent","label":"Отец и дочь","confidence":"inferred","evidence":["муж тети Маши пастух Махаз"]},
+      {"from":"masha_daughter_lyalya","to":"masha_baby_daughter","type":"sibling","label":"Старшая и младшая сёстры","confidence":"explicit","evidence":["прогуливала свою толстоногую, стремящуюся оторваться от нее сестренку"]},
+      {"from":"chik","to":"ankhara_redheaded_boy","type":"friend","label":"Дальние родственники и товарищи по детским играм","confidence":"inferred","evidence":["В голосе Рыжика Чик почувствовал такую дружественность"]}
+    ]},
+    {"title":"Чик и белая курица","work_id":"work_c5f140a04cbd3b1787b2e0ac9db3eb4fc50cc4cec72deffc3b6d5567a5b3fdcf","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ следует стыду и нравственному смятению Чика после того, как сострадание к белой курице принимают за трусость.","summary":"Чик не может зарезать белую курицу, и история мгновенно разносится по двору и школе. После разговора с троюродным братом Сафаром он уходит на море, находит потерянные часы, получает пять рублей и в драке с насмешником доказывает прежде всего самому себе, что жалость не равна трусости.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик играл с ребятами во дворе"]},
+      {"person":"chik_mother","role":"main","evidence":["мама его вышла на крыльцо и позвала его"]},
+      {"person":"onik","role":"secondary","evidence":["Чик, дай я зарежу курицу! — радостно крикнул Оник"]},
+      {"person":"lesik","role":"secondary","evidence":["крикнул даже хромой Лёсик"]},
+      {"person":"sonka","role":"main","evidence":["Вдруг Сонька с болезненной жалостью взглянула на Чика"]},
+      {"person":"nika_chik","role":"secondary","evidence":["таинственно улыбнулась Ника"]},
+      {"person":"alexandra_ivanovna","role":"secondary","evidence":["его любимая учительница литературы Александра Ивановна"]},
+      {"person":"shurik_cleaner_son","role":"secondary","evidence":["Шурик, нервный сын школьной уборщицы"]},
+      {"person":"chik_chiromancer_children","role":"secondary","evidence":["к нему вдруг подскочили братья-рыжики"]},
+      {"person":"chief_butcher_son","role":"secondary","evidence":["тот самый богатый игрок, с которым Чик когда-то играл на деньги"]},
+      {"person":"safar","role":"main","evidence":["его троюродный брат Сафар"]},
+      {"person":"chik_uncle_kolya","role":"mention","evidence":["Хватит, что его позорит твой сумасшедший дядюшка"]}
+    ],"people":[
+      {"id":"white_hen_chik","name":"Белая курица Чика","kind":"animal","description":"Белоснежная курица, которую Чик из жалости не может зарезать; становится причиной слухов и нравственного испытания героя.","role":"main","evidence":["Курица была совершенно белой"]},
+      {"id":"sofia_dmitrievna_neighbor","name":"Софья Дмитриевна","description":"Пожилая соседка во флигеле, которой Чик относит бутылку уксуса после истории с курицей.","role":"secondary","evidence":["во флигель, где жила Софья Дмитриевна"]},
+      {"id":"watch_owner_boatman_chik","name":"Владелец потерянных часов","description":"Молодой мужчина в лодке, обещающий пять рублей тому, кто достанет со дна его водонепроницаемые часы.","role":"secondary","evidence":["на которой сидел молодой мужчина в красных плавках"]},
+      {"id":"watch_owner_girlfriend_chik","name":"Девушка в лодке","description":"Спутница владельца часов, открыто поддерживающая Чика во время поисков.","role":"secondary","evidence":["девушка в купальнике с длинными волосами"]},
+      {"id":"beach_rival_white_hen","name":"Пляжный соперник Чика","description":"Мальчик, вместе с Чиком ныряющий за часами, затем насмехающийся над историей белой курицы и вступающий с ним в драку.","role":"main","evidence":["позади себя какого-то пацана"]}
+    ],"relations":[
+      {"from":"chik_mother","to":"chik","type":"parent","label":"Мать защищает сына от насмешек","confidence":"explicit","evidence":["резко сказала мама, явно обиженная за Чика"]},
+      {"from":"sonka","to":"chik","type":"in_love","label":"Понимает причину его жалости","confidence":"inferred","evidence":["О, догадливость влюбленных!"]},
+      {"from":"safar","to":"chik","type":"cousin","label":"Троюродные братья","confidence":"explicit","evidence":["его троюродный брат Сафар"]},
+      {"from":"watch_owner_boatman_chik","to":"watch_owner_girlfriend_chik","type":"companion","label":"Вместе находятся в лодке","confidence":"explicit","evidence":["Мужчина сидел на средней банке, а девушка на корме"]},
+      {"from":"chik","to":"beach_rival_white_hen","type":"rival","label":"Соперничают в поиске часов и дерутся","confidence":"explicit","evidence":["сам же я во всем виноват"]}
+    ]},
+    {"title":"Сандро из Чегема","work_id":"work_ecb8bbff0cad717344a31723dfe0b0037427c544bfb0bf56385a6cfaa27784ea","status":"read","narrator":"narrator","narrator_note":"Взрослый рассказчик представляет Сандро и пересказывает две его устные истории, сохраняя дистанцию к самогероизации рассказчика.","summary":"Вводная глава очерчивает долголетие и авантюрную молодость Сандро: ранение из-за княгини-сванки и ночёвку у богатого армянина-табачника во время меньшевистских реквизиций. Сандро спасает хозяина от худшего разорения и затем провожает его с семьёй к пароходу.","appearances":[
+      {"person":"sandro","role":"main","evidence":["Дядя Сандро прожил почти восемьдесят лет"]},
+      {"person":"narrator","role":"secondary","evidence":["я думаю, необходимо добавить"]},
+      {"person":"father_sandro","role":"secondary","evidence":["отец дяди Сандро в неурочное время"]},
+      {"person":"princess","role":"main","evidence":["Дело в том, что он тогда был любовником княгини"]},
+      {"person":"prince","role":"secondary","evidence":["князь у ворот"]},
+      {"person":"rival","role":"secondary","evidence":["Юный негодяй был влюблен в княгиню"]},
+      {"person":"tobacconist","role":"main","evidence":["где-то поблизости живет один богатый армянин"]},
+      {"person":"officer","role":"main","evidence":["тот, что был в офицерской форме, но без погон"]},
+      {"person":"clerk","role":"secondary","evidence":["Писарь, хрустнув плетнем"]}
+    ],"people":[],"relations":[
+      {"from":"sandro","to":"princess","type":"lover","label":"Любовники","confidence":"explicit","evidence":["он тогда был любовником княгини"]},
+      {"from":"rival","to":"sandro","type":"conflict","label":"Стреляет в любовного соперника","confidence":"explicit","evidence":["Юный негодяй был влюблен в княгиню"]},
+      {"from":"sandro","to":"tobacconist","type":"protects","label":"Защищает от полного разорения и провожает к пароходу","confidence":"explicit","evidence":["Даю тебе слово Сандро из Чегема, что я провожу тебя до самого парохода"]},
+      {"from":"tobacconist","to":"tab_wife","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["семья хозяина состояла из жены"]},
+      {"from":"father_sandro","to":"sandro","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["отец дяди Сандро в неурочное время"]}
+    ]},
+    {"title":"Дядя Сандро у себя дома","work_id":"work_306e05baee14adc2d5e52a52b569ddbd655fa45c909f1a9831b513f22102b457","status":"read","narrator":"narrator","narrator_note":"Взрослый рассказчик посещает Сандро в пригородном доме и саду; рамочный разговор переходит в цепочку семейных и бытовых историй хозяина.","summary":"Рассказчик заново знакомится с престарелым Сандро и Катей, слушает его воспоминания и наблюдает нынешнюю жизнь сторожа общественного сада. Центральный бытовой эпизод показывает, как Сандро превращает штраф за корову и конфликт с милиционером в взаимовыгодную договорённость, а затем рассказывает о братьях Ламба.","appearances":[
+      {"person":"narrator","role":"main","evidence":["Однажды, когда я собирался уехать из горной деревушки Чегем"]},
+      {"person":"sandro","role":"main","evidence":["впервые дядя Сандро переехал в город"]},
+      {"person":"katya","role":"main","evidence":["вспомнил ее имя — тетя Катя"]},
+      {"person":"lakoba","role":"mention","evidence":["Нестора Аполлоновича Лакоба"]},
+      {"person":"platon","role":"mention","evidence":["под руководством Платона Панцулая"]},
+      {"person":"pata","role":"mention","evidence":["Паты Патарая"]},
+      {"person":"tengo","role":"secondary","evidence":["Тенгизе, которого он обычно уменьшительно называл «мой Тенго»"]},
+      {"person":"policeman","role":"main","evidence":["Внизу на дороге появился милиционер"]},
+      {"person":"lamba_elder","role":"secondary","evidence":["говорит лоб, что постарше"]},
+      {"person":"lamba_younger","role":"secondary","evidence":["отвечает теперь лоб, что помладше"]}
+    ],"people":[],"relations":[
+      {"from":"sandro","to":"katya","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["вполголоса бросил жене"]},
+      {"from":"narrator","to":"sandro","type":"friend","label":"Постоянный слушатель и собеседник","confidence":"inferred","evidence":["дядю Сандро я слушал всегда с неослабевающим вниманием"]},
+      {"from":"sandro","to":"policeman","type":"arrangement","label":"Улаживает конфликт вокруг коровы и сада","confidence":"explicit","evidence":["Из-за коровы отвел ему яблоню"]},
+      {"from":"lamba_elder","to":"lamba_younger","type":"sibling","label":"Братья Ламба","confidence":"explicit","evidence":["Встречаю на базаре братьев Ламба"]}
+    ]},
+    {"title":"Принц Ольденбургский","work_id":"work_2bf36a25c72a2e154d6a3718727ac8a8fd065f5f70e53218c14f4a169efd39c5","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик чередует внутреннюю перспективу принца Александра Петровича и историю молодого Сандро, иронически сопоставляя две модели достоинства.","summary":"Принц Ольденбургский управляет Гаграми, мечтая о цивилизации края и мучая окружение деятельным патернализмом. Молодого Сандро арестовывают за нападение на сторожа; принц восхищается его свободной манерой, дарит адъютантский бинокль и велит освободить, если сторож выживет.","appearances":[
+      {"person":"oldenburg","role":"main","evidence":["Александр Петрович был не в духе"]},
+      {"person":"sandro","role":"main","evidence":["сам преступник — стройный молодой человек в черкеске"]}
+    ],"people":[
+      {"id":"oldenburg_kartuchikha","name":"Элеонора Леонтьевна Картухова (Картучиха)","description":"Массажистка и прежняя любовница принца Ольденбургского, ревнующая стареющего покровителя и возвращающая ему душевное равновесие массажем.","role":"main","evidence":["своей массажистки Элеоноры Леонтьевны Картуховой"]},
+      {"id":"oldenburg_wife_eugenia","name":"Евгения Максимилиановна Ольденбургская","description":"Тяжело больная парализованная жена принца Александра Петровича.","role":"secondary","evidence":["горячо любимая жена его, принцесса Евгения Максимилиановна"]},
+      {"id":"engineer_bartmer","name":"Инженер Бартмер","description":"Начальник участка, наказанный принцем за задержку дополнительных выходов в бараках австрийских пленных и прощённый после завершения работ.","role":"secondary","evidence":["начальнику участка инженеру Бартмеру"]},
+      {"id":"oldenburg_adjutant","name":"Адъютант принца Ольденбургского","description":"Нелюбимый принцем бездельник и возможный петербургский осведомитель; его бинокль Ольденбургский дарит Сандро.","role":"secondary","evidence":["Свита вместе с адъютантом"]},
+      {"id":"alpine_hotel_guard","name":"Сторож гостиницы «Альпийская»","description":"Сторож, оскорбивший Сандро непристойным звуком и получивший удар прикладом; его выздоровление спасает Сандро от суда.","role":"secondary","evidence":["разбил голову сторожу гостиницы «Альпийская»"]}
+    ],"relations":[
+      {"from":"oldenburg","to":"oldenburg_wife_eugenia","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["горячо любимая жена его, принцесса Евгения Максимилиановна"]},
+      {"from":"oldenburg","to":"oldenburg_kartuchikha","type":"lover","label":"Бывшие любовники; сохраняется близость","confidence":"explicit","evidence":["Картучиха была массажисткой и любовницей принца"]},
+      {"from":"oldenburg","to":"engineer_bartmer","type":"supervises","label":"Наказывает и затем прощает инженера","confidence":"explicit","evidence":["На начальника участка инженера Бартмера был наложен месячный арест"]},
+      {"from":"sandro","to":"alpine_hotel_guard","type":"conflict","label":"Бьёт прикладом за оскорбление","confidence":"explicit","evidence":["выхватил у него винтовку и дал ему прикладом по голове"]},
+      {"from":"oldenburg","to":"sandro","type":"helps","label":"Дарит бинокль и условно освобождает","confidence":"explicit","evidence":["Дарю тебе за любознательность и остроглазие"]}
+    ]},
+    {"title":"Игроки","work_id":"work_a3d3fa76365c8c9e87186293543e51c8804cb276929c72a889ae5dc8f285a8c1","status":"read","narrator":"narrator","narrator_note":"Внешний рассказчик соединяет легенду Сандро об игре у Коли Зархиди с более поздней семейной памятью о разорившихся хозяевах и жильцах двора.","summary":"Табачник Коля Зархиди трое суток проигрывает эндурскому скотопромышленнику состояние в нарды. Сандро спасает друга, отвлекая соперника прыжками на коне через игровой стол; после революции Коля торгует табаком через Лакобу, увозит валюту в Стамбул и не возвращается, а Даша и Алихан заканчивают жизнь в доме семьи рассказчика.","appearances":[
+      {"person":"koli_zarkhidi","role":"main","evidence":["особняка известного табачника Коли Зархиди"]},
+      {"person":"sandro","role":"main","evidence":["Дядя Сандро знал Колю Зархиди"]},
+      {"person":"alikhan_dasha","role":"main","evidence":["Даша проснулась и попыталась привстать"]},
+      {"person":"uncle_alikhan","role":"main","evidence":["Алихан крепился"]},
+      {"person":"lakoba","role":"secondary","evidence":["Нестор Аполлонович доверил ему самому съездить с табаками в Стамбул"]},
+      {"person":"narrator","role":"secondary","evidence":["я об этом смутно помню"]}
+    ],"people":[
+      {"id":"endurian_cattle_dealer_players","name":"Эндурский скотопромышленник","description":"Богатый и удачливый противник Коли Зархиди в трёхсуточной игре в нарды; почти выигрывает его состояние, но ломается из-за выходки Сандро.","role":"main","evidence":["хозяине дома и эндурском скотопромышленнике"]},
+      {"id":"dasha_garrison_officer","name":"Гарнизонный офицер — любовник Даши","description":"Русский офицер, содержавший Дашу, затем отдавший её греку и покончивший с собой после безуспешной попытки вернуть.","role":"secondary","evidence":["офицер начал уговаривать ее, переходя от любовных воспоминаний к угрозам"]},
+      {"id":"koli_zarkhidi_mother","name":"Мать Коли Зархиди","description":"Властная хозяйка особняка, сохраняющая после революции при доме служанку, чтобы «присматривать за Советской властью».","role":"secondary","evidence":["мать Коли Зархиди опять ухитрилась оставить при особняке служанку"]}
+    ],"relations":[
+      {"from":"sandro","to":"koli_zarkhidi","type":"friend","label":"Кунак и защитник в опасной игре","confidence":"explicit","evidence":["обязательно захаживал к своему высокому кунаку"]},
+      {"from":"koli_zarkhidi","to":"endurian_cattle_dealer_players","type":"rival","label":"Противники в большой игре в нарды","confidence":"explicit","evidence":["двух основных солистах — хозяине дома и эндурском скотопромышленнике"]},
+      {"from":"sandro","to":"koli_zarkhidi","type":"helps","label":"Срывает игру и спасает остаток состояния","confidence":"explicit","evidence":["Пока у вас есть я, не бойся, Даша"]},
+      {"from":"uncle_alikhan","to":"alikhan_dasha","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["вместе со своей простоволосой, неряшливой женой"]},
+      {"from":"koli_zarkhidi_mother","to":"koli_zarkhidi","type":"parent","label":"Мать и сын","confidence":"explicit","evidence":["мать Коли Зархиди"]}
     ]}
   ]
 }
