@@ -2371,6 +2371,95 @@
       {"from":"chik_uncle_riza","to":"pata","type":"friend","label":"Друг репрессированного отца Ники","confidence":"explicit","evidence":["отец Ники был моим другом"]},
       {"from":"chik_uncle_riza","to":"chik","type":"uncle","label":"Любимый дядя и нравственный наставник","confidence":"explicit","evidence":["любимый дядя Чика"]},
       {"from":"sonka","to":"chik","type":"helps","label":"Сохраняет тайну и спасает портфель","confidence":"explicit","evidence":["Белочка начала грызть, но я у нее отняла его"]}
+    ]},
+    {"title":"Чик идет на оплакивание","work_id":"work_1d55e9cc476dcdb27aa517c9905b74aa32711402b3f993ae9686ffc74256165e","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ следует первому участию Чика в оплакивании и его попытке понять любовь, смерть и поведение взрослых.","summary":"Тётушка ведёт Чика оплакивать подругу Циалу. У гроба он искренне плачет под музыку, а во дворе слышит историю любви Циалы к капитану «Цесаревича Георгия», разрушенной ограблением парохода и встречей с желтоглазым абреком.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик никогда не ходил на оплакивание умерших"]},
+      {"person":"chik_aunt","role":"main","evidence":["Умерла моя дорогая Циала"]},
+      {"person":"onik","role":"secondary","evidence":["Оник стоял в воротах"]},
+      {"person":"belka_chik","role":"mention","evidence":["Белочка ринулась за ним"]},
+      {"person":"chik_mother","role":"secondary","evidence":["Тетушка имела в виду его маму"]},
+      {"person":"persian_consul","role":"secondary","evidence":["ее первый муж был персидским консулом"]},
+      {"person":"chik_aunt_husband","role":"secondary","evidence":["Теперь у тетушки муж — сын простого крестьянина"]},
+      {"person":"chief_butcher_son","role":"secondary","evidence":["велосипедист, который недавно обыграл его"]},
+      {"person":"chief_butcher_mukhus","role":"secondary","evidence":["богатые мясники иногда бывают остроумными"]}
+    ],"people":[
+      {"id":"aunt_tsiala","name":"Тётя Циала","description":"Покойная подруга тётушки Чика, жена абхазского князя и бывшая возлюбленная капитана парохода «Цесаревич Георгий»; её оплакивание впервые сталкивает Чика с близкой смертью.","role":"main","evidence":["Тетя Циала была приятельницей тетушки"]},
+      {"id":"tsiala_prince_husband","name":"Князь — муж тёти Циалы","description":"Невысокий пожилой абхазский князь и бухгалтер, преданно ухаживавший за умирающей женой Циалой и носивший её по двору.","role":"main","evidence":["ее муж был абхазским князем"]},
+      {"id":"tsesarevich_georgy_captain","name":"Капитан «Цесаревича Георгия»","description":"Молодой капитан парохода и возлюбленный Циалы; после унижения при ограблении и её отказа опознать абрека прекращает отношения.","role":"main","evidence":["капитан парохода «Цесаревич Георгий»"]},
+      {"id":"yellow_eyed_abrek_tsiala","name":"Желтоглазый абрек","description":"Вооружённый участник ограбления парохода, отнявший оружие у капитана; Циала из страха не опознаёт его в полиции.","role":"secondary","evidence":["какой-то желтоглазый человек"]},
+      {"id":"tsiala_mourning_storyteller","name":"Рассказчик истории Циалы","description":"Старый знакомый Циалы с Первой Подгорной, подробно пересказывающий гостям историю ограбления парохода и разрыва с капитаном.","role":"secondary","evidence":["Мы же с ней выросли на Первой Подгорной"]},
+      {"id":"freckled_girl_tsiala_mourning","name":"Веснушчатая девочка на поминках","description":"Девочка напротив Чика за поминальным столом; сначала обменивается с ним взглядами, затем переключает внимание на богатого сына мясника.","role":"secondary","evidence":["веснушках девочки, сидевшей напротив"]}
+    ],"relations":[
+      {"from":"aunt_tsiala","to":"tsiala_prince_husband","type":"spouse","label":"Супруги","confidence":"explicit","evidence":["ее муж был абхазским князем"]},
+      {"from":"aunt_tsiala","to":"tsesarevich_georgy_captain","type":"in_love","label":"Бывшие возлюбленные","confidence":"explicit","evidence":["она любила капитана"]},
+      {"from":"yellow_eyed_abrek_tsiala","to":"tsesarevich_georgy_captain","type":"robs","label":"Обезоруживает при ограблении","confidence":"explicit","evidence":["он сперва отнял у капитана пистолет"]},
+      {"from":"aunt_tsiala","to":"chik_aunt","type":"friend","label":"Близкие подруги","confidence":"explicit","evidence":["Тетя Циала была приятельницей тетушки"]},
+      {"from":"tsiala_prince_husband","to":"aunt_tsiala","type":"cares_for","label":"Ухаживает перед смертью","confidence":"explicit","evidence":["он ее перед смертью носил на руках"]}
+    ]},
+    {"title":"Чик и лунатик","work_id":"work_8434c8cb5fd3f83d545acecf5b74f0132c54d1e1abd2401131c270f4871ff590","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование следует ночному расследованию Чика и Бочо, постепенно разрушая их шпионскую гипотезу бытовой историей любви и ревности.","summary":"Бочо принимает тайные ночные визиты футболиста к девушке за вербовку военного лунатика. Чик крадёт бутылку вина для лодочника, вместе с Бочо добирается к дому и встречает на инжире ревнивого артиста — бывшего возлюбленного девушки.","appearances":[
+      {"person":"chik","role":"main","evidence":["казался Чику чудом техники"]},
+      {"person":"bocho","role":"main","evidence":["окликнул его в это время Бочо"]},
+      {"person":"anesti_brother_christo","role":"mention","evidence":["старший брат Анести"]},
+      {"person":"chik_aunt","role":"secondary","evidence":["Тетушка ее сейчас подметала"]},
+      {"person":"chik_uncle_kolya","role":"secondary","evidence":["Сумасшедший дядюшка Чика стоял на верхней лестничной площадке"]},
+      {"person":"chik_grandmother","role":"secondary","evidence":["Бабушка сидела рядом на скамеечке"]},
+      {"person":"poor_seamstress","role":"mention","evidence":["его любимая тетя Фаина"]},
+      {"person":"chik_older_brother","role":"mention","evidence":["Старший брат Чика уже несколько раз тайно пробовал вино"]},
+      {"person":"chik_uncle_riza","role":"mention","evidence":["Дядя Риза был в командировке"]},
+      {"person":"evgeny_dmitrievich_drama_teacher","role":"mention","evidence":["Я знаю артиста Левкоева"]}
+    ],"people":[
+      {"id":"doctor_ledin_elder_son","name":"Старший сын доктора Ледина","description":"Десятиклассник, вместе со старшим братом Анести запускающий над двором большого воздушного змея в виде красной звезды.","role":"mention","evidence":["старший сын доктора Ледина"]},
+      {"id":"bocho_bamboo_companion","name":"Товарищ Бочо по бамбуковым удилищам","description":"Мальчик с улицы Бочо, ученик музыкальной школы; первым показывает ему ночного посетителя крыши и объявляет музыку «лунатской».","role":"secondary","evidence":["с одним пацаном с нашей улицы ходили ночью вырезать бамбуковые удилища"]},
+      {"id":"jealous_theater_actor_moonwalker","name":"Ревнивый артист на инжире","description":"Высокий артист драмтеатра, следящий с дерева за бывшей возлюбленной; прежде играл с ней в «Коварстве и любви» и объясняет Чику настоящую причину ночных визитов.","role":"main","evidence":["Я артист драмтеатра"]},
+      {"id":"actress_moonwalker_girl","name":"Актриса — бывшая возлюбленная артиста","description":"Молодая артистка и прежняя партнёрша ревнивого актёра, тайно принимающая футболиста, пока строгие родители отсутствуют.","role":"secondary","evidence":["А она артистка"]},
+      {"id":"funduk_footballer","name":"Футболист по прозвищу Фундук","description":"Молодой футболист, которого мальчики принимают за лунатика; тайком проходит по крыше к возлюбленной по сигналу «Лунной сонаты».","role":"main","evidence":["У него прозвище Фундук"]}
+    ],"relations":[
+      {"from":"chik","to":"bocho","type":"friend","label":"Товарищи по ночному расследованию","confidence":"explicit","evidence":["Расставшись с Бочо, Чик благополучно дошел до своего дома"]},
+      {"from":"jealous_theater_actor_moonwalker","to":"actress_moonwalker_girl","type":"former_partner","label":"Бывшие возлюбленные и сценические партнёры","confidence":"explicit","evidence":["Мы любили друг друга"]},
+      {"from":"actress_moonwalker_girl","to":"funduk_footballer","type":"in_love","label":"Тайные возлюбленные","confidence":"explicit","evidence":["полюбила футболиста"]},
+      {"from":"jealous_theater_actor_moonwalker","to":"funduk_footballer","type":"rival","label":"Любовные соперники","confidence":"explicit","evidence":["она бы все равно ушла к футболисту"]}
+    ]},
+    {"title":"Чик — играющий судья","work_id":"work_0aea83f397fb2af9a137d9c95d4ab1491166ce30023da7f32eb13b3da84d8479","status":"read","narrator":"chik","narrator_note":"Третьеличное повествование последовательно держится точки зрения Чика: его футбольного самолюбия, попытки одновременно играть и судить и постепенного понимания собственной пристрастности.","summary":"Во время матча Четвёртой Подгорной с Третьей отец Оника приносит сыну молоко и булку, Оник в стыде бросает судейство, а Чик съедает угощение и объявляет себя играющим судьёй. Совмещая роли, он невольно и намеренно ошибается, переживает насмешки и в конце сам кричит: «Куда смотрит судья?!», после чего мирится с Оником у муравейника.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик был капитаном своей команды и нападающим"]},
+      {"person":"sonka","role":"secondary","evidence":["Среди девочек были Сонька и Ника"]},
+      {"person":"nika_chik","role":"secondary","evidence":["Среди девочек были Сонька и Ника"]},
+      {"person":"bocho","role":"main","evidence":["Бочо, друг Чика, сейчас играл против него"]},
+      {"person":"onik","role":"main","evidence":["игру судил Оник, сын Богатого Портного"]},
+      {"person":"rich_tailor_chik","role":"main","evidence":["В парк, где они играли, явился Богатый Портной"]},
+      {"person":"anesti_boatswain","role":"secondary","evidence":["Даже Анести из команды Чика ехидно улыбнулся"]},
+      {"person":"hector","role":"main","evidence":["Звали его Гектор"]}
+    ],"people":[
+      {"id":"hector_elder_footballer_brother","name":"Старший брат Гектора","description":"Игрок взрослой местной футбольной команды; его настоящую динамовскую форму носит младший брат Гектор.","role":"mention","evidence":["старший брат капитана играл в местной взрослой команде"]},
+      {"id":"edik_third_hill_midfielder","name":"Эдик — хавбек Третьей Подгорной","description":"Футболист команды Гектора; сбивает Анести, но уклончиво отвечает Чику, была ли подножка.","role":"secondary","evidence":["Эдик, только честно, была подножка?"]}
+    ],"relations":[
+      {"from":"chik","to":"bocho","type":"friend","label":"Друзья, играющие за команды-соперницы","confidence":"explicit","evidence":["Бочо, друг Чика, сейчас играл против него"]},
+      {"from":"rich_tailor_chik","to":"onik","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Оник, сын Богатого Портного"]},
+      {"from":"hector_elder_footballer_brother","to":"hector","type":"sibling","label":"Старший брат Гектора","confidence":"explicit","evidence":["старший брат капитана играл в местной взрослой команде"]},
+      {"from":"chik","to":"hector","type":"rival","label":"Капитаны противоборствующих дворовых команд","confidence":"explicit","evidence":["Через некоторое время два капитана схлестнулись в центре поля"]},
+      {"from":"chik","to":"onik","type":"friend","label":"Соседи и товарищи, примирившиеся у муравейника","confidence":"inferred","evidence":["Он лег рядом с Оником и стал следить за муравьями"]}
+    ]},
+    {"title":"Страшная месть Чика","work_id":"work_da8cbb5f140f073e7bffcceb92ae3234e0e866a81c2a6bced63726386929e7b8","status":"read","narrator":"chik","narrator_note":"Третьеличный рассказ сохраняет внутреннюю перспективу Чика: от пляжного унижения через год ночных фантазий о мести до случайной встречи с обидчиком и нравственного самоосуждения.","summary":"На пляже Чик после уроков плавания Лёсику расслабляется рядом с Никой и Сонькой, но незнакомый мальчик унижает его перед компанией. Через год Чик узнаёт обидчика в автобусе, запугивает вымышленной бандитской биографией и лишь после укуса петуха понимает, что сам переусердствовал с местью.","appearances":[
+      {"person":"chik","role":"main","evidence":["Чик, уткнувшись лицом в горячую гальку, лежал на берегу моря"]},
+      {"person":"lesik","role":"main","evidence":["сегодня он доучивал Лёсика плавать"]},
+      {"person":"slavik","role":"secondary","evidence":["он вчера обедал в доме Славика"]},
+      {"person":"slavik_father_monkey_scientist","role":"secondary","evidence":["Отец Славика был профессором"]},
+      {"person":"slavik_mother_monkey_scientist","role":"secondary","evidence":["мать его была какой-то научной шишкой"]},
+      {"person":"nika_chik","role":"main","evidence":["это Ника так шутит"]},
+      {"person":"sonka","role":"main","evidence":["Теперь и Сонька какой-то палочкой стала водить по его спине"]},
+      {"person":"onik","role":"secondary","evidence":["попытался утешить его Оник"]},
+      {"person":"redheaded_young_fighter","role":"mention","evidence":["Тебя отлупцевал Рыжик с горы?"]}
+    ],"people":[
+      {"id":"chik_beach_offender","name":"Пляжный обидчик Чика","description":"Незнакомый мальчик из пляжной компании, дважды дёрнувший Чика за чуб; через год встречается ему в автобусе и становится жертвой Чиковой выдуманной мести.","role":"main","evidence":["он вдруг наклонился и два раза подергал Чика за чуб"]},
+      {"id":"chik_school_instigator_beach","name":"Школьник из компании пляжного обидчика","description":"Ученик школы Чика, которому нравится Ника; из ревности рассказывает компании ложную историю о поражении Чика от Рыжика и подзадоривает обидчика.","role":"secondary","evidence":["А дело было в том, что мальчику из его школы, который сидел в этой компании, нравилась Ника"]},
+      {"id":"chik_cousin_lena","name":"Тётя Лена — двоюродная сестра Чика","description":"Взрослая двоюродная сестра Чика с красивым лицом и могучими руками; возвращается вместе с ним из Чегема и невольно прерывает его устрашающий спектакль в автобусе.","role":"main","evidence":["Чик со своей взрослой двоюродной сестрой, которую звали Лена"]},
+      {"id":"slavik_family_maid","name":"Служанка семьи Славика","description":"Домашняя работница в профессорской семье Славика, рассаживающая гостей и подающая борщ во время первого обеда Чика в их доме.","role":"secondary","evidence":["Потом служанка стала разливать борщ по тарелкам"]}
+    ],"relations":[
+      {"from":"chik","to":"lesik","type":"teaches","label":"Учит плавать и помогает преодолеть страх глубины","confidence":"explicit","evidence":["Чик дней десять трудился, и наконец Лёсик поплыл"]},
+      {"from":"chik","to":"chik_beach_offender","type":"conflict","label":"Обидчик и мстящий ему Чик","confidence":"explicit","evidence":["Это был он, тот самый, который дергал его за чуб!"]},
+      {"from":"chik_school_instigator_beach","to":"nika_chik","type":"romantic_interest","label":"Ревнует Нику к Чику","confidence":"explicit","evidence":["мальчику из его школы, который сидел в этой компании, нравилась Ника"]},
+      {"from":"chik_cousin_lena","to":"chik","type":"cousin","label":"Взрослая двоюродная сестра","confidence":"explicit","evidence":["Чик со своей взрослой двоюродной сестрой, которую звали Лена"]},
+      {"from":"slavik_father_monkey_scientist","to":"slavik","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Отец Славика был профессором"]},
+      {"from":"slavik_mother_monkey_scientist","to":"slavik","type":"parent","label":"Мать и сын","confidence":"explicit","evidence":["Чик, запомни, пожалуйста, — сказала мама Славика"]}
     ]}
   ]
 }
