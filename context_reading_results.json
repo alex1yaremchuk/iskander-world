@@ -3104,6 +3104,137 @@
         {"from":"tata_anhara","to":"nuri_anhara_exile","type":"advocates_for","label":"Просит род простить изгнанника","confidence":"explicit","evidence":["Пусть простят его"]},
         {"from":"raif_anhara","to":"nuri_anhara_exile","type":"conflict","label":"Отказывается нарушить родовое табу","confidence":"explicit","evidence":["Но я с этим хулиганом за один стол не сяду"]}
       ]
+    },
+    {
+      "title":"Широколобый","work_id":"work_224b8cdff6acaa16c416f414454c9d59e5b7e37d56ecfdd9cb0ace8772396f54","status":"read","narrator":"narrator","narrator_note":"Всеведущий рассказчик ведёт повествование преимущественно изнутри восприятия буйвола Широколобого, переводя его ощущения и память на человеческий язык.","summary":"Старый буйвол Широколобый вспоминает труд, любовь, обиды и людей Чегема, пока знакомый пастух Бардуша везёт его на бойню. Узнав страшное место, буйвол вырывается, добегает до моря и плывёт в сторону Чегема, но рыбаки убивают его выстрелом и возвращают тушу на берег.",
+      "appearances":[
+        {"person":"narrator","role":"secondary","evidence":["В жаркий летний день буйвол по кличке Широколобый сидел в прохладной запруде"]},
+        {"person":"kyzym","role":"secondary","evidence":["Так в первый раз Кязым спас его от смерти"]},
+        {"person":"bardusha_shepherd","role":"main","evidence":["К запруде подошел пастух Бардуша"]}
+      ],
+      "people":[
+        {"id":"shirokoloby_buffalo","name":"Широколобый","description":"Старый чегемский буйвол, через память и ощущения которого рассказана его жизнь; бежит с бойни к морю и погибает от выстрела рыбаков.","kind":"animal","role":"main","evidence":["В жаркий летний день буйвол по кличке Широколобый сидел в прохладной запруде"]}
+      ],
+      "relations":[
+        {"from":"bardusha_shepherd","to":"shirokoloby_buffalo","type":"caretaker","label":"Знакомый и любимый буйволом пастух","confidence":"explicit","evidence":["Тем более этого пастуха он давно знал и любил"]},
+        {"from":"kyzym","to":"shirokoloby_buffalo","type":"saves","label":"Однажды спасает от убоя","confidence":"explicit","evidence":["Так в первый раз Кязым спас его от смерти"]}
+      ]
+    },
+    {
+      "title":"Большой день Большого дома","work_id":"work_6b39c8b6701afceaeed0928613ea4df78aadd9c2c5009e4bc6258f9ca6317f1f","status":"read","narrator":"narrator","narrator_note":"Всеведущий рассказчик следует за двенадцатилетней Камой и одновременно сообщает будущую судьбу её старшей сестры Эсмы.","summary":"Двенадцатилетняя Кама проводит летний день в Большом Доме, нянча племянника Кемальчика и наблюдая родных. Неожиданное возвращение заболевшей Эсмы с мужем превращает обычный день в семейный праздник. Рассказчик заранее открывает трагедию Эсмы: случайную гибель первого мужа, второй брак, разлуку с детьми и возвращение их решением старейшин.",
+      "appearances":[
+        {"person":"narrator","role":"secondary","evidence":["В жаркий солнечный день во дворе Большого Дома"]},
+        {"person":"sandro","role":"main","evidence":["ее самый старший брат Сандро"]},
+        {"person":"father_sandro","role":"main","evidence":["Там отец Камы с тремя сыновьями мотыжил кукурузу"]},
+        {"person":"wife_habug","role":"main","evidence":["Мать сидела на низенькой скамейке у очага"]},
+        {"person":"isa","role":"secondary","evidence":["Иса слегка подвирает"]},
+        {"person":"kyzym","role":"secondary","evidence":["Кязым у нас ушастый"]},
+        {"person":"kemal","role":"main","evidence":["своего племянника Кемальчика"]}
+      ],
+      "people":[
+        {"id":"kama_big_house","name":"Кама","description":"Двенадцатилетняя дочь Хабуга и сестра Сандро, через чьё восприятие показан большой семейный день; заботливо нянчит племянника Кемальчика.","role":"main","evidence":["сидела двенадцатилетняя Кама"]},
+        {"id":"esma_kemal_mother","name":"Эсма","description":"Старшая сестра Камы и Сандро, мать Кемала; приезжает с малярией в родной дом, а позднее переживает гибель мужа и борьбу за детей.","role":"main","evidence":["— Эсма! — крикнула Кама"]},
+        {"id":"esma_first_husband","name":"Первый муж Эсмы","description":"Отец Кемала, приехавший с Эсмой в Большой Дом; позднее случайно погибает, разнимая драку.","role":"secondary","evidence":["следом муж Эсмы"]}
+      ],
+      "relations":[
+        {"from":"father_sandro","to":"kama_big_house","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["Там отец Камы с тремя сыновьями мотыжил кукурузу"]},
+        {"from":"wife_habug","to":"kama_big_house","type":"parent","label":"Мать и дочь","confidence":"strongly_implied","evidence":["Мать сидела на низенькой скамейке у очага"]},
+        {"from":"sandro","to":"kama_big_house","type":"sibling","label":"Старший брат и младшая сестра","confidence":"explicit","evidence":["ее самый старший брат Сандро"]},
+        {"from":"kama_big_house","to":"esma_kemal_mother","type":"sibling","label":"Сёстры","confidence":"explicit","evidence":["Кама узнала сестру"]},
+        {"from":"esma_kemal_mother","to":"kemal","type":"parent","label":"Мать и сын","confidence":"explicit","evidence":["Мать схватила в охапку Кемальчика"]},
+        {"from":"esma_first_husband","to":"kemal","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["Кемальчика приодели, и его взял на руки отец"]},
+        {"from":"esma_kemal_mother","to":"esma_first_husband","type":"spouse","label":"Первый брак Эсмы","confidence":"explicit","evidence":["Сандро и муж сестры поймали лошадей"]},
+        {"from":"kama_big_house","to":"kemal","type":"aunt","label":"Тётя и племянник","confidence":"explicit","evidence":["Кама и кормила своего племянника Кемальчика"]}
+      ]
+    },
+    {
+      "title":"Кутеж трех князей в зеленом дворике","work_id":"work_f999ad39df56abdc67b750768d42fae5d5336f066758b052b0aa30a915e4ecba","status":"read","narrator":"narrator","narrator_note":"Автобиографический рассказчик участвует в застолье вместе с Сандро, Абесаломоном Нартовичем и космонавтом, а затем пересказывает услышанную историю.","summary":"Во время застолья в зелёном дворике молодой хозяин переставляет ветви ольхи, невольно обозначая меняющийся престиж гостей. Абесаломон Нартович рассказывает, как Железное Колено, по его убеждению, убил неверную жену и её любовника-завмага и заставил врача признать двойное самоубийство. Космонавт оспаривает возможность подкупа советского врача и теряет символическую ветвь первенства; позднее Сандро объясняет испуганному рассказчику поведение незнакомца.",
+      "appearances":[
+        {"person":"narrator","role":"main","evidence":["я ринулся к машине Абесаломона Нартовича"]},
+        {"person":"sandro","role":"main","evidence":["Один из них был дядя Сандро"]},
+        {"person":"abesalomon","role":"main","evidence":["монументальное лицо Абесаломона Нартовича"]},
+        {"person":"cosmonaut_green_yard","role":"main","evidence":["оказался космонавтом"]},
+        {"person":"iron_knee","role":"main","evidence":["Железное Колено больше не женился"]}
+      ],
+      "people":[
+        {"id":"iron_knee_wife","name":"Жена Железного Колена","description":"Молодая красавица из соседнего села, подозреваемая в связи с завмагом; найдена повешенной при обстоятельствах, указывающих на убийство мужем.","role":"main","evidence":["жена Железного Колена и завмаг покончили жизнь самоубийством"]},
+        {"id":"iron_knee_store_manager","name":"Завмаг — сосед Железного Колена","description":"Холостой сельский заведующий магазином, предполагаемый любовник жены Железного Колена; найден с перерезанным горлом.","role":"main","evidence":["увидел завмага, лежавшего возле кухонной кушетки"]}
+      ],
+      "relations":[
+        {"from":"iron_knee","to":"iron_knee_wife","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Года через два Железное Колено женился"]},
+        {"from":"iron_knee_wife","to":"iron_knee_store_manager","type":"lover","label":"Предполагаемые любовники","confidence":"uncertain","evidence":["жена Железного Колена подживает со своим соседом"]},
+        {"from":"iron_knee","to":"iron_knee_store_manager","type":"kills","label":"Предположительно перерезает горло","confidence":"strongly_implied","evidence":["подкрался сзади и перерезал ему глотку"]},
+        {"from":"iron_knee","to":"iron_knee_wife","type":"kills","label":"Предположительно убивает, инсценируя самоубийство","confidence":"strongly_implied","evidence":["заподозрив, что она ему изменяет с завмагом"]},
+        {"from":"abesalomon","to":"narrator","type":"tells","label":"Рассказывает историю Железного Колена","confidence":"explicit","evidence":["Так закончил свой рассказ Абесаломон Нартович"]}
+      ]
+    },
+    {
+      "title":"Джамхух — Сын Оленя, или Евангелие по-чегемски","work_id":"work_2cead754fccfeb9469156eb196a474db76305f865393c65e221b40dae5dbc80e","status":"read","narrator":"narrator","narrator_note":"Автобиографический рассказчик пересказывает слышанную в детстве чегемскую легенду; основное повествование сказово-всеведущее.","summary":"Выкормленный оленихой Джамхух становится приёмным сыном охотника Беслана и народным мудрецом. Вместе с семью чудесными спутниками он проходит испытания братьев-великанов и женится на Гунде. Гунда позднее уходит к царю Феодорию, а царь, опасаясь нравственного авторитета Джамхуха, приказывает тайно убить его. Народ слишком поздно понимает свою вину перед мудрецом.",
+      "appearances":[{"person":"narrator","role":"secondary","evidence":["Вот что я слышал в детстве о Джамхухе"]}],
+      "people":[
+        {"id":"jamkhuh_son_of_deer","name":"Джамхух — Сын Оленя","description":"Выкормленный оленихой чегемский мудрец, герой народной легенды; собирает чудесных друзей, женится на Гунде и погибает по тайному приказу царя.","role":"main","evidence":["Нарекаю тебя Джамхухом"]},
+        {"id":"jamkhuh_deer_mother","name":"Мать-олениха Джамхуха","description":"Олениха, нашедшая младенца, выкормившая и воспитавшая его как собственного оленёнка.","kind":"animal","role":"main","evidence":["Меня мать-олениха ребенком нашла в кустах и выкормила"]},
+        {"id":"old_beslan_jamkhuh","name":"Старый Беслан","description":"Чегемский охотник, нашедший мальчика среди оленей, давший ему имя и принявший его как сына после гибели своих детей.","role":"main","evidence":["старый охотник Беслан из села Чегем увидел на лесной лужайке"]},
+        {"id":"gunda_golden_haired","name":"Золотоголовая Гунда","description":"Красавица, сестра семерых великанов, первая жена Джамхуха; позднее оставляет его ради царя Феодория.","role":"main","evidence":["Сын Оленя, не облейся кипятком! — крикнула снизу золотоголовая Гунда"]},
+        {"id":"obyedalo_jamkhuh","name":"Объедало","description":"Чудесный обжора и верный спутник Джамхуха, побеждающий великанов в состязании едоков.","role":"main","evidence":["Меня зовут Объедало"]},
+        {"id":"opivalo_jamkhuh","name":"Опивало","description":"Чудесный выпивоха и тамада, спутник Джамхуха, способный осушать огромные сосуды.","role":"main","evidence":["недаром же меня зовут Опивалой"]},
+        {"id":"skorokhod_jamkhuh","name":"Скороход","description":"Сверхъестественно быстрый и влюбчивый спутник Джамхуха; после гибели друга покидает царскую службу.","role":"main","evidence":["Я Скороход"]},
+        {"id":"slukhach_jamkhuh","name":"Слухач","description":"Спутник Джамхуха с необыкновенным слухом, слышащий даже речь муравьёв.","role":"main","evidence":["На то меня и зовут Слухачом"]},
+        {"id":"silach_jamkhuh","name":"Силач","description":"Богатырь, способный переносить собственный дом; присоединяется к походу Джамхуха.","role":"main","evidence":["меня в самом деле зовут Силачом"]},
+        {"id":"ostroglaz_jamkhuh","name":"Остроглаз","description":"Спутник Джамхуха с необыкновенным зрением, участвующий в испытаниях великанов.","role":"secondary","evidence":["Силач, Слухач, Остроглаз, Ловкач и Скороход"]},
+        {"id":"lovkach_jamkhuh","name":"Ловкач","description":"Необыкновенно ловкий спутник Джамхуха, один из семерых друзей его похода.","role":"secondary","evidence":["Слухач, Остроглаз, Ловкач и Скороход"]},
+        {"id":"king_feodory","name":"Царь Феодорий","description":"Прозванный Тыквоголовым Красавчиком царь, второй муж Гунды; организует тайное убийство Джамхуха.","role":"main","evidence":["Царь Феодорий, конечно, злился на него"]},
+        {"id":"warrior_light_conscience","name":"Воин с Облегчённой Походного Типа Совестью","description":"Прославленный воин, которого Феодорий убеждает убить Джамхуха ради мнимого спасения народа.","role":"secondary","evidence":["Воин с Облегченной Походного Типа Совестью"]}
+      ],
+      "relations":[
+        {"from":"jamkhuh_deer_mother","to":"jamkhuh_son_of_deer","type":"foster_parent","label":"Приёмная мать, выкормившая младенца","confidence":"explicit","evidence":["Меня мать-олениха ребенком нашла в кустах и выкормила"]},
+        {"from":"old_beslan_jamkhuh","to":"jamkhuh_son_of_deer","type":"foster_parent","label":"Приёмный отец и сын","confidence":"explicit","evidence":["Так Джамхух — Сын Оленя зажил в доме старого охотника"]},
+        {"from":"jamkhuh_son_of_deer","to":"gunda_golden_haired","type":"spouse","label":"Первый муж и жена","confidence":"explicit","evidence":["на давней свадьбе Джамхуха"]},
+        {"from":"king_feodory","to":"gunda_golden_haired","type":"spouse","label":"Второй муж и жена","confidence":"explicit","evidence":["нынешней царице"]},
+        {"from":"jamkhuh_son_of_deer","to":"obyedalo_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["пришли его верные друзья Объедало"]},
+        {"from":"jamkhuh_son_of_deer","to":"opivalo_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["Объедало, Опивало, Силач"]},
+        {"from":"jamkhuh_son_of_deer","to":"skorokhod_jamkhuh","type":"friend","label":"Верные друзья; Скороход особенно оплакивает Джамхуха","confidence":"explicit","evidence":["особенно убивался Скороход"]},
+        {"from":"jamkhuh_son_of_deer","to":"slukhach_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["Силач, Слухач, Остроглаз"]},
+        {"from":"jamkhuh_son_of_deer","to":"silach_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["Опивало, Силач, Слухач"]},
+        {"from":"jamkhuh_son_of_deer","to":"ostroglaz_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["Слухач, Остроглаз, Ловкач"]},
+        {"from":"jamkhuh_son_of_deer","to":"lovkach_jamkhuh","type":"friend","label":"Верные друзья и спутники","confidence":"explicit","evidence":["Остроглаз, Ловкач и Скороход"]},
+        {"from":"king_feodory","to":"warrior_light_conscience","type":"orders","label":"Приказывает убить Джамхуха","confidence":"explicit","evidence":["тебе придется убить Джамхуха"]},
+        {"from":"warrior_light_conscience","to":"jamkhuh_son_of_deer","type":"kills","label":"Убивает по тайному приказу царя","confidence":"strongly_implied","evidence":["Через три дня Сын Оленя погиб"]}
+      ]
+    },
+    {
+      "title":"Дерево детства","work_id":"work_addaecdec6b3a485fc8bad1bb705174dae8216538f41716a457cab38a996f6db","status":"read","narrator":"narrator","narrator_note":"Автобиографический рассказчик соединяет детские воспоминания военного времени с возвращением в Чегем через тридцать лет вместе с Сандро.","summary":"Воспоминания рассказчика о деревьях Большого Дома раскрывают военное детство: ночной страх за корову, малярию, игры, немецкие листовки и гибель лейтенанта. Центральная вставная история показывает, как Кязым спасает простоватого Кунту от тюрьмы за украденный табак. Через тридцать лет рассказчик и Сандро возвращаются в опустевший Чегем, встречают престарелых Кунту и Омара и прощаются с исчезающим миром детства.",
+      "appearances":[
+        {"person":"narrator","role":"main","evidence":["В предвоенные годы я каждое лето проводил в доме дедушки"]},
+        {"person":"kyzym","role":"main","evidence":["стоял дядя Кязым"]},
+        {"person":"nutsa","role":"main","evidence":["Чью-то корову терзает широколапый, — кричит тетушка Нуца"]},
+        {"person":"sandro","role":"main","evidence":["мы с дядей Сандро приехали в Чегем"]},
+        {"person":"kunta","role":"main","evidence":["Это был Кунта"]},
+        {"person":"omar_forester","role":"main","evidence":["Я смотрел на Омара"]},
+        {"person":"kyzym_daughter_ryziko","role":"secondary","evidence":["старшая девочка Ризико"]},
+        {"person":"kyzym_daughter_zinochka","role":"secondary","evidence":["помладше меня, Зиночки"]},
+        {"person":"remzik","role":"secondary","evidence":["говорит Ремзик, самый младший из нас"]},
+        {"person":"lilisha_chunka_sister","role":"secondary","evidence":["нашей двоюродной сестры Лилиши"]},
+        {"person":"adgur","role":"secondary","evidence":["Болен и Адгур"]},
+        {"person":"zarifa","role":"secondary","evidence":["только Зарифа, его сестра, не тронута болезнью"]}
+      ],
+      "people":[
+        {"id":"kunta_wife","name":"Жена Кунты","description":"Худая горбоносая жена Кунты, которую когда-то сосватал Кязым; хозяйка бедного дома и родственница взятого на воспитание мальчика.","role":"secondary","evidence":["Жена Кунты, худая горбоносая женщина"]},
+        {"id":"kunta_foster_boy","name":"Воспитанник Кунты","description":"Маленький родственник жены Кунты, взятый стариком на воспитание и встреченный рассказчиком при возвращении в Чегем.","role":"secondary","evidence":["Взял на воспитание"]},
+        {"id":"omar_polish_first_wife","name":"Первая жена Омара","description":"Шестнадцатилетняя полька, привезённая Омаром после мировой войны в Чегем; к моменту возвращения рассказчика давно умерла.","role":"secondary","evidence":["была жива его первая жена"]}
+      ],
+      "relations":[
+        {"from":"kyzym","to":"nutsa","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["своего мужа дядю Кязыма"]},
+        {"from":"nutsa","to":"remzik","type":"parent","label":"Мать и младший сын","confidence":"explicit","evidence":["Ремзика мать переносит на руках"]},
+        {"from":"lilisha_chunka_sister","to":"narrator","type":"cousin","label":"Двоюродные брат и сестра","confidence":"explicit","evidence":["нашей двоюродной сестры Лилиши"]},
+        {"from":"zarifa","to":"adgur","type":"sibling","label":"Сестра и брат","confidence":"explicit","evidence":["Зарифа, его сестра"]},
+        {"from":"kunta","to":"omar_forester","type":"sibling","label":"Младший и старший братья","confidence":"explicit","evidence":["Хозяин приспособил своего брата крутить над огнем"]},
+        {"from":"kunta","to":"kunta_wife","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Дядя Кязым сам их когда-то женил"]},
+        {"from":"kunta","to":"kunta_foster_boy","type":"foster_parent","label":"Берёт мальчика на воспитание","confidence":"explicit","evidence":["Взял на воспитание"]},
+        {"from":"omar_forester","to":"omar_polish_first_wife","type":"spouse","label":"Первый брак Омара","confidence":"explicit","evidence":["шестнадцатилетней девушкой привез из Польши"]},
+        {"from":"kyzym","to":"kunta","type":"protects","label":"Спасает Кунту от тюрьмы за кражу табака","confidence":"strongly_implied","evidence":["нашего Кунту я вам не дам"]},
+        {"from":"sandro","to":"narrator","type":"uncle","label":"Дядя и племянник","confidence":"explicit","evidence":["Мой племянник"]}
+      ]
     }
   ]
 }
