@@ -2915,7 +2915,7 @@
         {"from":"kyzym","to":"bakhut_kyzym_friend","type":"friend","label":"Близкие друзья и товарищи-лошадники","confidence":"explicit","evidence":["Они любили друг друга"]},
         {"from":"aslan","to":"kyzym","type":"seeks_help","label":"Просит раскрыть кражи из сейфа","confidence":"explicit","evidence":["пришел в Большой Дом просить помощи у Кязыма"]},
         {"from":"kyzym","to":"timur_zhvanba","type":"exposes","label":"Разоблачает как вора колхозных денег","confidence":"explicit","evidence":["Остается Теймыр. И я на нем остановился"]},
-        {"from":"father_sandro","to":"nuri_habug_son","type":"parent","label":"Отец и младший сын","confidence":"explicit","evidence":["Нури был младшим сыном Хабуга"]}
+        {"from":"father_sandro","to":"nuri_habug_son","type":"parent","label":"Отец и младший сын в версии «Бригадира Кязыма»","confidence":"explicit","evidence":["Нури был младшим сыном Хабуга"],"note":"В «Софичке» тот же Нури представлен братом Софички и внуком брата Хабуга; сохранено как явное межтекстовое противоречие."}
       ]
     },
     {
@@ -3234,6 +3234,77 @@
         {"from":"omar_forester","to":"omar_polish_first_wife","type":"spouse","label":"Первый брак Омара","confidence":"explicit","evidence":["шестнадцатилетней девушкой привез из Польши"]},
         {"from":"kyzym","to":"kunta","type":"protects","label":"Спасает Кунту от тюрьмы за кражу табака","confidence":"strongly_implied","evidence":["нашего Кунту я вам не дам"]},
         {"from":"sandro","to":"narrator","type":"uncle","label":"Дядя и племянник","confidence":"explicit","evidence":["Мой племянник"]}
+      ]
+    },
+    {
+      "title":"Софичка","work_id":"work_1514e2c9e8dca3589b0523d2918c08a7496e9aa5330bd7b4e2bd872bfa0aaecd","status":"read","narrator":"narrator","narrator_note":"Всеведущий повествователь прослеживает жизнь Софички от девятнадцати лет до старости, иногда раскрывая мотивы Нури, Шамиля и других героев.","summary":"Осиротевшая Софичка, воспитанная в Большом Доме, выходит замуж за Роуфа, но через год её брат Нури случайно убивает мужа топором. Софичка останавливает кровную месть, отвергает Нури и посвящает жизнь семье покойного. Во время войны она укрывает дезертира Шамиля, переживает пытки НКВД, а затем добровольно уезжает в сибирскую ссылку с родителями Роуфа и детьми Шамиля. Вернувшись в Чегем, она растит Зарифу и через тридцать лет прощает Нури, но это разрушает внутреннюю связь с покойным мужем; спустя годы Нури гибнет у развалин Большого Дома.",
+      "appearances":[
+        {"person":"father_sandro","role":"main","evidence":["Софичка была внучкой брата старого Хабуга"]},
+        {"person":"kyzym","role":"main","evidence":["Ведь, в сущности, он ей заменил отца"]},
+        {"person":"nutsa","role":"secondary","evidence":["тетя Нуца запричитала"]},
+        {"person":"masha","role":"main","evidence":["сказала Софичка тете Маше"]},
+        {"person":"chunka","role":"secondary","evidence":["На самом деле Чунка был убит в самом начале войны"]},
+        {"person":"tali","role":"secondary","evidence":["Она вложила его в письмо Тали"]},
+        {"person":"bagrat","role":"secondary","evidence":["кончилась страшная война. Убит Чунка, убит Баграт"]},
+        {"person":"adgur","role":"secondary","evidence":["недалеко от дома Адгура"]}
+      ],
+      "rejected_appearances":[{"person":"zarifa","reason":"Зарифа здесь — дочь Шамиля, а не дочь Исы из других глав."}],
+      "people":[
+        {"id":"sofichka_chegem","name":"Софичка","description":"Осиротевшая внучка брата Хабуга, воспитанная в Большом Доме; вдова Роуфа, неутомимая колхозница и нравственный центр повести.","role":"main","evidence":["Софичка, девятнадцатилетняя чегемская девушка"],"merge_ids":["bulk_69b4922c376a1d5aa9d50e53","bulk_f7393b1d6a461f8061d76a8d","bulk_c066158875322d264c3c2df6","bulk_bbba7e7a0f748ad94bc468d4","bulk_6418bb579c04a9d6b2d3517a","bulk_e2ff5979123cfcb2bf145041"]},
+        {"id":"nuri_habug_son","name":"Нури — брат Софички","description":"Брат Софички, случайно убивший Роуфа и позднее ставший влиятельным участником теневого табачного бизнеса. Родословная противоречива: в «Софичке» он внук брата Хабуга, а в «Бригадире Кязыме» прямо назван младшим сыном Хабуга.","role":"main","evidence":["вместе со своим братом воспитывалась в доме старого Хабуга"],"merge_ids":["bulk_e399b5927fa2f53529137c7d"]},
+        {"id":"rouf_sofichka_husband","name":"Роуф","description":"Сильный и весёлый чегемец, любимый муж Софички; смертельно ранен топором Нури через год после свадьбы.","role":"main","evidence":["Это был Роуф"]},
+        {"id":"shamil_rouf_brother","name":"Шамиль — брат Роуфа","description":"Брат Роуфа, отказавшийся от кровной мести по просьбе Софички; дезертирует с голодного фронта, защищает её от бригадира и кончает с собой.","role":"main","evidence":["Брат Роуфа Шамиль тоже был призван в армию"]},
+        {"id":"old_hasan_rouf_father","name":"Старый Хасан — отец Роуфа","description":"Отец Роуфа и Шамиля; удерживает сына от кровной мести, затем вместе с семьёй и Софичкой переживает сибирскую ссылку.","role":"main","evidence":["старый Хасан сказал"]},
+        {"id":"hamsada_rouf_mother","name":"Хамсада","description":"Жена старого Хасана, мать Роуфа и Шамиля; вместе с мужем, внуками и Софичкой выслана в Сибирь.","role":"secondary","evidence":["старый Хасан, и его жена Хамсада"]},
+        {"id":"kamachich_shamil_wife","name":"Камачич","description":"Жена Шамиля и мать двух его детей; арестована за помощь мужу-дезертиру и погибает в сибирском лагере.","role":"secondary","evidence":["брат Роуфа Шамиль, и его жена Камачич"]},
+        {"id":"zarifa_shamil_daughter","name":"Зарифа — дочь Шамиля","description":"Дочь Шамиля, воспитанная Софичкой после гибели родителей; переживает ссылку, выходит замуж за учителя и позднее использует самоотверженность приёмной матери.","role":"main","evidence":["дочь Шамиля, Софичкина воспитанница и любимица Зарифа"]},
+        {"id":"shamil_son_siberia","name":"Сын Шамиля","description":"Старший ребёнок Шамиля, выросший в ссылке; погибает на лесозаготовках под упавшим деревом.","role":"secondary","evidence":["Спиленное дерево упало не в ту сторону и подмяло сына Шамиля"]},
+        {"id":"brigadier_sofichka","name":"Бригадир из «Софички»","description":"Похотливый сельский бригадир, шантажирующий Софичку мнимой связью с дезертиром; убит Шамилем.","role":"main","evidence":["сказал бригадир, — я знаю, Чунка дезертировал"]},
+        {"id":"rouf_dog_volk","name":"Волк — собака Роуфа","description":"Верная собака Роуфа, после смерти хозяина живущая у его могилы и умершая по дороге к ней.","kind":"animal","role":"secondary","evidence":["Волк, Волк, посиди"]}
+      ],
+      "relations":[
+        {"from":"sofichka_chegem","to":"nuri_habug_son","type":"sibling","label":"Сестра и младший брат","confidence":"explicit","evidence":["вместе со своим братом воспитывалась в доме старого Хабуга"]},
+        {"from":"sofichka_chegem","to":"rouf_sofichka_husband","type":"spouse","label":"Жена и муж; Софичка хранит верность после его смерти","confidence":"explicit","evidence":["За год замужества Софичка испытала только одно сильное потрясение"]},
+        {"from":"nuri_habug_son","to":"rouf_sofichka_husband","type":"kills","label":"Смертельно ранит брошенным топором","confidence":"explicit","evidence":["Нури ему ответил, что ему рано делать зарубки"]},
+        {"from":"shamil_rouf_brother","to":"rouf_sofichka_husband","type":"sibling","label":"Братья","confidence":"explicit","evidence":["Брат Роуфа Шамиль тоже был призван в армию"]},
+        {"from":"old_hasan_rouf_father","to":"rouf_sofichka_husband","type":"parent","label":"Отец и сын","confidence":"strongly_implied","evidence":["Кроме тебя, у нас теперь нет детей"]},
+        {"from":"old_hasan_rouf_father","to":"shamil_rouf_brother","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["снова обратился к сыну старый Хасан"]},
+        {"from":"hamsada_rouf_mother","to":"rouf_sofichka_husband","type":"parent","label":"Мать и сын","confidence":"strongly_implied","evidence":["и брат Роуфа Шамиль, и его жена Камачич"]},
+        {"from":"hamsada_rouf_mother","to":"shamil_rouf_brother","type":"parent","label":"Мать и сын","confidence":"strongly_implied","evidence":["Мать свою пожалей"]},
+        {"from":"shamil_rouf_brother","to":"kamachich_shamil_wife","type":"spouse","label":"Муж и жена","confidence":"explicit","evidence":["Жена Шамиля, наклонившись над котлом"]},
+        {"from":"shamil_rouf_brother","to":"zarifa_shamil_daughter","type":"parent","label":"Отец и дочь","confidence":"explicit","evidence":["дочь Шамиля, Софичкина воспитанница"]},
+        {"from":"kamachich_shamil_wife","to":"zarifa_shamil_daughter","type":"parent","label":"Мать и дочь","confidence":"strongly_implied","evidence":["у которой остались двое детей"]},
+        {"from":"shamil_rouf_brother","to":"shamil_son_siberia","type":"parent","label":"Отец и сын","confidence":"explicit","evidence":["подмяло сына Шамиля"]},
+        {"from":"sofichka_chegem","to":"zarifa_shamil_daughter","type":"foster_parent","label":"Воспитывает племянницу после гибели её родителей","confidence":"explicit","evidence":["воспитала дочь его брата"]},
+        {"from":"shamil_rouf_brother","to":"brigadier_sofichka","type":"kills","label":"Убивает за шантаж и домогательства к Софичке","confidence":"explicit","evidence":["Автомат плеснул очередью, и бригадир свалился в траву"]},
+        {"from":"brigadier_sofichka","to":"sofichka_chegem","type":"harasses","label":"Домогается и шантажирует доносом","confidence":"explicit","evidence":["Поладим — буду молчать"]},
+        {"from":"rouf_sofichka_husband","to":"rouf_dog_volk","type":"owner","label":"Хозяин и преданная собака","confidence":"explicit","evidence":["собака Роуфа"]},
+        {"from":"sofichka_chegem","to":"old_hasan_rouf_father","type":"supports","label":"Добровольно следует за свёкром в сибирскую ссылку","confidence":"explicit","evidence":["ехать в Сибирь вместе со старым Хасаном и его семьей"]}
+      ]
+    },
+    {
+      "title":"Поэт","work_id":"work_f661446da4603c5309b53eac340084b467d9a509548f23f010bcca9727530dad","status":"read","narrator":"narrator","narrator_note":"Автобиографический писательский рассказчик создаёт портрет своего друга Юрия Волкова из личных встреч, его монологов, стихов и длинных вставных историй.","summary":"Талантливый романтический поэт Юрий Сергеевич Волков десятилетиями не может издать книгу: его независимость, громогласность и остроты постоянно раздражают литературное и партийное начальство. Рассказчик собирает его стихи, парадоксы и автобиографические истории. Кульминацией становится поездка в Туркмению, где невинная пословица вызывает конфликт с секретарём Кирбабаевым, а местные жители принимают поэта за смелого борца с режимом. После перестройки Волков наконец становится знаменитым и получает Государственную премию, не переставая видеть в собственной судьбе мистику.",
+      "appearances":[
+        {"person":"narrator","role":"main","evidence":["мы сидели с ним в незнакомом ресторане"]},
+        {"person":"khrushchev","role":"secondary","evidence":["А наивный Хрущев вместо этого топал ногами"]},
+        {"person":"stalin","role":"secondary","evidence":["осуждение Сталина на Двадцатом съезде"]}
+      ],
+      "people":[
+        {"id":"yuri_sergeevich_volkov","name":"Юрий Сергеевич Волков","description":"Талантливый, громогласный и склонный к мистификации романтический поэт, долго не печатавшийся при советской власти и признанный после перестройки.","role":"main","evidence":["Юрий Сергеевич Волков был романтическим поэтом"],"merge_ids":["bulk_37e07193ab08d379cc0be7d8"]},
+        {"id":"writers_union_secretary_poet","name":"Либеральный секретарь Союза писателей","description":"Культурный литературный начальник, первоначально опекающий Волкова и продвигающий его книгу, но прекращающий дружбу после публичной остроты.","role":"secondary","evidence":["появился довольно либеральный секретарь Союза писателей"]},
+        {"id":"kirbabaev","name":"Кирбабаев","description":"Второй секретарь туркменского райкома, воспринимающий русскую пословицу как личное и национальное оскорбление и срывающий выступление Волкова.","role":"main","evidence":["второй секретарь по фамилии Кирбабаев"],"merge_ids":["bulk_0c225e741d5eefb3a6fdca13","bulk_a0304c5a6b37020c61484156"]},
+        {"id":"georgy_georgievich_poet","name":"Георгий Георгиевич","description":"Остроумный приятель рассказчика из вставной истории о Доме творчества, любитель женщин, застолий и детективных объяснений.","role":"secondary","evidence":["Звали его Георгий Георгиевич"]},
+        {"id":"lyuda_georgy","name":"Люда","description":"Спутница Георгия Георгиевича в Доме творчества, неожиданное появление которой разрушает подготовленную любовную комбинацию.","role":"secondary","evidence":["оттуда выходит Люда в халате"],"merge_ids":["bulk_6325648cff45d3c26961f29d"]},
+        {"id":"natalya_bogdanova","name":"Наташа Богданова","description":"Сельская библиотекарша, чью реальную жизнь молодой Волков превращает в вымышленный газетный образ передовой комсомолки.","role":"secondary","evidence":["Культурную жизнь села неизменно возглавляет секретарь местной комсомольской организации Наташа Богданова"],"merge_ids":["bulk_8c866dfc9ba1751b29973f29","bulk_1ed37cf45ecfc8fb68d39e38","bulk_d2481dc0487971878fef941a"]}
+      ],
+      "relations":[
+        {"from":"narrator","to":"yuri_sergeevich_volkov","type":"friend","label":"Многолетние друзья и собеседники","confidence":"explicit","evidence":["Юра, — сказал я шутливо"]},
+        {"from":"writers_union_secretary_poet","to":"yuri_sergeevich_volkov","type":"patron","label":"Опекает поэта и пытается издать его книгу","confidence":"explicit","evidence":["Он стал опекать нашего поэта"]},
+        {"from":"writers_union_secretary_poet","to":"yuri_sergeevich_volkov","type":"conflict","label":"Разрывает дружбу после остроты поэта","confidence":"explicit","evidence":["дружба на этом кончилась"]},
+        {"from":"yuri_sergeevich_volkov","to":"kirbabaev","type":"conflict","label":"Комический конфликт из-за пословицы о ловце и звере","confidence":"explicit","evidence":["Значит, у вас получается так: на ловца туркмен бежит"]},
+        {"from":"narrator","to":"georgy_georgievich_poet","type":"friend","label":"Приятели и собутыльники в Доме творчества","confidence":"strongly_implied","evidence":["Мы крепко пили с Георгием Георгиевичем"]},
+        {"from":"georgy_georgievich_poet","to":"lyuda_georgy","type":"lover","label":"Любовная пара","confidence":"strongly_implied","evidence":["Люда, конечно, на меня обиделась"]},
+        {"from":"yuri_sergeevich_volkov","to":"natalya_bogdanova","type":"writes_about","label":"Создаёт вымышленный газетный портрет библиотекарши","confidence":"explicit","evidence":["Наташа Богданова, кроме всего, еще и библиотекарь села"]}
       ]
     }
   ]
