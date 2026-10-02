@@ -39,4 +39,9 @@ assert family_blocks and family_people
 assert family_people <= people, sorted(family_people - people)
 assert 'D.meta.pilot_count' in app
 assert '<b>3</b><span>текста в пилоте' not in app
+assert 'data-graph-page' in app and "url.searchParams.set('page',route.page)" in app
+assert 'data-graph-next' not in app
+assert 'id="people-search"' not in app
+html = (ROOT / 'site/dist/index.html').read_text(encoding='utf-8')
+assert html.count('type="search"') == 1
 print('PASS: site export parity, entity references, evidence links, family-tree people, dynamic counters')

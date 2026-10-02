@@ -13,3 +13,18 @@
 @media(max-width:600px){.topbar{position:sticky;min-height:66px}.search-wrap{width:min(100%,280px)}.history-controls button{width:32px;height:34px}.section-tools{gap:13px}}
 .person-link{color:var(--green);font-weight:600;text-decoration:underline;text-decoration-color:#b7cbbf;text-underline-offset:2px}.person-link:hover{text-decoration-color:var(--green)}.entity-tile h3 button{padding:0;text-align:left;font:inherit;color:inherit}.entity-tile h3 button:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}
 .nav-item{text-decoration:none}.topbar-start{display:flex;align-items:center;gap:14px;min-width:0}.history-controls{display:flex;gap:5px}.history-controls button{width:34px;height:34px;border:1px solid var(--line);border-radius:5px;background:#fff;font-size:1.1rem;line-height:1}.history-controls button:hover{background:var(--paper);border-color:#b5cabe}.button:is(a){display:inline-flex;align-items:center;text-decoration:none}.entity-tile h3 a,.rel-row>div>a,.work-item>a,.work-table td>a{color:var(--ink);text-decoration:none}.entity-tile h3 a:hover,.rel-row>div>a:hover,.work-item>a:hover,.work-table td>a:hover{color:var(--green);text-decoration:underline;text-underline-offset:3px}.people-tools{display:grid;grid-template-columns:minmax(260px,430px) 1fr;gap:14px 20px;align-items:start;margin-bottom:21px}.people-tools .filters{margin:0}.people-count{margin-bottom:14px}@media(max-width:800px){.people-tools{grid-template-columns:1fr}.history-controls{gap:3px}.history-controls button{width:31px;height:31px}.topbar-start{gap:8px}}@media(max-width:600px){.breadcrumb{display:none}.topbar-start{flex:none}}
+
+/* Unified navigation: history has its own lane and search stays at the right edge. */
+.topbar{display:grid;grid-template-columns:minmax(140px,1fr) auto;align-items:center}
+.topbar-start{min-width:0;overflow:hidden}
+.breadcrumb{overflow:hidden;text-overflow:ellipsis}
+.topbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;min-width:0}
+.topbar-actions .search-wrap{width:min(390px,34vw);min-width:250px}
+.history-controls{flex:none}
+.people-filterbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:21px}
+.people-filterbar .filters{margin:0}
+.graph-pagination{display:flex;align-items:center;gap:9px;margin-right:auto;color:var(--muted)}
+.graph-pagination .button{min-width:38px;padding:6px 10px}
+.graph-pagination span{white-space:nowrap}
+@media(max-width:920px){.topbar{grid-template-columns:minmax(90px,1fr) minmax(320px,auto)}.topbar-actions{gap:8px}.topbar-actions .search-wrap{width:min(340px,40vw);min-width:210px}}
+@media(max-width:600px){.topbar{grid-template-columns:auto minmax(0,1fr);padding:8px 12px}.topbar-actions{grid-column:1/-1;width:100%;display:grid;grid-template-columns:auto minmax(0,1fr)}.topbar-actions .search-wrap{width:100%;min-width:0}.history-controls button{width:34px}.legend{align-items:center}.graph-pagination{width:100%;justify-content:center;margin:0 0 4px}}
