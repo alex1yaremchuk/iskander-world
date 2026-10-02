@@ -12,6 +12,7 @@ from inventory import ROOT, digest
 PERSON_ID_ALIASES = {
     "narrator_mother": "chik_mother",
     "kama_big_house": "chik_mother",
+    "bulk_b5ece0029482484dd2c243d2": "vakhtang_bochua",
 }
 
 PERSON_OVERRIDES = {

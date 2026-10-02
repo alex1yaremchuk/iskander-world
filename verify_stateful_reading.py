@@ -63,6 +63,11 @@ for item in results:
 people_ids = {row[0] for row in db.execute("SELECT id FROM Person")}
 assert "chik_mother" in people_ids
 assert not ({"narrator_mother", "kama_big_house"} & people_ids)
+assert "vakhtang_bochua" in people_ids
+assert "bulk_b5ece0029482484dd2c243d2" not in people_ids
+assert db.execute(
+    "SELECT count(*) FROM Person WHERE canonical_name='Вахтанг Бочуа'"
+).fetchone()[0] == 1
 assert db.execute(
     "SELECT 1 FROM Relation WHERE from_person='chik' AND to_person='narrator' AND type='same_person'"
 ).fetchone()
