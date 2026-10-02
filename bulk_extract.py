@@ -75,7 +75,7 @@ def export(db):
                   coverage='Проверенный пилот + линейное подробное чтение прозы + автоматические кандидаты.',
                   extraction='Ручной пилот; словарный проход известных героев; отдельная очередь отношений.'))
     (ROOT / 'data' / 'pilot_export.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
-    (ROOT / 'site' / 'dist' / 'data.js').write_text('window.ISKANDER_DATA=' + json.dumps(data, ensure_ascii=False) + ';\n', encoding='utf-8')
+    (ROOT / 'site' / 'dist' / 'data.js').write_text('window.ISKANDER_DATA=' + json.dumps(data, ensure_ascii=False) + ';\n', encoding='utf-8', newline='\n')
 
 
 def main():

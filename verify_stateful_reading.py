@@ -3,6 +3,7 @@ import json
 import sqlite3
 
 from inventory import ROOT, digest
+from apply_stateful_reading import canonical_person_id
 
 
 results = json.loads((ROOT / "context_reading_results.json").read_text(encoding="utf-8"))["works"]
@@ -34,9 +35,9 @@ for item in results:
     row = stored[work_id]
     expected_hash = digest(json.dumps(item, ensure_ascii=False, sort_keys=True))
     assert row["result_sha256"] == expected_hash, item["title"]
-    assert row["narrator_id"] == item["narrator"]
-    people = {entry["person"] for entry in item.get("appearances", [])}
-    people.update(entry["id"] for entry in item.get("people", []))
+    assert row["narrator_id"] == canonical_person_id(item["narrator"])
+    people = {canonical_person_id(entry["person"]) for entry in item.get("appearances", [])}
+    people.update(canonical_person_id(entry["id"]) for entry in item.get("people", []))
     actual = {
         r[0]
         for r in db.execute(
@@ -46,7 +47,7 @@ for item in results:
         )
     }
     assert people <= actual, (item["title"], people - actual)
-    rejected = {entry["person"] for entry in item.get("rejected_appearances", [])}
+    rejected = {canonical_person_id(entry["person"]) for entry in item.get("rejected_appearances", [])}
     assert not (rejected & actual), (item["title"], "rejected appearances remain", rejected & actual)
     for relation in item.get("relations", []):
         found = db.execute(
@@ -55,9 +56,16 @@ for item in results:
                JOIN Evidence e ON e.id=re.evidence_id
                WHERE e.work_id=? AND r.from_person=?
                  AND r.to_person=? AND r.type=?""",
-            (work_id, relation["from"], relation["to"], relation["type"]),
+            (work_id, canonical_person_id(relation["from"]), canonical_person_id(relation["to"]), relation["type"]),
         ).fetchone()
         assert found, (item["title"], relation)
+
+people_ids = {row[0] for row in db.execute("SELECT id FROM Person")}
+assert "chik_mother" in people_ids
+assert not ({"narrator_mother", "kama_big_house"} & people_ids)
+assert db.execute(
+    "SELECT 1 FROM Relation WHERE from_person='chik' AND to_person='narrator' AND type='same_person'"
+).fetchone()
 
 print(f"PASS: {len(results)} complete contextual readings and their entities, relations, evidence, and hashes")
 db.close()

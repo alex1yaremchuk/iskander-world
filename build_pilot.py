@@ -203,7 +203,7 @@ def main():
                           extraction='Чтение текстов ассистентом + словарный поиск; не исчерпывающее извлечение персонажей.'))
     (ROOT/'data/pilot_export.json').write_text(json.dumps(export,ensure_ascii=False,indent=2),encoding='utf-8')
     site=ROOT/'site/dist';site.mkdir(parents=True,exist_ok=True)
-    (site/'data.js').write_text('window.ISKANDER_DATA='+json.dumps(export,ensure_ascii=False)+';\n',encoding='utf-8')
+    (site/'data.js').write_text('window.ISKANDER_DATA='+json.dumps(export,ensure_ascii=False)+';\n',encoding='utf-8',newline='\n')
     assert not db.execute('PRAGMA foreign_key_check').fetchall()
     for e in db.execute('SELECT e.*,t.text AS original FROM Evidence e JOIN TextFragment t ON t.id=e.fragment_id'):
         assert e['original'][e['start_char']:e['end_char']]==e['quote'],e['id']
