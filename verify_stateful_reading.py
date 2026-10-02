@@ -67,5 +67,18 @@ assert db.execute(
     "SELECT 1 FROM Relation WHERE from_person='chik' AND to_person='narrator' AND type='same_person'"
 ).fetchone()
 
+kozlotur_work = db.execute(
+    "SELECT id FROM Work WHERE canonical_title='Созвездие Козлотура'"
+).fetchone()
+assert kozlotur_work
+assert db.execute(
+    """SELECT 1 FROM Appearance
+       WHERE work_id=? AND person_id='narrator' AND role='main'""",
+    (kozlotur_work[0],),
+).fetchone()
+assert "Созвездия Козлотура" in db.execute(
+    "SELECT description FROM Person WHERE id='narrator'"
+).fetchone()[0]
+
 print(f"PASS: {len(results)} complete contextual readings and their entities, relations, evidence, and hashes")
 db.close()
