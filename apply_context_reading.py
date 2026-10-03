@@ -62,7 +62,7 @@ def main():
 
         eid = evidence_ids[0]
         db.execute("INSERT OR IGNORE INTO Place VALUES (?,?,?,?,?,?,?)",
-                   ("iran", "Иран", "country", "Место высылки отца Чика.", 0, 0, json.dumps(evidence_ids)))
+                   ("iran", "Иран", "Страна", "Место высылки отца Чика.", 92, 86, json.dumps(evidence_ids)))
         db.execute("INSERT OR REPLACE INTO PersonPlace VALUES (?,?,?,?,?,?)",
                    ("pp_chik_father_iran", "chik_father", "iran", "Выслан; умер на чужбине", "explicit", eid))
     export(db)

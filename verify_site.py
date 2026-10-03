@@ -43,6 +43,13 @@ assert 'data-graph-page' in app and "url.searchParams.set('page',route.page)" in
 assert 'data-graph-next' not in app
 assert 'id="people-search"' not in app
 assert 'byConnections' in app and 'personSearchRank' in app
+assert 'searchTextByPerson' in app and 'scheduleSearchUrl' in app
+assert 'setTimeout(renderGlobalSearch,90)' in app
+assert 'function relationRole' in app and "return 'Сын'" in app and "return 'Отец'" in app
+assert 'placeLayout' in app and 'map-compass' in app
+for technical_copy in ('в пилоте', 'Авто · проверить', 'роль оценена при чтении', 'канонический источник'):
+    assert technical_copy not in app
 html = (ROOT / 'site/dist/index.html').read_text(encoding='utf-8')
 assert html.count('type="search"') == 1
+assert 'Проверенный слой' not in html and 'О наполнении атласа' not in html
 print('PASS: site export parity, entity references, evidence links, family-tree people, dynamic counters')
