@@ -49,6 +49,9 @@ assert "state.globalQuery=event.target.value.trim();clearTimeout(searchRenderTim
 assert "url.searchParams.set('q'" not in app
 assert 'workDescendants' in app and 'relationWorks' in app
 assert 'id="relation-scope"' in app and 'data-scope-option' in app
+assert 'Рассказы · ${stories.length}' in app
+assert '<summary>Том ${volume}</summary>' not in app
+assert 'volume-option' not in app
 assert 'function relationRole' in app and "return 'Сын'" in app and "return 'Отец'" in app
 assert 'placeLayout' in app and 'map-compass' in app
 for technical_copy in ('в пилоте', 'Авто · проверить', 'роль оценена при чтении', 'канонический источник'):
