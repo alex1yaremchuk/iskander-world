@@ -10,7 +10,7 @@
 <body>
 <a class="skip" href="#main">К содержимому</a>
 <aside class="rail">
-  <a href="#graph" class="brand" aria-label="Мир Искандера, главная"><span class="brand-mark">ФИ</span><span>Мир<br>Искандера</span></a>
+  <a href="?view=graph" class="brand" data-view="graph" data-nav-root aria-label="Мир Искандера, главная"><span class="brand-mark">ФИ</span><span>Мир<br>Искандера</span></a>
   <p class="rail-caption">ЛИТЕРАТУРНЫЙ АТЛАС</p>
   <nav aria-label="Режимы атласа" id="navigation">
     <a href="?view=graph" data-view="graph" class="nav-item active"><span aria-hidden="true">⌘</span>Карта связей</a>
@@ -23,6 +23,7 @@
 </aside>
 <div class="page">
   <header class="topbar"><div class="topbar-start"><div class="breadcrumb"><a href="?view=graph" data-view="graph" data-nav-root>Атлас</a><span>/</span><span id="current-view">Карта связей</span></div></div><div class="topbar-actions"><div class="history-controls" aria-label="История навигации"><button data-history-back aria-label="Назад" title="Назад"><span aria-hidden="true">←</span></button><button data-history-forward aria-label="Вперёд" title="Вперёд"><span aria-hidden="true">→</span></button></div><div class="search-wrap"><label class="sr-only" for="search">Поиск по всему атласу</label><input id="search" type="search" placeholder="Найти героя или произведение…" autocomplete="off" aria-controls="search-results"><span class="search-hint" aria-hidden="true">⌕</span><div id="search-results" class="search-results" hidden></div></div></div></header>
+  <div id="contextbar" class="contextbar" aria-label="Контекст атласа"></div>
   <main id="main" tabindex="-1"><div id="content"></div></main>
   <footer><span>Мир Искандера · литературный атлас</span><span>От персонажа — к книге</span></footer>
 </div>
