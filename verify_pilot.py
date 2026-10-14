@@ -1,6 +1,8 @@
 """Check evidence and entity boundaries that matter to this pilot."""
 import json
 import sqlite3
+import re
+from collections import defaultdict
 from inventory import ROOT
 
 db=sqlite3.connect(ROOT/'data/inventory.sqlite')
@@ -56,5 +58,17 @@ assert db.execute('''SELECT COUNT(*) FROM Mention m JOIN Work w ON w.id=m.work_i
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="aslan" AND to_person="shazina" AND type="spouse"').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="katya_grandmother" AND to_person="katya" AND type="grandparent"').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("katya","german_katrin")').fetchone()[0]==2
+def normalized_name(value):
+    value=value.casefold().replace('ё','е').replace('—','-').replace('–','-')
+    value=re.sub(r'[«»„“”\"\'()]','',value)
+    return re.sub(r'\s+',' ',value).strip()
+name_groups=defaultdict(list)
+for person in db.execute('SELECT id,canonical_name FROM Person'):
+    name_groups[normalized_name(person['canonical_name'])].append(person['id'])
+assert not [ids for ids in name_groups.values()
+            if any(x.startswith('bulk_') for x in ids) and any(not x.startswith('bulk_') for x in ids)]
+assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("masha","bulk_c44e41ad44f251d83d9c03ff")').fetchone()[0]==1
+assert not db.execute('SELECT 1 FROM Person WHERE id="bulk_d75876aee084ff286f0e0120"').fetchone()
+assert db.execute('SELECT canonical_name FROM Person WHERE id="masha"').fetchone()[0]=='Тётя Маша'
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="adamyr" AND to_person="khazarat" AND type="enslaves"').fetchone()[0]==1
 print('PASS: evidence quotes, mention spans, relation sources, unresolved corpus matches, false kinship, separate identities, cross-work merge, export consistency')

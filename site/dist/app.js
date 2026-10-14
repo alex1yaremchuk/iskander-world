@@ -38,7 +38,7 @@ function scheduleSearchUrl(){clearTimeout(searchUrlTimer);searchUrlTimer=setTime
 function clearSearchTimers(){clearTimeout(searchRenderTimer);clearTimeout(searchUrlTimer);}
 const personAnchor=(p,attrs='')=>`<a href="${esc(personUrl(p.id))}" data-person="${esc(p.id)}" data-view="graph" ${attrs}>${esc(p.canonical_name)}</a>`;
 const workAnchor=(w,attrs='')=>`<a href="${esc(workUrl(w.id))}" data-work="${esc(w.id)}" ${attrs}>${esc(w.title)}</a>`;
-const normalizeName=value=>String(value).trim().toLocaleLowerCase('ru');
+const normalizeName=value=>String(value).trim().toLocaleLowerCase('ru').replaceAll('ё','е');
 const regexEscape=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const personNames=(()=>{const candidates=[];for(const p of D.people){candidates.push({name:p.canonical_name,id:p.id});for(const name of aliasesByPerson.get(p.id)||[]){if(/^\p{Lu}/u.test(name))candidates.push({name,id:p.id});}}const owners=new Map;for(const item of candidates){const key=normalizeName(item.name);if(key.length<3)continue;if(!owners.has(key))owners.set(key,new Set);owners.get(key).add(item.id);}return candidates.filter(item=>owners.get(normalizeName(item.name))?.size===1).sort((a,b)=>b.name.length-a.name.length);})();
 const personNamePattern=personNames.length?new RegExp(`(?<![\\p{L}\\p{N}_])(?:${[...new Set(personNames.map(item=>regexEscape(item.name)))].join('|')})(?![\\p{L}\\p{N}_])`,'giu'):null;

@@ -13,6 +13,11 @@ PERSON_ID_ALIASES = {
     "narrator_mother": "chik_mother",
     "kama_big_house": "chik_mother",
     "bulk_b5ece0029482484dd2c243d2": "vakhtang_bochua",
+    "abesolomon_nartovich": "abesalomon",
+    "evgeny_dmitrievich_drama_teacher": "evgeny_levkoev",
+    "stepan_timofeevich_lenin": "stepan",
+    "uncle_samad_chik": "school_waltz_uncle_samad",
+    "wolfgang_amadeus_mozart": "wolfgang_mozart",
 }
 
 PERSON_OVERRIDES = {

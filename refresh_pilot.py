@@ -10,6 +10,7 @@ STEPS = [
     'deep_read.py',
     'apply_context_reading.py',
     'apply_stateful_reading.py',
+    'reconcile_people.py',
     'prepare_review_queue.py',
     'verify.py',
     'verify_pilot.py',

@@ -44,6 +44,7 @@ assert 'data-graph-next' not in app
 assert 'id="people-search"' not in app
 assert 'byConnections' in app and 'personSearchRank' in app
 assert 'searchTextByPerson' in app and 'scheduleSearchUrl' in app
+assert ".replaceAll('ё','е')" in app
 assert 'setTimeout(renderGlobalSearch,45)' in app
 assert "state.globalQuery=event.target.value.trim();clearTimeout(searchRenderTimer)" in app
 assert "url.searchParams.set('q'" not in app
