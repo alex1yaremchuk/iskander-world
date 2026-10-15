@@ -101,7 +101,9 @@ def main():
               '- Роль персонажа в произведении остаётся редакционной оценкой.',
               '- reported хранит слова героя или пересказ; rejected сохраняет опровергнутое утверждение, но не включает его в генеалогию.',
               '- Совпадения имени вне пилота остаются CorpusHit и не превращаются в Appearance.', '']
-    (ROOT / 'QUALITY_REPORT.md').write_text('\n'.join(lines), encoding='utf-8')
+    (ROOT / 'QUALITY_REPORT.md').write_text(
+        '\n'.join(lines), encoding='utf-8', newline='\n'
+    )
     assert all(v == 0 for v in c.values()), c
     print(json.dumps({'metrics': m, 'checks': c}, ensure_ascii=False))
     db.close()
