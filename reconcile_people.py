@@ -93,12 +93,70 @@ CONFIRMED_MERGES.update({
     "bulk_8624db37158aaf61943ad28b": "kolcheruky",
     "bulk_6e5f15e6ca226945b6195fd8": "kolcheruky",
     "tsiala": "aunt_tsiala",
+    "bulk_a620ff4860a1877fd6eeeb01": "prince_safar",
+    "bulk_e27dc5727f3a13376d03c426": "chik_mother",
+    "bulk_ea6ba1a4b0ad8a08df637ef3": "masha_daughter_mayana",
+    "bulk_c8f26b2a6f59f3295a4a4d1d": "masha_daughter_mayana",
+    "bulk_184d1c27f1cc8f4d9ef8947c": "uncle_alikhan",
+    "bulk_50217c6aa1149770dc7577c3": "alexander_pushkin",
+    "bulk_ad421ad810888d1eba49e3a1": "zurab_scorpion",
+    "bulk_5c2ce82c11184e88fe8c0335": "chik",
+    "bulk_7ebaa9bb3e137be4b532477b": "chik",
+    "bulk_3c21708a752d8cdd35169187": "chik",
+    "bulk_96ca801a06b10d45849bebf9": "chik",
+    "bulk_aaf403a2237bbd5dd340fdc2": "chik",
+    "bulk_66929eca8a0c19bcdf64c5e2": "chik",
+    "bulk_59ae85da8dbaaf2876ac0d54": "chik",
+    "bulk_84b70128158f7559830edbee": "chik",
+    "bulk_ccf2e4ea6325f7bf8f0bf68b": "chik",
+    "bulk_8230f12240bc1d8ec8ec4c68": "sonka",
+    "bulk_0c0ef00b3fc360796f22d5d1": "bocho",
+    "bulk_3eb095dbb9a11643f96401bb": "kaban_chik_hooligan",
+    "bulk_5d1aef366ce57d64b952268f": "onik",
+    "bulk_6ad1dbb7a5401e64ed5d6644": "evgeny_levkoev",
+    "bulk_717c3751bca2f6aefb0e356d": "nika_chik",
+    "bulk_97f27a3f1b99eba99acde538": "kunta",
+    "bulk_ef7e631eb1972217127ba2f7": "kharlampo_shepherd",
+    "bulk_84bf5b9d9b40a73c40e2805c": "shirokoloby_buffalo",
+    "bulk_48769520b91f8077e98622b6": "shirokoloby_buffalo",
+    "bulk_c675cbeca3ef103f6d33c015": "misrop_butcher_adgur",
+    "bulk_779d00ab213737a185e990b3": "yakov_dzhugashvili",
+    "bulk_7c1dabc7fc6f8b8c130d93fc": "alexander_aristarkhovich",
+    "bulk_6828eae86120b88a77971333": "lora_kartashov_story",
+    "bulk_5ae2b67a458bb1cab5d7c8cc": "lora_kartashov_story",
+    "bulk_2b706656953a527962e55530": "timurchik_ruslan_son",
+    "bulk_d64d0e13828f81b45828e76f": "boris_borzov_geneticist",
+    "bulk_7b0f6b59916ff24aa444b751": "andrei_tarkilov",
+    "bulk_56019047351304e16ba6ca69": "kosoy_boa",
 })
 
 NO_ALIAS_MERGES = {
     "bulk_fcdb6c0712f3a87de4fc84cc",  # «Так Сандро» includes a sentence-initial particle.
     "bulk_57bf78ba2a71bd2cf2e8758b",  # «Сандро Тали» spans two adjacent names.
 }
+NO_ALIAS_MERGES.update({
+    old_id for old_id in CONFIRMED_MERGES
+    if old_id.startswith("bulk_") and old_id in {
+        "bulk_a620ff4860a1877fd6eeeb01", "bulk_e27dc5727f3a13376d03c426",
+        "bulk_ea6ba1a4b0ad8a08df637ef3", "bulk_c8f26b2a6f59f3295a4a4d1d",
+        "bulk_184d1c27f1cc8f4d9ef8947c", "bulk_50217c6aa1149770dc7577c3",
+        "bulk_ad421ad810888d1eba49e3a1", "bulk_5c2ce82c11184e88fe8c0335",
+        "bulk_7ebaa9bb3e137be4b532477b", "bulk_3c21708a752d8cdd35169187",
+        "bulk_96ca801a06b10d45849bebf9", "bulk_aaf403a2237bbd5dd340fdc2",
+        "bulk_66929eca8a0c19bcdf64c5e2", "bulk_59ae85da8dbaaf2876ac0d54",
+        "bulk_84b70128158f7559830edbee", "bulk_ccf2e4ea6325f7bf8f0bf68b",
+        "bulk_8230f12240bc1d8ec8ec4c68", "bulk_0c0ef00b3fc360796f22d5d1",
+        "bulk_3eb095dbb9a11643f96401bb", "bulk_5d1aef366ce57d64b952268f",
+        "bulk_6ad1dbb7a5401e64ed5d6644", "bulk_717c3751bca2f6aefb0e356d",
+        "bulk_97f27a3f1b99eba99acde538", "bulk_ef7e631eb1972217127ba2f7",
+        "bulk_84bf5b9d9b40a73c40e2805c", "bulk_48769520b91f8077e98622b6",
+        "bulk_c675cbeca3ef103f6d33c015", "bulk_779d00ab213737a185e990b3",
+        "bulk_7c1dabc7fc6f8b8c130d93fc", "bulk_6828eae86120b88a77971333",
+        "bulk_5ae2b67a458bb1cab5d7c8cc", "bulk_2b706656953a527962e55530",
+        "bulk_d64d0e13828f81b45828e76f", "bulk_7b0f6b59916ff24aa444b751",
+        "bulk_56019047351304e16ba6ca69",
+    }
+})
 
 
 def normalized_name(value):

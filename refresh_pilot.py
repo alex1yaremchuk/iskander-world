@@ -18,6 +18,7 @@ STEPS = [
     'verify_review_queue.py',
     'verify_site.py',
     'quality_report.py',
+    'build_character_name_list.py',
 ]
 
 for script in STEPS:

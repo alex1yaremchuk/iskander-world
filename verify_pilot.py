@@ -100,5 +100,6 @@ assert not db.execute("SELECT 1 FROM Person WHERE id IN ('tsiala','bulk_e969d96f
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("safar","prince_safar")').fetchone()[0]==2
 assert db.execute("SELECT 1 FROM Relation WHERE from_person='safar' AND to_person='chik' AND type='cousin'").fetchone()
 assert db.execute("SELECT 1 FROM Relation WHERE from_person='bata_safar_foster_brother' AND to_person='prince_safar' AND type='kills'").fetchone()
+assert not db.execute("SELECT 1 FROM Person WHERE id IN ('bulk_a620ff4860a1877fd6eeeb01','bulk_e27dc5727f3a13376d03c426','bulk_ea6ba1a4b0ad8a08df637ef3','bulk_c8f26b2a6f59f3295a4a4d1d')").fetchone()
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="adamyr" AND to_person="khazarat" AND type="enslaves"').fetchone()[0]==1
 print('PASS: evidence quotes, mention spans, relation sources, unresolved corpus matches, false kinship, separate identities, cross-work merge, export consistency')
