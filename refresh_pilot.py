@@ -11,6 +11,7 @@ STEPS = [
     'apply_context_reading.py',
     'apply_stateful_reading.py',
     'reconcile_people.py',
+    'prune_automatic_candidates.py',
     'prepare_review_queue.py',
     'verify.py',
     'verify_pilot.py',

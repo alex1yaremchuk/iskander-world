@@ -34,6 +34,11 @@ assert any(w['title']=='Пиры Валтасара' and w['pilot'] for w in dat
 assert all(a['work_id'] in pilot_ids | automatic_ids and a['evidence'] for a in data['appearances'])
 assert all(p['evidence'] for p in data['people'])
 assert len(data['people'])==db.execute('SELECT COUNT(*) FROM Person').fetchone()[0]
+assert not db.execute("SELECT id FROM Person WHERE id LIKE 'bulk_%'").fetchall()
+automatic_audit=json.loads((ROOT/'data/automatic_name_audit.json').read_text(encoding='utf-8'))
+assert automatic_audit['summary']['removed_automatic_candidates']>0
+assert automatic_audit['summary']['reviewed']==len(automatic_audit['records'])
+assert {x['decision'] for x in automatic_audit['records']}=={'keep','remove'}
 assert db.execute('SELECT canonical_name FROM Person WHERE id="brother_sandro"').fetchone()[0]=='Махаз'
 assert not db.execute('SELECT 1 FROM Person WHERE id="kyzym_wife"').fetchone()
 assert db.execute('SELECT canonical_name FROM Person WHERE id="nutsa"').fetchone()[0]=='Тётя Нуца'
