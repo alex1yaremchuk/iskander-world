@@ -73,7 +73,22 @@ CONFIRMED_MERGES.update({
     "bulk_6cc6d5af456cc5f66cda00e6": "tamara_ivanovna_uninvited",
     "bulk_c7ccb808a9ee097679130a01": "nazim_hikmet",
     "bulk_5536fd4e9ccaf6e8002f9d16": "nazim_hikmet",
+    "bulk_c96e91b9c2ef1d8ab1b8fd77": "sandro",
+    "bulk_f685f65324fc1063e369b5db": "sandro",
+    "bulk_b020369a25fac95da7da9c02": "sandro",
+    "bulk_b6bfec204320a6902221dfb8": "sandro",
+    "bulk_fcdb6c0712f3a87de4fc84cc": "sandro",
+    "bulk_f83333f9262d58110bccefd9": "sandro",
+    "bulk_57bf78ba2a71bd2cf2e8758b": "sandro",
+    "bulk_8ffa8f5793b665bc4d3e802b": "sandro",
+    "bulk_330dfb4a60de2f5f3e8db99e": "sandro",
+    "bulk_4095a9fcb0ae940df31a4f23": "sandro",
 })
+
+NO_ALIAS_MERGES = {
+    "bulk_fcdb6c0712f3a87de4fc84cc",  # «Так Сандро» includes a sentence-initial particle.
+    "bulk_57bf78ba2a71bd2cf2e8758b",  # «Сандро Тали» spans two adjacent names.
+}
 
 
 def normalized_name(value):
@@ -83,7 +98,7 @@ def normalized_name(value):
     return re.sub(r"\s+", " ", value).strip()
 
 
-def merge_person(db, old_id, new_id):
+def merge_person(db, old_id, new_id, keep_alias=True):
     if old_id == new_id:
         return False
     old = db.execute("SELECT * FROM Person WHERE id=?", (old_id,)).fetchone()
@@ -105,7 +120,7 @@ def merge_person(db, old_id, new_id):
     )
 
     # Keep the discarded spelling searchable.
-    if normalized_name(old["canonical_name"]) != normalized_name(new["canonical_name"]):
+    if keep_alias and normalized_name(old["canonical_name"]) != normalized_name(new["canonical_name"]):
         alias_id = "alias_merge_" + digest(new_id + ":" + old["canonical_name"])[:20]
         db.execute(
             "INSERT OR IGNORE INTO Alias VALUES (?,?,?,?,?)",
@@ -175,7 +190,7 @@ def main():
     merged = []
     with db:
         for old_id, new_id in CONFIRMED_MERGES.items():
-            if merge_person(db, old_id, new_id):
+            if merge_person(db, old_id, new_id, old_id not in NO_ALIAS_MERGES):
                 merged.append((old_id, new_id, "confirmed"))
 
         # A bulk card may be folded only when the normalized name has exactly

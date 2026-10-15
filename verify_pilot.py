@@ -70,5 +70,7 @@ assert not [ids for ids in name_groups.values()
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("masha","bulk_c44e41ad44f251d83d9c03ff")').fetchone()[0]==1
 assert not db.execute('SELECT 1 FROM Person WHERE id="bulk_d75876aee084ff286f0e0120"').fetchone()
 assert db.execute('SELECT canonical_name FROM Person WHERE id="masha"').fetchone()[0]=='Тётя Маша'
+assert not db.execute("SELECT 1 FROM Person WHERE id IN ('bulk_c96e91b9c2ef1d8ab1b8fd77','bulk_f685f65324fc1063e369b5db','bulk_b020369a25fac95da7da9c02','bulk_b6bfec204320a6902221dfb8','bulk_330dfb4a60de2f5f3e8db99e','bulk_4095a9fcb0ae940df31a4f23')").fetchone()
+assert db.execute('SELECT COUNT(*) FROM Person WHERE id="sandro"').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="adamyr" AND to_person="khazarat" AND type="enslaves"').fetchone()[0]==1
 print('PASS: evidence quotes, mention spans, relation sources, unresolved corpus matches, false kinship, separate identities, cross-work merge, export consistency')
