@@ -18,6 +18,7 @@ PERSON_ID_ALIASES = {
     "stepan_timofeevich_lenin": "stepan",
     "uncle_samad_chik": "school_waltz_uncle_samad",
     "wolfgang_amadeus_mozart": "wolfgang_mozart",
+    "seva_sevastyanov": "sevastyanov_chik_classmate",
 }
 
 PERSON_OVERRIDES = {
@@ -35,6 +36,11 @@ PERSON_OVERRIDES = {
         "Кама (мать Чика)",
         "Кама, мать Чика и литературного рассказчика; дочь Хабуга и сестра Сандро, Кязыма, Махаза и Исы. "
         "Родилась в Большом Доме Чегема; позднее живёт с детьми в городе.",
+    ),
+    "sevastyanov_chik_classmate": (
+        "Сева (Севастьянов)",
+        "Одноклассник и приятель Чика, вместе с ним первым замечающий смешное и нелепое на уроках; "
+        "в других рассказах назван кратко Севой.",
     ),
 }
 
@@ -154,7 +160,11 @@ def main():
                         db.execute("DELETE FROM Relation WHERE id=?", (duplicate,))
 
             for old_id, new_id in PERSON_ID_ALIASES.items():
-                merge_person(old_id, new_id)
+                # Some context-reading identities are introduced later than a
+                # legacy seed identity.  Defer that merge until the target has
+                # been materialized instead of making result order significant.
+                if db.execute("SELECT 1 FROM Person WHERE id=?", (new_id,)).fetchone():
+                    merge_person(old_id, new_id)
 
             for p in result.get("people", []):
                 source_id = p["id"]

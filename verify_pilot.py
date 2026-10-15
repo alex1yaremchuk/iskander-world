@@ -110,6 +110,11 @@ assert db.execute("SELECT canonical_name FROM Person WHERE id='mikha_wife_raven_
 assert db.execute("SELECT canonical_name FROM Person WHERE id='mikha_wife_ankhara'").fetchone()[0]=='Жена Михи из Анхары'
 assert db.execute("SELECT COUNT(*) FROM Appearance WHERE person_id='mikha_hunter'").fetchone()[0]==1
 assert db.execute("SELECT COUNT(*) FROM Appearance WHERE person_id='mikha_raven_owner'").fetchone()[0]==1
+assert not db.execute("SELECT 1 FROM Person WHERE id='seva_sevastyanov'").fetchone()
+assert db.execute("SELECT 1 FROM Relation WHERE from_person='rich_tailor_mother_in_law' AND to_person='rich_tailor_wife' AND type='parent'").fetchone()
+assert db.execute("SELECT COUNT(*) FROM Relation WHERE id LIKE 'audit_rel_%'").fetchone()[0]>=85
+assert not db.execute("""SELECT r.id FROM Relation r LEFT JOIN RelationEvidence e ON e.relation_id=r.id
+    WHERE r.id LIKE 'audit_rel_%' GROUP BY r.id HAVING COUNT(e.evidence_id)=0""").fetchall()
 assert not db.execute("""SELECT 1 FROM Appearance a JOIN Appearance b ON a.work_id=b.work_id
     WHERE a.person_id='omar_forester' AND b.person_id='omar_chik'""").fetchone()
 assert not db.execute("SELECT 1 FROM Person WHERE id IN ('bulk_a620ff4860a1877fd6eeeb01','bulk_e27dc5727f3a13376d03c426','bulk_ea6ba1a4b0ad8a08df637ef3','bulk_c8f26b2a6f59f3295a4a4d1d')").fetchone()
