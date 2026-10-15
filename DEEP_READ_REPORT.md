@@ -6,8 +6,8 @@
 - works_in_scope: 165
 - works: 165
 - paragraphs: 47542
-- known_mentions: 17112
-- known_person_work_pairs: 727
+- known_mentions: 16568
+- known_person_work_pairs: 700
 - relation_windows: 10870
 - name_candidates: 11836
 - reviewed_decisions: 4

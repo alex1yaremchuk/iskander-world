@@ -176,7 +176,7 @@ def main():
         + "Первый проход завершён по всему прозаическому реестру. Произведение читается один раз; "
           "межтекстовое объединение вынесено из прохода.\n\n"
         + "\n".join(f"- {k}: {v}" for k, v in report.items()) + "\n",
-        encoding="utf-8")
+        encoding="utf-8", newline="\n")
     print(json.dumps(report, ensure_ascii=False, indent=2))
     db.close()
 

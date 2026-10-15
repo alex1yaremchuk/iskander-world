@@ -65,8 +65,8 @@ def normalized_name(value):
 name_groups=defaultdict(list)
 for person in db.execute('SELECT id,canonical_name FROM Person'):
     name_groups[normalized_name(person['canonical_name'])].append(person['id'])
-assert not [ids for ids in name_groups.values()
-            if any(x.startswith('bulk_') for x in ids) and any(not x.startswith('bulk_') for x in ids)]
+exact_name_collisions={name: ids for name, ids in name_groups.items() if len(ids)>1}
+assert not exact_name_collisions, exact_name_collisions
 
 # Removing an address/title catches cards such as «Катя» / «Тётя Катя».
 # Every remaining collision must be an explicitly reviewed homonym or a
@@ -100,6 +100,13 @@ assert not db.execute("SELECT 1 FROM Person WHERE id IN ('tsiala','bulk_e969d96f
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("safar","prince_safar")').fetchone()[0]==2
 assert db.execute("SELECT 1 FROM Relation WHERE from_person='safar' AND to_person='chik' AND type='cousin'").fetchone()
 assert db.execute("SELECT 1 FROM Relation WHERE from_person='bata_safar_foster_brother' AND to_person='prince_safar' AND type='kills'").fetchone()
+assert db.execute("SELECT canonical_name FROM Person WHERE id='beer_seller_lena'").fetchone()[0]=='Лена — продавщица на вокзале'
+assert db.execute("SELECT canonical_name FROM Person WHERE id='mikha_wife_raven_story'").fetchone()[0]=='Жена Михи — хозяина ворона'
+assert db.execute("SELECT canonical_name FROM Person WHERE id='mikha_wife_ankhara'").fetchone()[0]=='Жена Михи из Анхары'
+assert db.execute("SELECT COUNT(*) FROM Appearance WHERE person_id='mikha_hunter'").fetchone()[0]==1
+assert db.execute("SELECT COUNT(*) FROM Appearance WHERE person_id='mikha_raven_owner'").fetchone()[0]==1
+assert not db.execute("""SELECT 1 FROM Appearance a JOIN Appearance b ON a.work_id=b.work_id
+    WHERE a.person_id='omar_forester' AND b.person_id='omar_chik'""").fetchone()
 assert not db.execute("SELECT 1 FROM Person WHERE id IN ('bulk_a620ff4860a1877fd6eeeb01','bulk_e27dc5727f3a13376d03c426','bulk_ea6ba1a4b0ad8a08df637ef3','bulk_c8f26b2a6f59f3295a4a4d1d')").fetchone()
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="adamyr" AND to_person="khazarat" AND type="enslaves"').fetchone()[0]==1
 print('PASS: evidence quotes, mention spans, relation sources, unresolved corpus matches, false kinship, separate identities, cross-work merge, export consistency')
