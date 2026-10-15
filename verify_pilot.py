@@ -67,10 +67,38 @@ for person in db.execute('SELECT id,canonical_name FROM Person'):
     name_groups[normalized_name(person['canonical_name'])].append(person['id'])
 assert not [ids for ids in name_groups.values()
             if any(x.startswith('bulk_') for x in ids) and any(not x.startswith('bulk_') for x in ids)]
+
+# Removing an address/title catches cards such as «Катя» / «Тётя Катя».
+# Every remaining collision must be an explicitly reviewed homonym or a
+# possessive family label, never an unnoticed duplicate.
+honorific = re.compile(r'^(?:тетя|тетушка|дядя|дядюшка|старик|старый|молодой|князь|княгиня|принц|принцесса|дедушка|бабушка|товарищ|доктор|генерал|царь)\s+')
+core_groups=defaultdict(list)
+for person in db.execute('SELECT id,canonical_name FROM Person'):
+    core=normalized_name(person['canonical_name'])
+    previous=None
+    while previous != core:
+        previous=core
+        core=honorific.sub('',core)
+    core_groups[core].append(person['id'])
+reviewed_core_collisions={
+    frozenset({'safar','prince_safar'}),
+    frozenset({'chik_aunt','chik_grandmother'}),
+}
+unexpected_core_collisions=[]
+for ids in core_groups.values():
+    if len(ids)>1 and frozenset(ids) not in reviewed_core_collisions:
+        names={db.execute('SELECT canonical_name FROM Person WHERE id=?',(person_id,)).fetchone()[0] for person_id in ids}
+        if len(names)>1:
+            unexpected_core_collisions.append(ids)
+assert not unexpected_core_collisions, unexpected_core_collisions
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("masha","bulk_c44e41ad44f251d83d9c03ff")').fetchone()[0]==1
 assert not db.execute('SELECT 1 FROM Person WHERE id="bulk_d75876aee084ff286f0e0120"').fetchone()
 assert db.execute('SELECT canonical_name FROM Person WHERE id="masha"').fetchone()[0]=='Тётя Маша'
 assert not db.execute("SELECT 1 FROM Person WHERE id IN ('bulk_c96e91b9c2ef1d8ab1b8fd77','bulk_f685f65324fc1063e369b5db','bulk_b020369a25fac95da7da9c02','bulk_b6bfec204320a6902221dfb8','bulk_330dfb4a60de2f5f3e8db99e','bulk_4095a9fcb0ae940df31a4f23')").fetchone()
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id="sandro"').fetchone()[0]==1
+assert not db.execute("SELECT 1 FROM Person WHERE id IN ('tsiala','bulk_e969d96f858677047d9473e6','bulk_6ae702f9c69e29fff63c19ab','bulk_9607a4997fc8625ed92f09f6','bulk_a9fdf1d196dc6b219d00709f','bulk_9b3c18df05f8035248c1891f')").fetchone()
+assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("safar","prince_safar")').fetchone()[0]==2
+assert db.execute("SELECT 1 FROM Relation WHERE from_person='safar' AND to_person='chik' AND type='cousin'").fetchone()
+assert db.execute("SELECT 1 FROM Relation WHERE from_person='bata_safar_foster_brother' AND to_person='prince_safar' AND type='kills'").fetchone()
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="adamyr" AND to_person="khazarat" AND type="enslaves"').fetchone()[0]==1
 print('PASS: evidence quotes, mention spans, relation sources, unresolved corpus matches, false kinship, separate identities, cross-work merge, export consistency')

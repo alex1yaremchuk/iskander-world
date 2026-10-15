@@ -24296,14 +24296,28 @@
             "summary": "Князь и адвокат Сафар просит молочного брата Бату украсть кобылицу, а сам насилует его жену Назибролу. Бата годами откладывает месть и убивает Сафара уже при советской власти, ошибочно рассчитывая на классовое снисхождение суда.",
             "appearances": [
                 {
-                    "person": "safar",
+                    "person": "prince_safar",
                     "role": "main",
                     "evidence": [
                         "Молодой абхазский адвокат князь Сафар"
                     ]
                 }
             ],
+            "rejected_appearances": [
+                {
+                    "person": "safar"
+                }
+            ],
             "people": [
+                {
+                    "id": "prince_safar",
+                    "name": "Князь Сафар",
+                    "description": "Молодой абхазский князь и адвокат из «Звёзд и людей»; молочный брат Баты, совершивший насилие над Назибролой и позднее убитый Батой.",
+                    "role": "main",
+                    "evidence": [
+                        "Молодой абхазский адвокат князь Сафар"
+                    ]
+                },
                 {
                     "id": "bata_safar_foster_brother",
                     "name": "Бата",
@@ -24334,7 +24348,7 @@
             ],
             "relations": [
                 {
-                    "from": "safar",
+                    "from": "prince_safar",
                     "to": "bata_safar_foster_brother",
                     "type": "foster_sibling",
                     "label": "Молочные братья по аталычеству, ставшие врагами",
@@ -24354,7 +24368,7 @@
                     ]
                 },
                 {
-                    "from": "safar",
+                    "from": "prince_safar",
                     "to": "nazibrola_bata_wife",
                     "type": "assaults",
                     "label": "Сафар насилует жену молочного брата",
@@ -24365,7 +24379,7 @@
                 },
                 {
                     "from": "bata_safar_foster_brother",
-                    "to": "safar",
+                    "to": "prince_safar",
                     "type": "kills",
                     "label": "Убивает Сафара, мстя за преступление против Назибролы",
                     "confidence": "explicit",
@@ -24375,7 +24389,7 @@
                 },
                 {
                     "from": "astamyr_safar_teacher",
-                    "to": "safar",
+                    "to": "prince_safar",
                     "type": "teacher",
                     "label": "Первый учитель Сафара",
                     "confidence": "explicit",

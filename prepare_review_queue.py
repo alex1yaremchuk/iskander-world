@@ -14,6 +14,7 @@ from collections import Counter, defaultdict
 
 from inventory import ROOT, digest, local, text
 from pilot_seed import PEOPLE
+from reconcile_people import CONFIRMED_MERGES
 
 
 NEXT_TITLES = [
@@ -68,7 +69,8 @@ def main():
     patterns = []
     for person in PEOPLE:
         if person['pattern']:
-            patterns.append((person['id'], person['name'], re.compile(r'(?<!\w)(?:' + person['pattern'] + r')(?!\w)')))
+            person_id = CONFIRMED_MERGES.get(person['id'], person['id'])
+            patterns.append((person_id, person['name'], re.compile(r'(?<!\w)(?:' + person['pattern'] + r')(?!\w)')))
 
     db = sqlite3.connect(ROOT / 'data/inventory.sqlite')
     db.executescript('''

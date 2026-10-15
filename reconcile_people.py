@@ -83,6 +83,16 @@ CONFIRMED_MERGES.update({
     "bulk_8ffa8f5793b665bc4d3e802b": "sandro",
     "bulk_330dfb4a60de2f5f3e8db99e": "sandro",
     "bulk_4095a9fcb0ae940df31a4f23": "sandro",
+    "bulk_e969d96f858677047d9473e6": "alexey_efremovich_general",
+    "bulk_6ae702f9c69e29fff63c19ab": "lena_masha",
+    "bulk_852e53f2b1c27c12ebc182d6": "prince_safar",
+    "bulk_9607a4997fc8625ed92f09f6": "stalin",
+    "bulk_a9fdf1d196dc6b219d00709f": "tendel",
+    "bulk_9b3c18df05f8035248c1891f": "father_sandro",
+    "bulk_7678835a6f2e007ac3ad31ab": "chik_uncle_kolya",
+    "bulk_8624db37158aaf61943ad28b": "kolcheruky",
+    "bulk_6e5f15e6ca226945b6195fd8": "kolcheruky",
+    "tsiala": "aunt_tsiala",
 })
 
 NO_ALIAS_MERGES = {
@@ -183,11 +193,24 @@ def tidy_relations(db):
             db.execute("DELETE FROM Relation WHERE id=?", (duplicate,))
 
 
+def rewrite_mention_candidates(db, redirects):
+    """Keep unresolved mention candidates valid after deleting an identity."""
+    for mention in db.execute("SELECT id,candidates_json FROM Mention").fetchall():
+        candidates = json.loads(mention["candidates_json"])
+        rewritten = list(dict.fromkeys(redirects.get(person_id, person_id) for person_id in candidates))
+        if rewritten != candidates:
+            db.execute(
+                "UPDATE Mention SET candidates_json=? WHERE id=?",
+                (json.dumps(rewritten, ensure_ascii=False), mention["id"]),
+            )
+
+
 def main():
     db = sqlite3.connect(ROOT / "data" / "inventory.sqlite")
     db.row_factory = sqlite3.Row
     db.execute("PRAGMA foreign_keys=ON")
     merged = []
+    redirects = dict(CONFIRMED_MERGES)
     with db:
         for old_id, new_id in CONFIRMED_MERGES.items():
             if merge_person(db, old_id, new_id, old_id not in NO_ALIAS_MERGES):
@@ -206,6 +229,8 @@ def main():
             for old_id in bulk_ids:
                 if merge_person(db, old_id, editorial_ids[0]):
                     merged.append((old_id, editorial_ids[0], "normalized-name"))
+                    redirects[old_id] = editorial_ids[0]
+        rewrite_mention_candidates(db, redirects)
         tidy_relations(db)
 
     export(db)
