@@ -99,8 +99,8 @@ person('young_manager','Молодой завмаг','Гость Сандро; �
        [('p4_0197','молодой завмаг')],{'4':'episode'},extra=['p4_0278','p4_0280'])
 person('secret_doctor','Врач закрытой поликлиники','Врач, которого Тенгиз привозит к Сандро после сердечного приступа.',
        [('p4_0006','тайного светилу')],{'4':'episode'},extra=['p4_0008','p4_0015'])
-person('tali','Тали','Дочь Сандро и тёти Кати. В детстве считается чудесным ребёнком; в пятнадцать лет становится лучшей низальщицей табака и уходит с Багратом.',
-       [('p5_0003','Тали'),('p6_0001','Тали')],{'5':'episode','6':'main'},r'Тали(?:ко|кошка)?',extra=['p6_0147','p6_0507','p6_0739','p6_0769'])
+person('tali','Тали','Единственная дочь Сандро и тёти Кати. В детстве живёт с родителями в городском доме Сандро и считается чудесным ребёнком; в пятнадцать лет становится лучшей низальщицей табака и уходит с Багратом.',
+       [('p5_0003','Тали'),('p6_0001','Тали'),('p7_0528','дочкой Сандро')],{'5':'episode','6':'main','7':'episode'},r'Тали(?:ко|кошка)?',extra=['p6_0147','p6_0507','p6_0739','p6_0769'])
 person('isa','Иса','Брат Сандро и сын Хабуга. Охотник; помогает отцу и принимает вернувшегося мула Арапку.',
        [('p5_0063','Исой'),('p6_0141','Иса'),('p7_0043','Исы')],{'5':'secondary','6':'mention','7':'secondary'},r'Ис[аыеуой]+',extra=['p5_0067','p5_0173','p6_0144','p7_0441','p7_0451'])
 person('valiko','Валико','Племянник Щащико, который приводит Сандро на встречу с разгневанным абреком.',
@@ -220,8 +220,6 @@ person('kyzym_daughter','Дочь Кязыма','Безымянная внучк
        [('p7_0373','девочка')],{'7':'episode'},extra=['p7_0441','p7_0442'])
 person('batal','Батал','Темнокожий абхазский знакомый Хабуга, у которого путники отдыхают перед городом.',
        [('p7_0491','Батал')],{'7':'episode'},r'Батал[а-я]*',extra=['p7_0495','p7_0504'])
-person('sandro_city_daughter','Дочь Сандро в городе','Безымянная дочь Сандро, встречающая Хабуга в городе. Не склеена с Тали без прямого имени.',
-       [('p7_0528','дочкой Сандро')],{'7':'episode'},notes='В тексте имя не названо; возможное отождествление с Тали оставлено открытым.')
 person('aslan','Аслан','Дворянин из Атары и друг молодого Сандро. Готовит умыкание Кати, но после ошибки женится на Шазине.',
        [('p8_0007','Аслан')],{'8':'main'},r'Аслан[а-я]*',extra=['p8_0018','p8_0131','p8_0173','p8_0218','p8_0223'])
 person('teimyr','Теймыр','Друг Аслана из Анхары, которому поручена практическая часть умыкания; сначала хватает Шазину, затем Катю.',
@@ -448,7 +446,7 @@ relation('young_manager','rudenko','quotes','Пересказывает слов
 relation('rudenko','sarya_lakoba','praises','Говорит, что ей нужен памятник',['p4_0280'],perspective='young_manager',status='reported')
 relation('father_sandro','isa','parent','Отец → сын',['p5_0063'])
 relation('sandro','isa','sibling','Братья',['p5_0063','p5_0067'])
-relation('sandro','tali','parent','Отец → дочь',['p5_0003','p5_0058'])
+relation('sandro','tali','parent','Отец → дочь',['p5_0003','p5_0058','p7_0528'])
 relation('katya','tali','parent','Мать → дочь',['p5_0003'],'strongly_implied')
 relation('shashiko','valiko','avuncular','Дядя → племянник',['p5_0021','p5_0041'])
 relation('sandro','shashiko','distant_relative','Дальние родственники',['p5_0223'],'explicit',note='В этой главе связь названа далёким родством; двоюродное родство по-прежнему не принимается.')
@@ -473,7 +471,7 @@ relation('chekist_neighbor','narrator_father','neighbor','Соседи',['p5_020
 relation('guard_chief','sandro','arrangement','Передаёт тела за деньги и вино',['p5_0224','p5_0227'],perspective='narrator',status='accepted')
 relation('sandro','shashiko','recovers_remains','Перевозит останки для погребения',['p5_0225','p5_0242','p5_0245'])
 relation('father_sandro','brother_sandro','parent','Отец → сын',['p6_0283','p9_0188'],'explicit',note='В рассказе о Хазарате отец идёт вместе с сыновьями Кязымом, Махазом и Сандро.')
-relation('father_sandro','tali','grandparent','Дед → внучка',['p6_0194','p6_0208'])
+relation('father_sandro','tali','grandparent','Дед → внучка',['p6_0194','p6_0208','p7_0528'])
 relation('father_sandro','wife_habug','spouse','Супруги',['p6_0367'])
 relation('wife_habug','tali','grandparent','Бабушка → внучка',['p6_0774'],'strongly_implied')
 relation('brother_sandro','masha','spouse','Супруги',['p6_0274','p6_0283'])
@@ -520,8 +518,6 @@ relation('father_sandro','kyzym_son','grandparent','Дед → внук',['p7_03
 relation('father_sandro','kyzym_daughter','grandparent','Дед → внучка',['p7_0373'])
 relation('isa','mule_arapka','helps','Помогает вернуть мула домой',['p7_0451','p7_0454','p7_0455'])
 relation('father_sandro','batal','friend','Знакомые, гостят и беседуют',['p7_0491','p7_0495'])
-relation('sandro','sandro_city_daughter','parent','Отец → дочь',['p7_0528'])
-relation('father_sandro','sandro_city_daughter','grandparent','Дед → внучка',['p7_0528'])
 relation('sandro','aslan','friend','Друзья',['p8_0007','p8_0018','p8_0021'])
 relation('aslan','katya','betrothed','Тайно помолвлены до умыкания',['p8_0018','p8_0058','p8_0173'],perspective='narrator',status='accepted')
 relation('sandro','katya','romance','Взаимно влюбляются',['p8_0019','p8_0060'])
@@ -695,7 +691,7 @@ PERSON_PLACES=[
  ('father_sandro','estonka','Проезжает по дороге','p7_0335'),
  ('father_sandro','atary','Ездит после возвращения мула','p7_0456'),
  ('sandro','sandro_city_home','Живёт во время работы в ансамбле','p7_0527'),
- ('sandro_city_daughter','sandro_city_home','Встречает деда','p7_0528'),
+ ('tali','sandro_city_home','Встречает деда','p7_0528'),
  ('aslan','atary','Живёт','p8_0021'),
  ('teimyr','ankhara','Приглашён оттуда','p8_0071'),
  ('sandro','big_house','Принимает Аслана после свадьбы','p8_0218'),
