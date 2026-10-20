@@ -14,6 +14,12 @@ for e in db.execute('SELECT e.*,t.text FROM Evidence e JOIN TextFragment t ON t.
 for m in db.execute('SELECT m.*,t.text FROM Mention m JOIN TextFragment t ON t.id=m.fragment_id'):
     assert m['text'][m['start_char']:m['end_char']]==m['surface'],m['id']
 assert not db.execute('SELECT id FROM Relation WHERE id NOT IN (SELECT relation_id FROM RelationEvidence)').fetchall()
+for symmetric_type in ('sibling', 'spouse', 'cousin', 'friend'):
+    assert not db.execute('''SELECT r1.id FROM Relation r1 JOIN Relation r2
+        ON r1.from_person=r2.to_person AND r1.to_person=r2.from_person
+        AND r1.type=r2.type AND r1.id<r2.id
+        WHERE r1.type=? AND r1.status!='rejected' AND r2.status!='rejected' ''',
+        (symmetric_type,)).fetchall(), symmetric_type
 assert not db.execute('SELECT m.id FROM Mention m JOIN MentionResolution r ON m.id=r.mention_id WHERE m.method="corpus_name_candidate"').fetchall()
 assert db.execute('SELECT status FROM Relation WHERE from_person="sandro" AND to_person="shashiko" AND type="cousin"').fetchone()[0]=='rejected'
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("stepan","lenin","inna","inessa")').fetchone()[0]==4
@@ -52,6 +58,9 @@ assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="lakoba" AND 
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="brother_sandro" AND to_person="masha" AND type="spouse"').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="isa" AND to_person="adgur" AND type="parent"').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="tali" AND to_person="bagrat" AND type="spouse"').fetchone()[0]==1
+assert db.execute('''SELECT COUNT(*) FROM Relation WHERE type='sibling' AND status!='rejected'
+    AND ((from_person='omar_forester' AND to_person='kunta')
+      OR (from_person='kunta' AND to_person='omar_forester'))''').fetchone()[0]==1
 assert db.execute('SELECT COUNT(*) FROM Person WHERE id IN ("mule_arapka","donkey_arapka")').fetchone()[0]==2
 assert db.execute('SELECT COUNT(*) FROM Person WHERE canonical_name LIKE "Арапка (%"').fetchone()[0]==2
 assert db.execute('SELECT COUNT(*) FROM Relation WHERE from_person="father_sandro" AND to_person="kyzym" AND type="parent"').fetchone()[0]==1

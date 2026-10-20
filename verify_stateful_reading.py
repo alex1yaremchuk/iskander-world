@@ -3,7 +3,7 @@ import json
 import sqlite3
 
 from inventory import ROOT, digest
-from apply_stateful_reading import canonical_person_id
+from apply_stateful_reading import SYMMETRIC_RELATION_TYPES, canonical_person_id
 
 
 results = json.loads((ROOT / "context_reading_results.json").read_text(encoding="utf-8"))["works"]
@@ -50,13 +50,24 @@ for item in results:
     rejected = {canonical_person_id(entry["person"]) for entry in item.get("rejected_appearances", [])}
     assert not (rejected & actual), (item["title"], "rejected appearances remain", rejected & actual)
     for relation in item.get("relations", []):
+        from_person = canonical_person_id(relation["from"])
+        to_person = canonical_person_id(relation["to"])
+        endpoints = (
+            (from_person, to_person)
+            if relation["type"] not in SYMMETRIC_RELATION_TYPES
+            else (from_person, to_person, to_person, from_person)
+        )
+        endpoint_clause = (
+            "r.from_person=? AND r.to_person=?"
+            if relation["type"] not in SYMMETRIC_RELATION_TYPES
+            else "((r.from_person=? AND r.to_person=?) OR (r.from_person=? AND r.to_person=?))"
+        )
         found = db.execute(
-            """SELECT 1 FROM Relation r
+            f"""SELECT 1 FROM Relation r
                JOIN RelationEvidence re ON re.relation_id=r.id
                JOIN Evidence e ON e.id=re.evidence_id
-               WHERE e.work_id=? AND r.from_person=?
-                 AND r.to_person=? AND r.type=?""",
-            (work_id, canonical_person_id(relation["from"]), canonical_person_id(relation["to"]), relation["type"]),
+               WHERE e.work_id=? AND {endpoint_clause} AND r.type=?""",
+            (work_id, *endpoints, relation["type"]),
         ).fetchone()
         assert found, (item["title"], relation)
 

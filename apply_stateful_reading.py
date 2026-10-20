@@ -21,6 +21,11 @@ PERSON_ID_ALIASES = {
     "seva_sevastyanov": "sevastyanov_chik_classmate",
 }
 
+# These relations describe one undirected semantic edge.  A later reading may
+# naturally state the same fact from the other person's point of view; that
+# must add evidence to the existing edge, not create a second card in the UI.
+SYMMETRIC_RELATION_TYPES = {"sibling", "spouse", "cousin", "friend"}
+
 PERSON_OVERRIDES = {
     "chik": (
         "Чик",
@@ -212,24 +217,43 @@ def main():
             for relation in result.get("relations", []):
                 from_person = canonical_person_id(relation["from"])
                 to_person = canonical_person_id(relation["to"])
+                relation_type = relation["type"]
                 existing = db.execute(
                     """SELECT id FROM Relation
                        WHERE from_person=? AND to_person=? AND type=? AND status!='rejected'
                        ORDER BY CASE WHEN id LIKE 'state_rel_%' THEN 1 ELSE 0 END, id LIMIT 1""",
-                    (from_person, to_person, relation["type"]),
+                    (from_person, to_person, relation_type),
                 ).fetchone()
+                reversed_existing = False
+                if not existing and relation_type in SYMMETRIC_RELATION_TYPES:
+                    existing = db.execute(
+                        """SELECT id FROM Relation
+                           WHERE from_person=? AND to_person=? AND type=? AND status!='rejected'
+                           ORDER BY CASE WHEN id LIKE 'state_rel_%' THEN 1 ELSE 0 END, id LIMIT 1""",
+                        (to_person, from_person, relation_type),
+                    ).fetchone()
+                    reversed_existing = existing is not None
                 if existing:
                     rid = existing[0]
-                    db.execute(
-                        """UPDATE Relation SET label=?,confidence=?,perspective=?,status=?,note=? WHERE id=?""",
-                        (relation["label"], relation.get("confidence", "explicit"),
-                         relation.get("perspective", "narrator"), relation.get("status", "accepted"),
-                         relation.get("note", ""), rid),
-                    )
+                    if reversed_existing:
+                        # Keep the established orientation and its directional
+                        # wording, while accepting the stronger reviewed state.
+                        db.execute(
+                            "UPDATE Relation SET confidence=?,status=? WHERE id=?",
+                            (relation.get("confidence", "explicit"),
+                             relation.get("status", "accepted"), rid),
+                        )
+                    else:
+                        db.execute(
+                            """UPDATE Relation SET label=?,confidence=?,perspective=?,status=?,note=? WHERE id=?""",
+                            (relation["label"], relation.get("confidence", "explicit"),
+                             relation.get("perspective", "narrator"), relation.get("status", "accepted"),
+                             relation.get("note", ""), rid),
+                        )
                 else:
-                    rid = "state_rel_" + digest(from_person + ":" + to_person + ":" + relation["type"])[:24]
+                    rid = "state_rel_" + digest(from_person + ":" + to_person + ":" + relation_type)[:24]
                     db.execute("INSERT INTO Relation VALUES (?,?,?,?,?,?,?,?,?)",
-                               (rid, from_person, to_person, relation["type"], relation["label"],
+                               (rid, from_person, to_person, relation_type, relation["label"],
                                 relation.get("confidence", "explicit"), relation.get("perspective", "narrator"),
                                 relation.get("status", "accepted"), relation.get("note", "")))
                 db.execute(
