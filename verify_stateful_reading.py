@@ -4,6 +4,17 @@ import sqlite3
 
 from inventory import ROOT, digest
 from apply_stateful_reading import SYMMETRIC_RELATION_TYPES, canonical_person_id
+from reconcile_people import CONFIRMED_MERGES
+
+
+def final_person_id(person_id):
+    """Follow both reading-time aliases and later editorial reconciliations."""
+    person_id = canonical_person_id(person_id)
+    seen = set()
+    while person_id in CONFIRMED_MERGES and person_id not in seen:
+        seen.add(person_id)
+        person_id = CONFIRMED_MERGES[person_id]
+    return person_id
 
 
 results = json.loads((ROOT / "context_reading_results.json").read_text(encoding="utf-8"))["works"]
@@ -35,9 +46,9 @@ for item in results:
     row = stored[work_id]
     expected_hash = digest(json.dumps(item, ensure_ascii=False, sort_keys=True))
     assert row["result_sha256"] == expected_hash, item["title"]
-    assert row["narrator_id"] == canonical_person_id(item["narrator"])
-    people = {canonical_person_id(entry["person"]) for entry in item.get("appearances", [])}
-    people.update(canonical_person_id(entry["id"]) for entry in item.get("people", []))
+    assert row["narrator_id"] == final_person_id(item["narrator"])
+    people = {final_person_id(entry["person"]) for entry in item.get("appearances", [])}
+    people.update(final_person_id(entry["id"]) for entry in item.get("people", []))
     actual = {
         r[0]
         for r in db.execute(
@@ -47,11 +58,11 @@ for item in results:
         )
     }
     assert people <= actual, (item["title"], people - actual)
-    rejected = {canonical_person_id(entry["person"]) for entry in item.get("rejected_appearances", [])}
+    rejected = {final_person_id(entry["person"]) for entry in item.get("rejected_appearances", [])}
     assert not (rejected & actual), (item["title"], "rejected appearances remain", rejected & actual)
     for relation in item.get("relations", []):
-        from_person = canonical_person_id(relation["from"])
-        to_person = canonical_person_id(relation["to"])
+        from_person = final_person_id(relation["from"])
+        to_person = final_person_id(relation["to"])
         endpoints = (
             (from_person, to_person)
             if relation["type"] not in SYMMETRIC_RELATION_TYPES

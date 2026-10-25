@@ -24,6 +24,15 @@ CONFIRMED_MERGES = {
 # These pairs were checked against their source appearances; unlike fuzzy
 # matching at runtime, the explicit list cannot collapse a merely similar name.
 CONFIRMED_MERGES.update({
+    # The same two daughters of Kyzym are named in later chapters.  In
+    # "Chik respects customs" they are listed explicitly as the eldest
+    # Riziko and her younger sister Zinochka; "Grandfather" calls the latter
+    # Zina and describes the former only as the eldest daughter.
+    "kyzym_daughter_zinochka": "zina_kyzym",
+    "kyzym_older_daughter": "kyzym_daughter_ryziko",
+    # The unnamed girl riding Arapka is the same younger daughter: the paired
+    # boy and girl recur elsewhere as the near-age children Remzik and Zina.
+    "kyzym_daughter": "zina_kyzym",
     "bulk_d50ac87c7719add05572269e": "avtandil_tsikridze",
     "bulk_525796660f2dfb9af82ff798": "alexandra_ivanovna",
     "bulk_a7827585ef01ccc12819c53c": "alexandra_ivanovna",
